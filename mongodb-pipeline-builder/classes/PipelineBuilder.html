@@ -1,0 +1,4153 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mongodb-pipeline-builder documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../.." class="navbar-brand">mongodb-pipeline-builder documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>PipelineBuilder</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>lib/main.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The class of the pipeline builder object</p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#addStage">addStage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#debugBuild">debugBuild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#defaultOptions">defaultOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#disableDebug">disableDebug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#enableDebug">enableDebug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#getCurrentDate">getCurrentDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#getDebugActionList">getDebugActionList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#getName">getName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#getPipeline">getPipeline</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#isValidStage">isValidStage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#log">log</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#logsEnabled">logsEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#pipelineName">pipelineName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#resetPipeline">resetPipeline</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#saveActionToDebugHistoryList">saveActionToDebugHistoryList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#stageErrorList">stageErrorList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#stageList">stageList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#stageValidatorsBundle">stageValidatorsBundle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#toggleDebug">toggleDebug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#ToObject">ToObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#validatePayload">validatePayload</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#verifyPipelineValidity">verifyPipelineValidity</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#AddFields">AddFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Bucket">Bucket</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#BucketAuto">BucketAuto</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#CollStats">CollStats</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Count">Count</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Facet">Facet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#GeoNear">GeoNear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#GraphLookup">GraphLookup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Group">Group</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#IndexStats">IndexStats</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Limit">Limit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ListSessions">ListSessions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Lookup">Lookup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Match">Match</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Merge">Merge</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Out">Out</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#PlanCacheStats">PlanCacheStats</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Project">Project</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Redact">Redact</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ReplaceRoot">ReplaceRoot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ReplaceWith">ReplaceWith</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Sample">Sample</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Search">Search</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Set">Set</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Skip">Skip</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Sort">Sort</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#SortByCount">SortByCount</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#UnionWith">UnionWith</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Unset">Unset</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#Unwind">Unwind</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(pipelineName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options: <a href="../interfaces/InitOptionsInterface.html">InitOptionsInterface</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">lib/main.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>constructor</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>pipelineName</td>
+
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                        <td>
+                                                                <code><p>The name of the pipeline</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>options</td>
+
+                                                        <td>
+                                                                        <code><a href="../interfaces/InitOptionsInterface.html" target="_self" >InitOptionsInterface</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addStage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            addStage</b>
+                            <a href="#addStage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="445" class="link-to-prism">lib/main.ts:445</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Adds a new stage to the pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>stageTypeLabel</td>
+                                                        <td>
+                                                                <code><p>the type of stage</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>stageValue</td>
+                                                        <td>
+                                                                <code><p>the value of the stage</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="debugBuild"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            debugBuild</b>
+                            <a href="#debugBuild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/DebugBuildInterface.html" target="_self" >DebugBuildInterface</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">lib/main.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains debug status and information saved at each step</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultOptions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            defaultOptions</b>
+                            <a href="#defaultOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/BuilderOptionsInterface.html" target="_self" >BuilderOptionsInterface</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+        debug: false,
+        logsEnabled: false
+    }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">lib/main.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Default builder options</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disableDebug"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            disableDebug</b>
+                            <a href="#disableDebug"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">lib/main.ts:124</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Disable debug mode</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="enableDebug"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            enableDebug</b>
+                            <a href="#enableDebug"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">lib/main.ts:118</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enable debug mode</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCurrentDate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            getCurrentDate</b>
+                            <a href="#getCurrentDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="586" class="link-to-prism">lib/main.ts:586</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns the current date in the expected format if specified. ISO by default.</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                <code><p>Default to ISO</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDebugActionList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            getDebugActionList</b>
+                            <a href="#getDebugActionList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">lib/main.ts:130</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Get the list of all actions stored in the debug history list</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getName"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            getName</b>
+                            <a href="#getName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">lib/main.ts:94</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns the name of the pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getPipeline"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            getPipeline</b>
+                            <a href="#getPipeline"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">lib/main.ts:101</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Return the constructed pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isValidStage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            isValidStage</b>
+                            <a href="#isValidStage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="496" class="link-to-prism">lib/main.ts:496</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Check the validity of a stage</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>stageToValidate</td>
+                                                        <td>
+                                                                <code><p>The stage to validate</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="log"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            log</b>
+                            <a href="#log"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="596" class="link-to-prism">lib/main.ts:596</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Displays the messages passed as parameters in the console</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                <code><p>The type of log to display</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>messageList</td>
+                                                        <td>
+                                                                <code><p>Messages to display</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logsEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            logsEnabled</b>
+                            <a href="#logsEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">lib/main.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A boolean allowing to display or not the logs</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pipelineName"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            pipelineName</b>
+                            <a href="#pipelineName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">lib/main.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the name of the pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetPipeline"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            resetPipeline</b>
+                            <a href="#resetPipeline"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">lib/main.ts:108</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Reset the pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveActionToDebugHistoryList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            saveActionToDebugHistoryList</b>
+                            <a href="#saveActionToDebugHistoryList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="551" class="link-to-prism">lib/main.ts:551</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Save all actions in the history if debug mode is enabled</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>action</td>
+                                                        <td>
+                                                                <code><p>The type of action to save</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>argList</td>
+                                                        <td>
+                                                                <code><p>A list of information on the current state or the values that could have caused instability of the
+builder</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stageErrorList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            stageErrorList</b>
+                            <a href="#stageErrorList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/StageErrorInterface.html" target="_self" >StageErrorInterface[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">lib/main.ts:57</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the list of errors returned by the pipeline validator</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stageList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            stageList</b>
+                            <a href="#stageList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/StageInterface.html" target="_self" >StageInterface[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">lib/main.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the list of pipeline stages that have been added</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stageValidatorsBundle"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            stageValidatorsBundle</b>
+                            <a href="#stageValidatorsBundle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">lib/main.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains all active payload validators</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleDebug"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            toggleDebug</b>
+                            <a href="#toggleDebug"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="538" class="link-to-prism">lib/main.ts:538</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enables / disables debugging mode</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>debugBuildStatus</td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ToObject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            ToObject</b>
+                            <a href="#ToObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="577" class="link-to-prism">lib/main.ts:577</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Converts a list of objects to one</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>list</td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validatePayload"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            validatePayload</b>
+                            <a href="#validatePayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="526" class="link-to-prism">lib/main.ts:526</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Checks the compliance of the stage payload</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>stageType</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>payload</td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="verifyPipelineValidity"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            verifyPipelineValidity</b>
+                            <a href="#verifyPipelineValidity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="469" class="link-to-prism">lib/main.ts:469</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Check the validity of the pipeline</p>
+</div>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                          <div class="io-description">
+                                  <b>Parameters :</b>
+                                  <table class="params">
+                                      <thead>
+                                          <tr>
+                                                <td>Name</td>
+                                                    <td>Description</td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                <tr>
+                                                        <td>pipelineBuilt</td>
+                                                        <td>
+                                                                <code><p>The pipeline built</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                      </tbody>
+                                  </table>
+                          </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="AddFields"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            AddFields
+                        </b>
+                        <a href="#AddFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>AddFields(value: literal type | literal type[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">lib/main.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds new fields to documents. Similar to $project, $addFields reshapes each document in the stream; specifically,
+by adding new fields to output documents that contain both the existing fields from the input documents and the
+newly added fields.
+$set is an alias for $addFields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>literal type | literal type[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Bucket"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Bucket
+                        </b>
+                        <a href="#Bucket"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Bucket(value: <a href="../interfaces/BucketStageInterface.html">BucketStageInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">lib/main.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket
+boundaries.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/BucketStageInterface.html" target="_self" >BucketStageInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="BucketAuto"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            BucketAuto
+                        </b>
+                        <a href="#BucketAuto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>BucketAuto(value: <a href="../interfaces/BucketAutoStageInterface.html">BucketAutoStageInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">lib/main.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Categorizes incoming documents into a specific number of groups, called buckets, based on a specified expression.
+Bucket boundaries are automatically determined in an attempt to evenly distribute the documents into the specified
+number of buckets.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/BucketAutoStageInterface.html" target="_self" >BucketAutoStageInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CollStats"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            CollStats
+                        </b>
+                        <a href="#CollStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>CollStats(value: <a href="../interfaces/CollStatsStageInterface.html">CollStatsStageInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">lib/main.ts:174</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns statistics regarding a collection or view.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/CollStatsStageInterface.html" target="_self" >CollStatsStageInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Count"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Count
+                        </b>
+                        <a href="#Count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Count(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">lib/main.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a count of the number of documents at this stage of the aggregation pipeline.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Facet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Facet
+                        </b>
+                        <a href="#Facet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Facet(value: <a href="../interfaces/FacetStageInterface.html">FacetStageInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">lib/main.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Processes multiple aggregation pipelines within a single stage on the same set of input documents. Enables the
+creation of multi-faceted aggregations capable of characterizing data across multiple dimensions, or facets, in a
+single stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/FacetStageInterface.html" target="_self" >FacetStageInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="GeoNear"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            GeoNear
+                        </b>
+                        <a href="#GeoNear"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>GeoNear(value: <a href="../interfaces/GeoNearStageInterface.html">GeoNearStageInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">lib/main.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns an ordered stream of documents based on the proximity to a geospatial point. Incorporates the functionality
+of $match, $sort, and $limit for geospatial data. The output documents include an additional distance field and can
+include a location identifier field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/GeoNearStageInterface.html" target="_self" >GeoNearStageInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="GraphLookup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            GraphLookup
+                        </b>
+                        <a href="#GraphLookup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>GraphLookup(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">lib/main.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Performs a recursive search on a collection. To each output document, adds a new array field that contains the
+traversal results of the recursive search for that document.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Group"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Group
+                        </b>
+                        <a href="#Group"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Group(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="221"
+                            class="link-to-prism">lib/main.ts:221</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Groups input documents by a specified identifier expression and applies the accumulator expression(s), if specified,
+to each group. Consumes all input documents and outputs one document per each distinct group. The output documents
+only contain the identifier field and, if specified, accumulated fields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="IndexStats"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            IndexStats
+                        </b>
+                        <a href="#IndexStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>IndexStats(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">lib/main.ts:229</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns statistics regarding the use of each index for the collection.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Limit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Limit
+                        </b>
+                        <a href="#Limit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Limit(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="238"
+                            class="link-to-prism">lib/main.ts:238</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Passes the first n documents unmodified to the pipeline where n is the specified limit. For each input document,
+outputs either one document (for the first n documents) or zero documents (after the first n documents).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ListSessions"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ListSessions
+                        </b>
+                        <a href="#ListSessions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ListSessions(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">lib/main.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Lists all sessions that have been active long enough to propagate to the system.sessions collection.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Lookup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Lookup
+                        </b>
+                        <a href="#Lookup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Lookup(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="257"
+                            class="link-to-prism">lib/main.ts:257</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Performs a left outer join to an unSharded collection in the same database to filter in documents from the “joined”
+collection for processing. To each input document, the $lookup stage adds a new array field whose elements are the
+matching documents from the “joined” collection. The $lookup stage passes these reshaped documents to the next stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Match"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Match
+                        </b>
+                        <a href="#Match"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Match(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">lib/main.ts:280</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters the documents to pass only the documents that match the specified condition(s) to the next pipeline stage.</p>
+<p>$match takes a document that specifies the query conditions. The query syntax is identical to the read operation
+query syntax; i.e. $match does not accept raw aggregation expressions. Instead, use a $expr query expression to
+include aggregation expression in $match.</p>
+<p>Pipeline Optimization</p>
+<ul>
+<li>Place the $match as early in the aggregation pipeline as possible. Because $match limits the total number of
+documents in the aggregation pipeline, earlier $match operations minimize the amount of processing down the pipe.</li>
+<li>If you place a $match at the very beginning of a pipeline, the query can take advantage of indexes like any other
+db.collection.find() or db.collection.findOne().</li>
+</ul>
+<p>Restrictions</p>
+<ul>
+<li>The $match query syntax is identical to the read operation query syntax; i.e. $match does not accept raw
+aggregation expressions. To include aggregation expression in $match, use a $expr query expression.</li>
+</ul>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Merge"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Merge
+                        </b>
+                        <a href="#Merge"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Merge(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="291"
+                            class="link-to-prism">lib/main.ts:291</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Writes the resulting documents of the aggregation pipeline to a collection. The stage can incorporate (insert new
+documents, merge documents, replace documents, keep existing documents, fail the operation, process documents with
+a custom update pipeline) the results into an output collection. To use the $merge stage, it must be the last stage
+in the pipeline.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Out"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Out
+                        </b>
+                        <a href="#Out"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Out(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">lib/main.ts:300</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Writes the resulting documents of the aggregation pipeline to a collection. To use the $out stage, it must be the
+last stage in the pipeline.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="PlanCacheStats"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            PlanCacheStats
+                        </b>
+                        <a href="#PlanCacheStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>PlanCacheStats(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="308"
+                            class="link-to-prism">lib/main.ts:308</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns plan cache information for a collection.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Project"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Project
+                        </b>
+                        <a href="#Project"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Project(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="319"
+                            class="link-to-prism">lib/main.ts:319</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Passes along the documents with the requested fields to the next stage in the pipeline. The specified fields can be
+existing fields from the input documents or newly computed fields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Include OR Exclude Existing Fields
+documents, you must explicitly specify the suppression of the _id field in $project by passing false.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Redact"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Redact
+                        </b>
+                        <a href="#Redact"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Redact(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="329"
+                            class="link-to-prism">lib/main.ts:329</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Reshapes each document in the stream by restricting the content for each document based on information stored in
+the documents themselves. Incorporates the functionality of $project and $match. Can be used to implement field
+level redaction. For each input document, outputs either one or zero documents.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ReplaceRoot"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ReplaceRoot
+                        </b>
+                        <a href="#ReplaceRoot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ReplaceRoot(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="340"
+                            class="link-to-prism">lib/main.ts:340</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+document, including the _id field. Specify a document embedded in the input document to promote the embedded
+document to the top level.
+$replaceWith is an alias for $replaceRoot stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ReplaceWith"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ReplaceWith
+                        </b>
+                        <a href="#ReplaceWith"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ReplaceWith(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="351"
+                            class="link-to-prism">lib/main.ts:351</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+document, including the _id field. Specify a document embedded in the input document to promote the embedded
+document to the top level.
+$replaceWith is an alias for $replaceRoot stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Sample"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Sample
+                        </b>
+                        <a href="#Sample"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Sample(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="359"
+                            class="link-to-prism">lib/main.ts:359</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Randomly selects the specified number of documents from its input.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Search"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Search
+                        </b>
+                        <a href="#Search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Search(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="368"
+                            class="link-to-prism">lib/main.ts:368</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Performs a full-text search of the field or fields in an Atlas collection.
+$search is only available for MongoDB Atlas clusters, and is not available for self-managed deployments.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Set"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Set
+                        </b>
+                        <a href="#Set"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Set(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="379"
+                            class="link-to-prism">lib/main.ts:379</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds new fields to documents. Similar to $project, $set reshapes each document in the stream; specifically, by
+adding new fields to output documents that contain both the existing fields from the input documents and the
+newly added fields.
+$set is an alias for $addFields stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Skip"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Skip
+                        </b>
+                        <a href="#Skip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Skip(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="389"
+                            class="link-to-prism">lib/main.ts:389</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Skips the first n documents where n is the specified skip number and passes the remaining documents unmodified to
+the pipeline. For each input document, outputs either zero documents (for the first n documents) or one document
+(if after the first n documents).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Sort"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Sort
+                        </b>
+                        <a href="#Sort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Sort(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="398"
+                            class="link-to-prism">lib/main.ts:398</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Reorders the document stream by a specified sort key. Only the order changes; the documents remain unmodified.
+For each input document, outputs one document.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SortByCount"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            SortByCount
+                        </b>
+                        <a href="#SortByCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>SortByCount(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="407"
+                            class="link-to-prism">lib/main.ts:407</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Groups incoming documents based on the value of a specified expression, then computes the count of documents in
+each distinct group.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UnionWith"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            UnionWith
+                        </b>
+                        <a href="#UnionWith"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>UnionWith(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="416"
+                            class="link-to-prism">lib/main.ts:416</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Performs a union of two collections; i.e. combines pipeline results from two collections into a single result
+set.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Unset"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Unset
+                        </b>
+                        <a href="#Unset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Unset(value: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="425"
+                            class="link-to-prism">lib/main.ts:425</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Removes/excludes fields from documents.
+$unset is an alias for $project stage that removes fields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Unwind"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            Unwind
+                        </b>
+                        <a href="#Unwind"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Unwind(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="435"
+                            class="link-to-prism">lib/main.ts:435</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deconstructs an array field from the input documents to output a document for each element. Each output document
+replaces the array with an element value. For each input document, outputs n documents where n is the number of
+array elements and can be zero for an empty array.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { LOGS_ENABLED, APP_TIMEZONE } from &#x27;./&#x27;;
+import {
+    DebugBuildInterface,
+    StageErrorInterface,
+    StageInterface,
+    getStageTypeValue,
+    StageLabel,
+    BucketStageInterface,
+    BuilderOptionsInterface,
+    InitOptionsInterface, BucketAutoStageInterface, CollStatsStageInterface, FacetStageInterface, GeoNearStageInterface,
+} from &quot;./interfaces&quot;;
+import {DATE_FORMAT, PAYLOAD_VALIDATION_ENABLED} from &quot;./constants&quot;;
+import { PipelineError } from &quot;./errors&quot;;
+import {lookupPayloadValidator} from &quot;./validators&quot;;
+
+/**
+ * The moment.js library for formatting dates
+ */
+const moment &#x3D; require(&#x27;moment-timezone&#x27;);
+
+/**
+ * The class of the pipeline builder object
+ */
+export class PipelineBuilder {
+    /**
+     * Default builder options
+     * @private
+     */
+    private readonly defaultOptions: BuilderOptionsInterface &#x3D; {
+        debug: false,
+        logsEnabled: false
+    };
+    /**
+     * Contains the name of the pipeline
+     * @private
+     */
+    private readonly pipelineName: string;
+    /**
+     * Contains debug status and information saved at each step
+     * @private
+     */
+    private readonly debugBuild: DebugBuildInterface;
+    /**
+     * A boolean allowing to display or not the logs
+     * @private
+     */
+    private readonly logsEnabled: boolean;
+    /**
+     * Contains the list of pipeline stages that have been added
+     * @private
+     */
+    private stageList: StageInterface[];
+    /**
+     * Contains the list of errors returned by the pipeline validator
+     * @private
+     */
+    private stageErrorList: StageErrorInterface[];
+    /**
+     * Contains all active payload validators
+     * @private
+     */
+    private readonly stageValidatorsBundle: { [key: string]: any };
+
+    /**
+     * constructor
+     * @param pipelineName The name of the pipeline
+     * @param options
+     */
+    constructor(
+        pipelineName: string,
+        options: InitOptionsInterface &#x3D; {}
+    ) {
+        const setOptions: BuilderOptionsInterface &#x3D; {
+            ...this.defaultOptions,
+            ...options
+        };
+
+        this.pipelineName &#x3D; pipelineName;
+        this.debugBuild &#x3D; { status: setOptions.debug, historyList: [] };
+        this.logsEnabled &#x3D; setOptions.logsEnabled ? true : (LOGS_ENABLED &#x3D;&#x3D;&#x3D; &#x27;true&#x27;);
+        this.stageList &#x3D; [];
+        this.stageErrorList &#x3D; [];
+        this.stageValidatorsBundle &#x3D; {
+            lookup: lookupPayloadValidator
+        };
+
+        this.saveActionToDebugHistoryList(&#x27;constructor&#x27;, { debug: setOptions.debug }, { logsEnabled: setOptions.logsEnabled }, { debugBuild: this.debugBuild });
+    }
+
+    // basics
+    /**
+     * Returns the name of the pipeline
+     */
+    public readonly getName &#x3D; () &#x3D;&gt; {
+        this.saveActionToDebugHistoryList(&#x27;getName&#x27;);
+        return this.pipelineName;
+    }
+    /**
+     * Return the constructed pipeline
+     */
+    public readonly getPipeline &#x3D; () &#x3D;&gt; {
+        this.saveActionToDebugHistoryList(&#x27;getPipeline&#x27;);
+        return this.verifyPipelineValidity([...this.stageList]);
+    }
+    /**
+     * Reset the pipeline
+     */
+    public readonly resetPipeline &#x3D; () &#x3D;&gt; {
+        this.stageList &#x3D; [];
+        this.saveActionToDebugHistoryList(&#x27;resetPipeline&#x27;);
+        return this.stageList;
+    }
+
+    // tools
+    /**
+     * Enable debug mode
+     */
+    public readonly enableDebug &#x3D; () &#x3D;&gt; {
+        return this.toggleDebug(true);
+    }
+    /**
+     * Disable debug mode
+     */
+    public readonly disableDebug &#x3D; () &#x3D;&gt; {
+        return this.toggleDebug(false);
+    }
+    /**
+     * Get the list of all actions stored in the debug history list
+     */
+    public readonly getDebugActionList &#x3D; () &#x3D;&gt; {
+        this.log(&#x27;info&#x27;, &#x27;getDebugActionList&#x27;, this.debugBuild.historyList);
+        return this.debugBuild.historyList;
+    }
+
+    // stage
+    /**
+     * Adds new fields to documents. Similar to $project, $addFields reshapes each document in the stream; specifically,
+     * by adding new fields to output documents that contain both the existing fields from the input documents and the
+     * newly added fields.
+     * $set is an alias for $addFields.
+     * @param value
+     * @constructor
+     */
+    public AddFields(value: { [key: string]: any } | { [key: string]: any }[]): this {
+        return this.addStage(
+            &#x27;addFields&#x27;,
+            Array.isArray(value) ? this.ToObject(value) : value
+        );
+    }
+    /**
+     * Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket
+     * boundaries.
+     * @param value
+     * @constructor
+     */
+    public Bucket(value: BucketStageInterface): this {
+        return this.addStage(&#x27;bucket&#x27;, value);
+    }
+    /**
+     * Categorizes incoming documents into a specific number of groups, called buckets, based on a specified expression.
+     * Bucket boundaries are automatically determined in an attempt to evenly distribute the documents into the specified
+     * number of buckets.
+     * @param value
+     * @constructor
+     */
+    public BucketAuto(value: BucketAutoStageInterface): this {
+        return this.addStage(&#x27;bucketAuto&#x27;, value);
+    }
+    /**
+     * Returns statistics regarding a collection or view.
+     * @param value
+     * @constructor
+     */
+    public CollStats(value: CollStatsStageInterface): this {
+        return this.addStage(&#x27;collStats&#x27;, value);
+    }
+    /**
+     * Returns a count of the number of documents at this stage of the aggregation pipeline.
+     * @param value
+     * @constructor
+     */
+    public Count(value: string): this {
+        return this.addStage(&#x27;count&#x27;, value);
+    }
+    /**
+     * Processes multiple aggregation pipelines within a single stage on the same set of input documents. Enables the
+     * creation of multi-faceted aggregations capable of characterizing data across multiple dimensions, or facets, in a
+     * single stage.
+     * @param value
+     * @constructor
+     */
+    public Facet(value: FacetStageInterface): this {
+        return this.addStage(&#x27;facet&#x27;, value);
+    }
+    /**
+     * Returns an ordered stream of documents based on the proximity to a geospatial point. Incorporates the functionality
+     * of $match, $sort, and $limit for geospatial data. The output documents include an additional distance field and can
+     * include a location identifier field.
+     * @param value
+     * @constructor
+     */
+    public GeoNear(value: GeoNearStageInterface): this {
+        return this.addStage(&#x27;geoNear&#x27;, value);
+    }
+    /**
+     * Performs a recursive search on a collection. To each output document, adds a new array field that contains the
+     * traversal results of the recursive search for that document.
+     * @param value
+     * @constructor
+     */
+    public GraphLookup(value: any): this {
+        return this.addStage(&#x27;graphLookup&#x27;, value);
+    }
+    /**
+     * Groups input documents by a specified identifier expression and applies the accumulator expression(s), if specified,
+     * to each group. Consumes all input documents and outputs one document per each distinct group. The output documents
+     * only contain the identifier field and, if specified, accumulated fields.
+     * @param value
+     * @constructor
+     */
+    public Group(value: any): this {
+        return this.addStage(&#x27;group&#x27;, value);
+    }
+    /**
+     * Returns statistics regarding the use of each index for the collection.
+     * @param value
+     * @constructor
+     */
+    public IndexStats(value: any): this {
+        return this.addStage(&#x27;indexStats&#x27;, value);
+    }
+    /**
+     * Passes the first n documents unmodified to the pipeline where n is the specified limit. For each input document,
+     * outputs either one document (for the first n documents) or zero documents (after the first n documents).
+     * @param value
+     * @constructor
+     */
+    public Limit(value: any): this {
+        return this.addStage(&#x27;limit&#x27;, value);
+    }
+    /**
+     * Lists all sessions that have been active long enough to propagate to the system.sessions collection.
+     * @param value
+     * @constructor
+     */
+    public ListSessions(value: any): this {
+        return this.addStage(&#x27;listSessions&#x27;, value);
+    }
+    /**
+     * Performs a left outer join to an unSharded collection in the same database to filter in documents from the “joined”
+     * collection for processing. To each input document, the $lookup stage adds a new array field whose elements are the
+     * matching documents from the “joined” collection. The $lookup stage passes these reshaped documents to the next stage.
+     *
+     * @param value
+     * @constructor
+     */
+    public Lookup(value: any): this {
+        return this.addStage(&#x27;lookup&#x27;, value);
+    }
+    /**
+     * Filters the documents to pass only the documents that match the specified condition(s) to the next pipeline stage.
+     *
+     * $match takes a document that specifies the query conditions. The query syntax is identical to the read operation
+     * query syntax; i.e. $match does not accept raw aggregation expressions. Instead, use a $expr query expression to
+     * include aggregation expression in $match.
+     *
+     * Pipeline Optimization
+     * - Place the $match as early in the aggregation pipeline as possible. Because $match limits the total number of
+     * documents in the aggregation pipeline, earlier $match operations minimize the amount of processing down the pipe.
+     * - If you place a $match at the very beginning of a pipeline, the query can take advantage of indexes like any other
+     * db.collection.find() or db.collection.findOne().
+     *
+     * Restrictions
+     * - The $match query syntax is identical to the read operation query syntax; i.e. $match does not accept raw
+     * aggregation expressions. To include aggregation expression in $match, use a $expr query expression.
+     *
+     * @param value
+     * @constructor
+     */
+    public Match(value: any): this {
+        return this.addStage(&#x27;match&#x27;, value);
+    }
+    /**
+     * Writes the resulting documents of the aggregation pipeline to a collection. The stage can incorporate (insert new
+     * documents, merge documents, replace documents, keep existing documents, fail the operation, process documents with
+     * a custom update pipeline) the results into an output collection. To use the $merge stage, it must be the last stage
+     * in the pipeline.
+     * @param value
+     * @constructor
+     */
+    public Merge(value: any): this {
+        return this.addStage(&#x27;merge&#x27;, value);
+    }
+    /**
+     * Writes the resulting documents of the aggregation pipeline to a collection. To use the $out stage, it must be the
+     * last stage in the pipeline.
+     * @param value
+     * @constructor
+     */
+    public Out(value: any): this {
+        return this.addStage(&#x27;out&#x27;, value);
+    }
+    /**
+     * Returns plan cache information for a collection.
+     * @param value
+     * @constructor
+     */
+    public PlanCacheStats(value: any): this {
+        return this.addStage(&#x27;planCacheStats&#x27;, value);
+    }
+    /**
+     * Passes along the documents with the requested fields to the next stage in the pipeline. The specified fields can be
+     * existing fields from the input documents or newly computed fields.
+     *
+     * @param value Include OR Exclude Existing Fields
+     * documents, you must explicitly specify the suppression of the _id field in $project by passing false.
+     * @constructor
+     */
+    public Project(value: any): this {
+        return this.addStage(&#x27;project&#x27;, value);
+    }
+    /**
+     * Reshapes each document in the stream by restricting the content for each document based on information stored in
+     * the documents themselves. Incorporates the functionality of $project and $match. Can be used to implement field
+     * level redaction. For each input document, outputs either one or zero documents.
+     * @param value
+     * @constructor
+     */
+    public Redact(value: any): this {
+        return this.addStage(&#x27;redact&#x27;, value);
+    }
+    /**
+     * Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+     * document, including the _id field. Specify a document embedded in the input document to promote the embedded
+     * document to the top level.
+     * $replaceWith is an alias for $replaceRoot stage.
+     * @param value
+     * @constructor
+     */
+    public ReplaceRoot(value: any): this {
+        return this.addStage(&#x27;replaceRoot&#x27;, value);
+    }
+    /**
+     * Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+     * document, including the _id field. Specify a document embedded in the input document to promote the embedded
+     * document to the top level.
+     * $replaceWith is an alias for $replaceRoot stage.
+     * @param value
+     * @constructor
+     */
+    public ReplaceWith(value: any): this {
+        return this.addStage(&#x27;replaceWith&#x27;, value);
+    }
+    /**
+     * Randomly selects the specified number of documents from its input.
+     * @param value
+     * @constructor
+     */
+    public Sample(value: any): this {
+        return this.addStage(&#x27;sample&#x27;, value);
+    }
+    /**
+     * Performs a full-text search of the field or fields in an Atlas collection.
+     * $search is only available for MongoDB Atlas clusters, and is not available for self-managed deployments.
+     * @param value
+     * @constructor
+     */
+    public Search(value: any): this {
+        return this.addStage(&#x27;search&#x27;, value);
+    }
+    /**
+     * Adds new fields to documents. Similar to $project, $set reshapes each document in the stream; specifically, by
+     * adding new fields to output documents that contain both the existing fields from the input documents and the
+     * newly added fields.
+     * $set is an alias for $addFields stage.
+     * @param value
+     * @constructor
+     */
+    public Set(value: any): this {
+        return this.addStage(&#x27;set&#x27;, value);
+    }
+    /**
+     * Skips the first n documents where n is the specified skip number and passes the remaining documents unmodified to
+     * the pipeline. For each input document, outputs either zero documents (for the first n documents) or one document
+     * (if after the first n documents).
+     * @param value
+     * @constructor
+     */
+    public Skip(value: any): this {
+        return this.addStage(&#x27;skip&#x27;, value);
+    }
+    /**
+     * Reorders the document stream by a specified sort key. Only the order changes; the documents remain unmodified.
+     * For each input document, outputs one document.
+     * @param value
+     * @constructor
+     */
+    public Sort(value: any): this {
+        return this.addStage(&#x27;sort&#x27;, value);
+    }
+    /**
+     * Groups incoming documents based on the value of a specified expression, then computes the count of documents in
+     * each distinct group.
+     * @param value
+     * @constructor
+     */
+    public SortByCount (value: any): this {
+        return this.addStage(&#x27;sortByCount&#x27;, value);
+    }
+    /**
+     * Performs a union of two collections; i.e. combines pipeline results from two collections into a single result
+     * set.
+     * @param value
+     * @constructor
+     */
+    public UnionWith(value: any): this {
+        return this.addStage(&#x27;unionWith&#x27;, value);
+    }
+    /**
+     * Removes/excludes fields from documents.
+     * $unset is an alias for $project stage that removes fields.
+     * @param value
+     * @constructor
+     */
+    public Unset(value: string[]): this {
+        return this.addStage(&#x27;unset&#x27;, value);
+    }
+    /**
+     * Deconstructs an array field from the input documents to output a document for each element. Each output document
+     * replaces the array with an element value. For each input document, outputs n documents where n is the number of
+     * array elements and can be zero for an empty array.
+     * @param value
+     * @constructor
+     */
+    public Unwind(value: any): this {
+        return this.addStage(&#x27;unwind&#x27;, value);
+    }
+
+    /**
+     * Adds a new stage to the pipeline
+     * @param stageTypeLabel the type of stage
+     * @param stageValue the value of the stage
+     * @returns the builder allowing to chain the methods
+     */
+    private readonly addStage &#x3D; (stageTypeLabel: StageLabel, stageValue: any) &#x3D;&gt; {
+        const payloadError &#x3D; this.validatePayload(stageTypeLabel, stageValue);
+        if (
+            (!stageValue || payloadError) &amp;&amp;
+            this.debugBuild.status
+        ) {
+            const errorMessage &#x3D; !stageValue
+                ? &#x60;The ${stageTypeLabel} stage value is not valid.&#x60;
+                : payloadError;
+            throw new PipelineError(errorMessage);
+        }
+
+        this.stageList.push({
+            [getStageTypeValue(stageTypeLabel)]: stageValue
+        });
+
+        this.saveActionToDebugHistoryList(&#x27;addStage&#x27;, { stageTypeLabel, stageValue: JSON.stringify(stageValue) });
+        return this;
+    }
+
+    /**
+     * Check the validity of the pipeline
+     * @param pipelineBuilt The pipeline built
+     */
+    private readonly verifyPipelineValidity &#x3D; (pipelineBuilt: StageInterface[]) &#x3D;&gt; {
+        this.log(&#x27;info&#x27;, &#x60;verifyPipelineValidity of ${this.pipelineName} pipeline:\n&#x60;, JSON.stringify(this.stageList));
+        if (!pipelineBuilt.length) {
+            throw new PipelineError(&#x60;Error, ${this.pipelineName} pipeline is empty!&#x60;);
+        }
+
+        this.stageErrorList &#x3D; pipelineBuilt.map(
+            s &#x3D;&gt; this.isValidStage(s)
+        ).filter(error &#x3D;&gt; error) as StageErrorInterface[];
+
+        if (this.stageErrorList.length) {
+            const errorMessage &#x3D; this.stageErrorList.map(
+                (e, i) &#x3D;&gt; &#x60;${i + 1}) ${e.message}&#x60;
+            ).join(&#x27;\n&#x27;);
+            this.log(&#x27;error&#x27;, errorMessage, &#x27;stageErrorList&#x27;, this.stageErrorList);
+
+            this.saveActionToDebugHistoryList(&#x27;stageErrorList&#x27;, { errorMessage });
+            throw new PipelineError(errorMessage);
+        }
+        return pipelineBuilt;
+    }
+
+    /**
+     * Check the validity of a stage
+     * @param stageToValidate The stage to validate
+     * @private
+     */
+    private readonly isValidStage &#x3D; (stageToValidate: StageInterface) &#x3D;&gt; {
+        const stageType: string &#x3D; Object.keys(stageToValidate)[0].substr(1);
+        const stageValue: any &#x3D; Object.values(stageToValidate)[0];
+        const payloadError &#x3D; this.validatePayload(stageType, stageValue);
+
+        if (!stageValue || payloadError) {
+            const errorMessage &#x3D; !stageValue
+                ? &#x60;The ${stageType} stage value is not valid.&#x60;
+                : payloadError;
+
+            this.saveActionToDebugHistoryList(
+                &#x27;Stage Error&#x27;,
+                { message: errorMessage },
+                stageType,
+                { invalidStage: JSON.stringify(stageToValidate) }
+            );
+            return {
+                stageType,
+                message: errorMessage
+            };
+        }
+
+        return null;
+    }
+
+    /**
+     * Checks the compliance of the stage payload
+     * @param stageType
+     * @param payload
+     */
+    private readonly validatePayload &#x3D; (stageType: string, payload: any) &#x3D;&gt; {
+        if (!PAYLOAD_VALIDATION_ENABLED.includes(stageType)) {
+            return &#x27;&#x27;;
+        }
+
+        return this.stageValidatorsBundle[stageType](payload);
+    }
+
+    /**
+     * Enables / disables debugging mode
+     * @param debugBuildStatus
+     */
+    private readonly toggleDebug &#x3D; (debugBuildStatus: boolean) &#x3D;&gt; {
+        this.debugBuild.status &#x3D; debugBuildStatus;
+        this.saveActionToDebugHistoryList(&#x27;toggleDebug&#x27;, { debugBuildStatus });
+        return debugBuildStatus;
+    }
+
+    /**
+     * Save all actions in the history if debug mode is enabled
+     * @param action The type of action to save
+     * @param argList A list of information on the current state or the values that could have caused instability of the
+     * builder
+     * @private
+     */
+    private readonly saveActionToDebugHistoryList &#x3D; (action: string, ...argList: any[]) &#x3D;&gt; {
+        if (!this.debugBuild.status) {
+            return;
+        }
+
+        const historyBundle: {
+            date: any;
+            action: any;
+            pipeline: any;
+            value?: any;
+        } &#x3D; { date: this.getCurrentDate(), action: &#x60;${this.pipelineName} &#x3D;&gt; ${action}&#x60;, pipeline: this.stageList };
+
+        if (argList &amp;&amp; argList.length) {
+            historyBundle.value &#x3D; JSON.stringify(argList.length &gt; 1? argList : argList[0]);
+        }
+
+        this.debugBuild.historyList.push(historyBundle);
+        this.log(&#x27;info&#x27;, &#x27;saveToDebugActionList&#x27;, historyBundle);
+    }
+
+    // Utils
+    /**
+     * Converts a list of objects to one
+     * @param list
+     * @constructor
+     */
+    private readonly ToObject &#x3D; (list: { [key: string]: any }[]) &#x3D;&gt; {
+        const objectToReturn: { [key: string]: any } &#x3D; {};
+        list.forEach(element &#x3D;&gt; objectToReturn[Object.keys(element)[0]] &#x3D; Object.values(element)[0]);
+        return objectToReturn;
+    }
+    /**
+     * Returns the current date in the expected format if specified. ISO by default.
+     * @param type Default to ISO
+     */
+    private readonly getCurrentDate &#x3D; (type &#x3D; &#x27;ISO&#x27;) &#x3D;&gt; {
+        return moment().tz(APP_TIMEZONE).format(DATE_FORMAT[type]);
+    }
+
+    /**
+     * Displays the messages passed as parameters in the console
+     * @param type The type of log to display
+     * @param messageList Messages to display
+     * @private
+     */
+    private readonly log &#x3D; (type: &#x27;info&#x27; | &#x27;warn&#x27; | &#x27;error&#x27;, ...messageList: any[]) &#x3D;&gt; {
+        if (this.logsEnabled) {
+            console[type](&#x60;${this.getCurrentDate()} - ${this.pipelineName}:\n&#x60;, ...messageList);
+        }
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'PipelineBuilder.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mongodb-pipeline-builder documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="imagesavicon.ico">
+	      <link rel="stylesheet" href="stylestyle.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href=".." class="navbar-brand">mongodb-pipeline-builder documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p style="text-align: center; width: 100%;">
+
+<p><a href="https://app.circleci.com/pipelines/github/MikeDev75015/mongodb-pipeline-builder"><img src="https://circleci.com/gh/MikeDev75015/mongodb-pipeline-builder.svg?style=shield" alt="CircleCI" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=alert_status" alt="Quality Gate Status" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=sqale_rating" alt="Maintainability Rating" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=reliability_rating" alt="Reliability Rating" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=security_rating" alt="Security Rating" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=coverage" alt="Coverage" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=ncloc" alt="Lines of Code" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=duplicated_lines_density" alt="Duplicated Lines (%)" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=code_smells" alt="Code Smells" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=sqale_index" alt="Technical Debt" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=bugs" alt="Bugs" class="img-responsive"></a>
+<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=vulnerabilities" alt="Vulnerabilities" class="img-responsive"></a></p>
+<h1 id="mongodb-pipeline-builder"><code>mongodb-pipeline-builder</code></h1>
+<h2 id="span-styledisplay-block-font-weight-bold-whitespace-nowrap-pre-release-span"><span style="display: block; font-weight: bold; whitespace: nowrap;">[ pre-release ]</span></h2>
+</p>
+
+<p style="text-align: justify; width: 100%;font-size: 15px;">
+is a pipeline builder for the db.collection.aggregate method and db.aggregate method. It will simplify pipelines by making them more
+readable and much easier to edit. It also allows you to test your pipelines on a dataset in order to verify them. Pipeline stages appear in an array. Documents pass
+through the stages in sequence.
+</p>
+
+<h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
+<h3 id="npm-i-mongodb-pipeline-builderlatest---save">npm i mongodb-pipeline-builder@latest --save</h3>
+<h2 id="usage">Usage</h2>
+<p style="font-size: 15px;">
+import { PipelineBuilder } from 'mongodb-pipeline-builder';<br>
+import { EqualityPayload, Expression, List, Only, Property } from 'mongodb-pipeline-builder/helpers';<br>
+import { ArrayElemAt, Equal } from 'mongodb-pipeline-builder/operators';
+</p>
+
+<p style="font-size: 15px;">
+const myNewPipeline = new PipelineBuilder('name-of-my-new-pipeline')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Match( Expression( Equal( '$id' , userId ) ) )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Lookup( EqualityPayload( 'profiles', 'profile', 'profileId', 'id' ) )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Project( Only( 'firstname', 'lastname', 'email' ) )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.AddFields( List(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property( 'skills', ArrayElemAt( '$profile.skills', 0 ) ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property( 'availability', ArrayElemAt( '$profile.availability', 0 ) ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;) )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Unset(&nbsp;List(&nbsp;'profile'&nbsp;)&nbsp;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.getPipeline();
+</p>
+
+<p>
+*** If no helper is available for a stage, use its method and pass it a valid value as a parameter.
+</p>
+
+<h3 id="is-equivalent-to">is equivalent to:</h3>
+<p style="font-size: 15px;">
+const myNewPipeline = [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$match:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$expr:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$eq:&nbsp;[ '$id', userId ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$lookup:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from:&nbsp;'profiles',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as:&nbsp;'profile',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localField:&nbsp;'profileId',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreignField:&nbsp;'id'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$project:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_id:&nbsp;0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstname:&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastname:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$addFields:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skills:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$arrayElemAt('$profile.skills', 0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availability:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$arrayElemAt('$profile.availability', 0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$unset:&nbsp;[ 'profile' ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+];<br>
+</p>
+
+<h3 id="soon-more-complex-examples-will-be-available">Soon more complex examples will be available!</h3>
+<p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
+
+<p style="font-size: 15px;">
+AddFields | Bucket | BucketAuto | CollStats | Count | Facet | GeoNear | GraphLookup | Group | IndexStats | Limit | ListSessions | Lookup | Match | Merge | Out | PlanCacheStats | Project | Redact | ReplaceRoot | ReplaceWith | Sample | Search | Set | Skip | Sort | SortByCount | UnionWith | Unset | Unwind
+</p>
+
+<p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Helpers</a> ]</p>
+
+<p style="font-size: 15px;">
+AddFields( Property | List( Property, Property, ... )<br>
+Lookup( ConditionPayload | EqualityPayload )<br>
+Match( Expression | Field | "any valid read operation request syntax" )<br>
+Project( Only | Ignore )<br>
+Unset( List )
+</p>
+
+<p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/" target="_blank">Aggregation Pipeline Operators</a> ]</p>
+
+<p style="font-size: 15px;">
+Absolute | Accumulator | Acos | Acosh | Add | AddToSet | AllElementsTrue | And | AnyElementTrue | ArrayElemAt | ArrayToObject | Asin | Asinh | Atan | Atan2 | Atanh | Avg | BinarySize | BsonSize | Ceil | Compare | Concat | ConcatArrays | Cond | Convert | Cos | Cosh | DateFromParts | DateFromString | DateToParts | DateToString | DayOfMonth | DayOfWeek | DayOfYear | DegreesToRadians | Divide | Equal | Exponent | Filter | First | Floor | FunctionOperator | GreaterThan | GreaterThanEqual | Hour | IfNull | Ignore | In | IndexOfArray | IndexOfBytes | IndexOfCP | IsArray | IsNumber | IsoDayOfWeek | IsoWeek | IsoWeekYear | Last | LessThan | LessThanEqual | Let | Literal | Log | Log10 | Ltrim | MapOperator | Max | MergeObjects | Meta | Millisecond | Min | Minute | Mod | Month | Multiply | NaturalLog | Not | NotEqual | ObjectToArray | Only | Or | Pow | Push | RadiansToDegrees | Rand | Range | Reduce | RegexFind | RegexFindAll | RegexMatch | ReplaceAll | ReplaceOne | ReverseArray | Round | Rtrim | SampleRate | Second | SetDifference | SetEquals | SetIntersection | SetIsSubset | SetUnion | Sin | Sinh | Size | Slice | Split | Sqrt | StdDevPop | StdDevSamp | StrCaseCmp | StrLenBytes | StrLenCP | Substr | SubstrBytes | SubstrCP | Subtract | Sum | Switch | Tan | Tanh | ToBool | ToDate | ToDecimal | ToDouble | ToInt | ToLong | ToLower | ToObjectId | ToString | ToUpper | Trim | Trunc | Type | Week | Year | Zip"
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="jsibs/custom-elements.min.js"></script>
+       <script src="jsibs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="jsibs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="jsenu-wc.js" defer></script>
+
+       <script src="jsibs/bootstrap-native.js"></script>
+
+       <script src="jsibs/es6-shim.min.js"></script>
+       <script src="jsibs/EventDispatcher.js"></script>
+       <script src="jsibs/promise.min.js"></script>
+       <script src="jsibs/zepto.min.js"></script>
+
+       <script src="jsompodoc.js"></script>
+
+       <script src="jsabs.js"></script>
+       <script src="jsenu.js"></script>
+       <script src="jsibs/clipboard.min.js"></script>
+       <script src="jsibs/prism.js"></script>
+       <script src="jsourceCode.js"></script>
+          <script src="jsearch/search.js"></script>
+          <script src="jsearch/lunr.min.js"></script>
+          <script src="jsearch/search-lunr.js"></script>
+          <script src="jsearch/search_index.js"></script>
+       <script src="jsazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
