@@ -282,7 +282,7 @@ and the _id field. If specifying a different on identifier, the on must contain 
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>whenMatched:     <code>&quot;replace&quot; | &quot;keepExisting&quot; | &quot;merge&quot; | &quot;fail&quot; | &quot;pipeline&quot;</code>
+                                        <code>whenMatched:         <code><a href="../miscellaneous/typealiases.html#whenMatched" target="_self" >whenMatched</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -290,7 +290,7 @@ and the _id field. If specifying a different on identifier, the on must contain 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>&quot;replace&quot; | &quot;keepExisting&quot; | &quot;merge&quot; | &quot;fail&quot; | &quot;pipeline&quot;</code>
+                                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#whenMatched" target="_self" >whenMatched</a></code>
 
                                         </td>
                                     </tr>
@@ -562,7 +562,7 @@ let specification is omitted.</p>
      *
      * The user-defined variables in the let field, i.e. $$&lt;uservariable&gt;.&lt;field&gt;.
      */
-    whenMatched?: &#x27;replace&#x27; | &#x27;keepExisting&#x27; | &#x27;merge&#x27; | &#x27;fail&#x27; | &#x27;pipeline&#x27;;
+    whenMatched?: whenMatched;
     /**
      * Optional. Specifies variables accessible for use in the whenMatched pipeline
      *
@@ -601,6 +601,8 @@ let specification is omitted.</p>
      */
     whenNotMatched?: &#x27;insert&#x27; | &#x27;discard&#x27; | &#x27;fail&#x27;;
 }
+
+declare type whenMatched &#x3D; &#x27;replace&#x27; | &#x27;keepExisting&#x27; | &#x27;merge&#x27; | &#x27;fail&#x27; | &#x27;pipeline&#x27;;
 </code></pre>
     </div>
 </div>
