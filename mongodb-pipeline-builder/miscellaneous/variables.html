@@ -181,7 +181,7 @@
                             <a href="#Exponent" title="lib/operators/arithmetic/index.ts"><b>Exponent</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#Expression" title="lib/helpers/match/index.ts"><b>Expression</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#Expression" title="lib/operators/misc/index.ts"><b>Expression</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Field" title="lib/helpers/commons/index.ts"><b>Field</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -208,13 +208,16 @@
                             <a href="#GreaterThanEqual" title="lib/operators/comparison/index.ts"><b>GreaterThanEqual</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#GroupByPayload" title="lib/helpers/bucket/index.ts"><b>GroupByPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#Hour" title="lib/operators/date/index.ts"><b>Hour</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#IfNull" title="lib/operators/conditional/index.ts"><b>IfNull</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#Ignore" title="lib/helpers/project/index.ts"><b>Ignore</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#IgnorePayload" title="lib/helpers/project/index.ts"><b>IgnorePayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#In" title="lib/operators/array/index.ts"><b>In</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -268,6 +271,9 @@
                             <a href="#Log10" title="lib/operators/arithmetic/index.ts"><b>Log10</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#lookupEqualityValidator" title="lib/validators/index.ts"><b>lookupEqualityValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#lookupPayloadValidator" title="lib/validators/index.ts"><b>lookupPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
@@ -319,7 +325,7 @@
                             <a href="#ObjectToArray" title="lib/operators/array/index.ts"><b>ObjectToArray</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#Only" title="lib/helpers/project/index.ts"><b>Only</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#OnlyPayload" title="lib/helpers/project/index.ts"><b>OnlyPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Or" title="lib/operators/boolean/index.ts"><b>Or</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -487,10 +493,10 @@
                             <a href="#Type" title="lib/operators/type/index.ts"><b>Type</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#VALID_STAGE_LIST" title="lib/constants/index.ts"><b>VALID_STAGE_LIST</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#" title="lib/environments/index.ts"><b></b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#" title="lib/environments/index.ts"><b></b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#VALID_STAGE_LIST" title="lib/constants/index.ts"><b>VALID_STAGE_LIST</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Week" title="lib/operators/date/index.ts"><b>Week</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -4465,7 +4471,7 @@ year) and 53 (leap year).</p>
             </tbody>
         </table>
 </section>
-    <h3>lib/helpers/match/index.ts</h3>
+    <h3>lib/operators/misc/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -4495,172 +4501,7 @@ expression.</p>
 
             </tbody>
         </table>
-</section>
-    <h3>lib/helpers/commons/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Field"></a>
-                        <span class="name">
-                            <b>
-                            Field</b>
-                            <a href="#Field"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(fieldName: string, fieldValue: any) &#x3D;&gt; {
-    return { [fieldName]: fieldValue };
-}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Creates a javascript object with the name and the value passed in parameter</p>
-<p>With .Match(), returns all documents whose specified field contains the searched value.</p>
-<p>With .AddFields, adds a new property to returned documents</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
         <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="List"></a>
-                        <span class="name">
-                            <b>
-                            List</b>
-                            <a href="#List"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(...args: any[]) &#x3D;&gt; args</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Create a list with the elements passed in parameter</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>lib/interfaces/core/stage-type.interface.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="getStageTypeValue"></a>
-                        <span class="name">
-                            <b>
-                            getStageTypeValue</b>
-                            <a href="#getStageTypeValue"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(label: StageLabel) &#x3D;&gt; {
-    return StageTypeEnum[label];
-}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Returns the stage value for a stage type</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>lib/helpers/project/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Ignore"></a>
-                        <span class="name">
-                            <b>
-                            Ignore</b>
-                            <a href="#Ignore"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(...properties: string[]) &#x3D;&gt; {
-    const projectIgnoreObject: {[index: string]: any} &#x3D; {};
-    properties.forEach(prop &#x3D;&gt; projectIgnoreObject[prop] &#x3D; 0);
-    return projectIgnoreObject;
-}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Returns expected project stage Ignore Object</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Only"></a>
-                        <span class="name">
-                            <b>
-                            Only</b>
-                            <a href="#Only"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(...properties: string[]) &#x3D;&gt; {
-    const projectOnlyObject: {[index: string]: any} &#x3D; properties.includes(&#x27;_id&#x27;) ? {} : { _id: 0 };
-    properties.forEach(prop &#x3D;&gt; {
-        if (prop !&#x3D;&#x3D; &#x27;_id&#x27;) {
-            projectOnlyObject[prop] &#x3D; 1;
-        }
-    });
-    return projectOnlyObject;
-}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Returns expected project stage Only Object</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>lib/operators/misc/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
@@ -4829,9 +4670,259 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             </tbody>
         </table>
 </section>
+    <h3>lib/helpers/commons/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Field"></a>
+                        <span class="name">
+                            <b>
+                            Field</b>
+                            <a href="#Field"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(fieldName: string, fieldValue: any) &#x3D;&gt; {
+    return { [fieldName]: fieldValue };
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Creates a javascript object with the name and the value passed in parameter</p>
+<p>With .Match(), returns all documents whose specified field contains the searched value.</p>
+<p>With .AddFields, adds a new property to returned documents</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="List"></a>
+                        <span class="name">
+                            <b>
+                            List</b>
+                            <a href="#List"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(...args: any[]) &#x3D;&gt; args</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Create a list with the elements passed in parameter</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/interfaces/core/stage-type.interface.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getStageTypeValue"></a>
+                        <span class="name">
+                            <b>
+                            getStageTypeValue</b>
+                            <a href="#getStageTypeValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(label: StageLabel) &#x3D;&gt; {
+    return StageTypeEnum[label];
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns the stage value for a stage type</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/bucket/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GroupByPayload"></a>
+                        <span class="name">
+                            <b>
+                            GroupByPayload</b>
+                            <a href="#GroupByPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+    groupBy: any,
+    boundaries: any[],
+    defaultId: string | number | null &#x3D; &quot;Other&quot;,
+    output: any | null &#x3D; { &quot;count&quot;: { $sum: 1 }}
+) &#x3D;&gt; {
+
+    const payload &#x3D; {
+        groupBy: groupBy,
+        boundaries: boundaries,
+        default: defaultId,
+        output: output
+    } as BucketStageInterface;
+
+    if (!defaultId) {
+        delete payload.default;
+    }
+
+    if (!output) {
+        delete payload.output;
+    }
+
+    return payload;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>GroupBy Payload</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/project/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="IgnorePayload"></a>
+                        <span class="name">
+                            <b>
+                            IgnorePayload</b>
+                            <a href="#IgnorePayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(...properties: string[]) &#x3D;&gt; {
+    const projectIgnoreObject: {[index: string]: any} &#x3D; {};
+    properties.forEach(prop &#x3D;&gt; projectIgnoreObject[prop] &#x3D; 0);
+    return projectIgnoreObject;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns expected project stage Ignore Object</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="OnlyPayload"></a>
+                        <span class="name">
+                            <b>
+                            OnlyPayload</b>
+                            <a href="#OnlyPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(...properties: string[]) &#x3D;&gt; {
+    const projectOnlyObject: {[index: string]: any} &#x3D; properties.includes(&#x27;_id&#x27;) ? {} : { _id: 0 };
+    properties.forEach(prop &#x3D;&gt; {
+        if (prop !&#x3D;&#x3D; &#x27;_id&#x27;) {
+            projectOnlyObject[prop] &#x3D; 1;
+        }
+    });
+    return projectOnlyObject;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns expected project stage Only Object</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
     <h3>lib/validators/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lookupEqualityValidator"></a>
+                        <span class="name">
+                            <b>
+                            lookupEqualityValidator</b>
+                            <a href="#lookupEqualityValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(payload: LookupStageInterface) &#x3D;&gt; {
+    if (!payload.localField) {
+        return &#x27;The localField property is required when foreignField is specified.&#x27;;
+    } else if (!payload.foreignField) {
+        return &#x27;The foreignField property is required when localfield is specified.&#x27;;
+    } else {
+        return &#x27;&#x27;;
+    }
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Check that all the fields necessary for an equality payload are present</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
@@ -4845,13 +4936,15 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(payload: any) &#x3D;&gt; {
+                            <i>Default value : </i><code>(payload: LookupStageInterface) &#x3D;&gt; {
     if (!payload.from &amp;&amp; !payload.as) {
         return &#x27;The from and as properties are required&#x27;;
     } else if (!payload.from) {
         return &#x27;The from property is required&#x27;;
     } else if (!payload.as) {
         return &#x27;The as property is required&#x27;;
+    } else if (payload.localField || payload.foreignField) {
+        return lookupEqualityValidator(payload);
     } else {
         return &#x27;&#x27;;
     }
@@ -4861,7 +4954,7 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Check the mandatory properties of the lookup payload</p>
+                        <div class="io-description"><p>Checks the presence of mandatory fields</p>
 </div>
                     </td>
                 </tr>
