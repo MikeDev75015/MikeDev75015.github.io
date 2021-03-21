@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>BucketAutoStageInterface</li>
+  <li>UnwindStageInterface</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,14 +61,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>lib/interfaces/stages/bucket-auto-stage.interface.ts</code>
+            <code>lib/interfaces/stages/unwind-stage.interface.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>BucketAuto Stage Interface</p>
+                <p>Unwind Stage Interface</p>
 
             </p>
 
@@ -86,18 +86,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#buckets">buckets</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#includeArrayIndex">includeArrayIndex</a>
+                                </li>
+                                <li>
+                                        <a href="#path">path</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#granularity">granularity</a>
-                                </li>
-                                <li>
-                                        <a href="#groupBy">groupBy</a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#output">output</a>
+                                        <a href="#preserveNullAndEmptyArrays">preserveNullAndEmptyArrays</a>
                                 </li>
                             </ul>
                         </td>
@@ -114,48 +111,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="buckets"></a>
-                                        <span class="name"><b>buckets</b><a href="#buckets"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="includeArrayIndex"></a>
+                                        <span class="name"><b>includeArrayIndex</b><a href="#includeArrayIndex"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>buckets:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>A positive 32-bit integer that specifies the number of buckets into which input documents are grouped.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="granularity"></a>
-                                        <span class="name"><b>granularity</b><a href="#granularity"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>granularity:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>includeArrayIndex:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -179,23 +141,8 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Optional. A string that specifies the preferred number series to use to ensure that the calculated boundary edges
-end on preferred round numbers or their powers of 10.</p>
-<p>Available only if the all groupBy values are numeric and none of them are NaN.</p>
-<p>The suppported values of granularity are:</p>
-<p>&quot;R5&quot;
-&quot;R10&quot;
-&quot;R20&quot;
-&quot;R40&quot;
-&quot;R80&quot;
-&quot;1-2-5&quot;
-&quot;E6&quot;
-&quot;E12&quot;
-&quot;E24&quot;
-&quot;E48&quot;
-&quot;E96&quot;
-&quot;E192&quot;
-&quot;POWERSOF2&quot;</p>
+                                    <div class="io-description"><p>Optional. The name of a new field to hold the array index of the element. The name cannot start with a dollar
+sign $.</p>
 </div>
                                 </td>
                             </tr>
@@ -205,13 +152,13 @@ end on preferred round numbers or their powers of 10.</p>
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="groupBy"></a>
-                                        <span class="name"><b>groupBy</b><a href="#groupBy"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="path"></a>
+                                        <span class="name"><b>path</b><a href="#path"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>groupBy:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>path:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -219,7 +166,7 @@ end on preferred round numbers or their powers of 10.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -230,8 +177,8 @@ end on preferred round numbers or their powers of 10.</p>
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>An expression to group documents by. To specify a field path, prefix the field name with a dollar sign $ and
-enclose it in quotes.</p>
+                                    <div class="io-description"><p>Field path to an array field. To specify a field path, prefix the field name with a dollar sign $ and enclose in
+quotes.</p>
 </div>
                                 </td>
                             </tr>
@@ -241,13 +188,13 @@ enclose it in quotes.</p>
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="output"></a>
-                                        <span class="name"><b>output</b><a href="#output"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="preserveNullAndEmptyArrays"></a>
+                                        <span class="name"><b>preserveNullAndEmptyArrays</b><a href="#preserveNullAndEmptyArrays"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>output:     <code>literal type</code>
+                                        <code>preserveNullAndEmptyArrays:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -255,7 +202,7 @@ enclose it in quotes.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>literal type</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -271,17 +218,10 @@ enclose it in quotes.</p>
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Optional. A document that specifies the fields to include in the output documents in addition to the _id field.
-To specify the field to include, you must use accumulator expressions:</p>
-<p><outputfield1>: { <accumulator>: <expression1> },</p>
-<p>...</p>
-<p>The default count field is not included in the output document when output is specified. Explicitly specify the
-count expression as part of the output document to include it:</p>
-<p>output: {</p>
-<p><outputfield1>: { <accumulator>: <expression1> },</p>
-<p>...</p>
-<p>count: { $sum: 1 }</p>
-<p>}</p>
+                                    <div class="io-description"><p>Optional.</p>
+<p>If true, if the path is null, missing, or an empty array, $unwind outputs the document.</p>
+<p>If false, if path is null, missing, or an empty array, $unwind does not output a document.</p>
+<p>The default value is false.</p>
 </div>
                                 </td>
                             </tr>
@@ -292,63 +232,27 @@ count expression as part of the output document to include it:</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface BucketAutoStageInterface {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface UnwindStageInterface {
     /**
-     * An expression to group documents by. To specify a field path, prefix the field name with a dollar sign $ and
-     * enclose it in quotes.
+     * Field path to an array field. To specify a field path, prefix the field name with a dollar sign $ and enclose in
+     * quotes.
      */
-    groupBy: any;
+    path: string;
     /**
-     * A positive 32-bit integer that specifies the number of buckets into which input documents are grouped.
+     * Optional. The name of a new field to hold the array index of the element. The name cannot start with a dollar
+     * sign $.
      */
-    buckets: number;
+    includeArrayIndex?: string;
     /**
-     * Optional. A document that specifies the fields to include in the output documents in addition to the _id field.
-     * To specify the field to include, you must use accumulator expressions:
+     * Optional.
      *
-     * &lt;outputfield1&gt;: { &lt;accumulator&gt;: &lt;expression1&gt; },
+     * If true, if the path is null, missing, or an empty array, $unwind outputs the document.
      *
-     * ...
+     * If false, if path is null, missing, or an empty array, $unwind does not output a document.
      *
-     * The default count field is not included in the output document when output is specified. Explicitly specify the
-     * count expression as part of the output document to include it:
-     *
-     * output: {
-     *
-     * &lt;outputfield1&gt;: { &lt;accumulator&gt;: &lt;expression1&gt; },
-     *
-     * ...
-     *
-     * count: { $sum: 1 }
-     *
-     * }
+     * The default value is false.
      */
-    output?: {
-        [key: string]: any;
-    };
-    /**
-     * Optional. A string that specifies the preferred number series to use to ensure that the calculated boundary edges
-     * end on preferred round numbers or their powers of 10.
-     *
-     * Available only if the all groupBy values are numeric and none of them are NaN.
-     *
-     * The suppported values of granularity are:
-     *
-     * &quot;R5&quot;
-     * &quot;R10&quot;
-     * &quot;R20&quot;
-     * &quot;R40&quot;
-     * &quot;R80&quot;
-     * &quot;1-2-5&quot;
-     * &quot;E6&quot;
-     * &quot;E12&quot;
-     * &quot;E24&quot;
-     * &quot;E48&quot;
-     * &quot;E96&quot;
-     * &quot;E192&quot;
-     * &quot;POWERSOF2&quot;
-     */
-    granularity?: string;
+    preserveNullAndEmptyArrays?: boolean;
 }
 </code></pre>
     </div>
@@ -377,7 +281,7 @@ count expression as part of the output document to include it:</p>
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'BucketAutoStageInterface.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UnwindStageInterface.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

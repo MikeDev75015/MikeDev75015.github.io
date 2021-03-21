@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>LookupEqualityPayloadInterface</li>
+  <li>LookupStageInterface</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,14 +61,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>lib/interfaces/stages/lookup-equality-payload.interface.ts</code>
+            <code>lib/interfaces/stages/lookup-stage.interface.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Lookup Equality Payload Interface</p>
+                <p>Lookup Stage Interface</p>
 
             </p>
 
@@ -89,13 +89,23 @@
                                         <a href="#as">as</a>
                                 </li>
                                 <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#foreignField">foreignField</a>
                                 </li>
                                 <li>
                                         <a href="#from">from</a>
                                 </li>
                                 <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#let">let</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#localField">localField</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#pipeline">pipeline</a>
                                 </li>
                             </ul>
                         </td>
@@ -168,6 +178,11 @@ existing field is overwritten.</p>
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -221,6 +236,60 @@ the foreignField, the $lookup treats the value as null for matching purposes.</p
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
+                                        <a name="let"></a>
+                                        <span class="name"><b>let</b><a href="#let"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>let:     <code>literal type</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>literal type</code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Optional. Specifies variables to use in the pipeline field stages. Use the variable expressions to access the
+fields from the documents input to the $lookup stage.</p>
+<p>The pipeline cannot directly access the input document fields. Instead, first define the variables for the input
+document fields, and then reference the variables in the stages in the pipeline.</p>
+<p>NOTE</p>
+<p>To reference variables in pipeline stages, use the &quot;$$<variable>&quot; syntax.</p>
+<p>The let variables can be accessed by the stages in the pipeline, including additional $lookup stages nested in
+the pipeline.</p>
+<p>A $match stage requires the use of an $expr operator to access the variables. $expr allows the use of aggregation
+expressions inside of the $match syntax.</p>
+<p>Without the use of the $expr operator, $match can refer to fields in a document but cannot access variables
+defined by a $lookup let clause.</p>
+<p>The $expr operator only uses indexes on the from collection for equality matches. Non-equality match queries,
+such as range queries, cannot use indexes on the from collection.</p>
+<p>Other (non-$match) stages in the pipeline do not require an $expr operator to access the variables.</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
                                         <a name="localField"></a>
                                         <span class="name"><b>localField</b><a href="#localField"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
@@ -240,6 +309,11 @@ the foreignField, the $lookup treats the value as null for matching purposes.</p
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -254,34 +328,149 @@ the localField, the $lookup treats the field as having a value of null for match
                             </tr>
                         </tbody>
                     </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="pipeline"></a>
+                                        <span class="name"><b>pipeline</b><a href="#pipeline"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>pipeline:         <code><a href="../interfaces/StageInterface.html" target="_self" >StageInterface[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/StageInterface.html" target="_self" >StageInterface[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Specifies the pipeline to run on the joined collection. The pipeline determines the resulting documents from the
+joined collection. To return all documents, specify an empty pipeline [].</p>
+<p>The pipeline cannot include the $out stage or the $merge stage.</p>
+<p>The pipeline cannot directly access the input document fields. Instead, first define the variables for the input
+document fields, and then reference the variables in the stages in the pipeline.</p>
+<p>NOTE</p>
+<p>To reference variables in pipeline stages, use the &quot;$$<variable>&quot; syntax.</p>
+<p>The let variables can be accessed by the stages in the pipeline, including additional $lookup stages nested in
+the pipeline.</p>
+<p>A $match stage requires the use of an $expr operator to access the variables. $expr allows the use of aggregation
+expressions inside of the $match syntax.</p>
+<p>Without the use of the $expr operator, $match can refer to fields in a document but cannot access variables
+defined by a $lookup let clause.</p>
+<p>The $expr operator only uses indexes on the from collection for equality matches. Non-equality match queries,
+such as range queries, cannot use indexes on the from collection.</p>
+<p>Other (non-$match) stages in the pipeline do not require an $expr operator to access the variables.</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface LookupEqualityPayloadInterface {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {StageInterface} from &quot;../core/stage.interface&quot;;
+
+/**
+ * Lookup Stage Interface
+ */
+export interface LookupStageInterface {
     /**
      * Specifies the collection in the same database to perform the join with. The from collection cannot be sharded.
      */
     from: string;
     /**
+     * Specifies the name of the new array field to add to the input documents. The new array field contains the
+     * matching documents from the from collection. If the specified name already exists in the input document, the
+     * existing field is overwritten.
+     */
+    as: string;
+    /**
      * Specifies the field from the documents input to the $lookup stage. $lookup performs an equality match on the
      * localField to the foreignField from the documents of the from collection. If an input document does not contain
      * the localField, the $lookup treats the field as having a value of null for matching purposes.
      */
-    localField: string;
+    localField?: string;
     /**
      * Specifies the field from the documents in the from collection. $lookup performs an equality match on the
      * foreignField to the localField from the input documents. If a document in the from collection does not contain
      * the foreignField, the $lookup treats the value as null for matching purposes.
      */
-    foreignField: string;
+    foreignField?: string;
     /**
-     * Specifies the name of the new array field to add to the input documents. The new array field contains the
-     * matching documents from the from collection. If the specified name already exists in the input document, the
-     * existing field is overwritten.
+     * Optional. Specifies variables to use in the pipeline field stages. Use the variable expressions to access the
+     * fields from the documents input to the $lookup stage.
+     *
+     * The pipeline cannot directly access the input document fields. Instead, first define the variables for the input
+     * document fields, and then reference the variables in the stages in the pipeline.
+     *
+     * NOTE
+     *
+     * To reference variables in pipeline stages, use the &quot;$$&lt;variable&gt;&quot; syntax.
+     *
+     * The let variables can be accessed by the stages in the pipeline, including additional $lookup stages nested in
+     * the pipeline.
+     *
+     * A $match stage requires the use of an $expr operator to access the variables. $expr allows the use of aggregation
+     * expressions inside of the $match syntax.
+     *
+     * Without the use of the $expr operator, $match can refer to fields in a document but cannot access variables
+     * defined by a $lookup let clause.
+     *
+     * The $expr operator only uses indexes on the from collection for equality matches. Non-equality match queries,
+     * such as range queries, cannot use indexes on the from collection.
+     *
+     * Other (non-$match) stages in the pipeline do not require an $expr operator to access the variables.
      */
-    as: string
+    let?: { [key: string]: any },
+    /**
+     * Specifies the pipeline to run on the joined collection. The pipeline determines the resulting documents from the
+     * joined collection. To return all documents, specify an empty pipeline [].
+     *
+     * The pipeline cannot include the $out stage or the $merge stage.
+     *
+     * The pipeline cannot directly access the input document fields. Instead, first define the variables for the input
+     * document fields, and then reference the variables in the stages in the pipeline.
+     *
+     * NOTE
+     *
+     * To reference variables in pipeline stages, use the &quot;$$&lt;variable&gt;&quot; syntax.
+     *
+     * The let variables can be accessed by the stages in the pipeline, including additional $lookup stages nested in
+     * the pipeline.
+     *
+     * A $match stage requires the use of an $expr operator to access the variables. $expr allows the use of aggregation
+     * expressions inside of the $match syntax.
+     *
+     * Without the use of the $expr operator, $match can refer to fields in a document but cannot access variables
+     * defined by a $lookup let clause.
+     *
+     * The $expr operator only uses indexes on the from collection for equality matches. Non-equality match queries,
+     * such as range queries, cannot use indexes on the from collection.
+     *
+     *
+     * Other (non-$match) stages in the pipeline do not require an $expr operator to access the variables.
+     */
+    pipeline?: StageInterface[],
 }
 </code></pre>
     </div>
@@ -310,7 +499,7 @@ the localField, the $lookup treats the field as having a value of null for match
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'LookupEqualityPayloadInterface.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'LookupStageInterface.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

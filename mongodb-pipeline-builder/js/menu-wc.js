@@ -100,6 +100,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/GeoNearStageInterface.html" data-type="entity-link">GeoNearStageInterface</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/GraphLookupStageInterface.html" data-type="entity-link">GraphLookupStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GroupStageInterface.html" data-type="entity-link">GroupStageInterface</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/InitOptionsInterface.html" data-type="entity-link">InitOptionsInterface</a>
                             </li>
                             <li class="link">
@@ -109,10 +115,31 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/LookupEqualityPayloadInterface.html" data-type="entity-link">LookupEqualityPayloadInterface</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/LookupStageInterface.html" data-type="entity-link">LookupStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MergeStageInterface.html" data-type="entity-link">MergeStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/OutStageInterface.html" data-type="entity-link">OutStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ReplaceRootStageInterface.html" data-type="entity-link">ReplaceRootStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/SampleStageInterface.html" data-type="entity-link">SampleStageInterface</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/StageErrorInterface.html" data-type="entity-link">StageErrorInterface</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/StageInterface.html" data-type="entity-link">StageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/UnionWithStageInterface.html" data-type="entity-link">UnionWithStageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/UnwindStageInterface.html" data-type="entity-link">UnwindStageInterface</a>
                             </li>
                         </ul>
                     </li>
