@@ -184,7 +184,7 @@
                             <a href="#Expression" title="lib/helpers/match/index.ts"><b>Expression</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#Field" title="lib/helpers/match/index.ts"><b>Field</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#Field" title="lib/helpers/commons/index.ts"><b>Field</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Filter" title="lib/operators/array/index.ts"><b>Filter</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -329,9 +329,6 @@
                         </li>
                         <li>
                             <a href="#Pow" title="lib/operators/arithmetic/index.ts"><b>Pow</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#Property" title="lib/helpers/commons/index.ts"><b>Property</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Push" title="lib/operators/accumulator/index.ts"><b>Push</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -4498,7 +4495,10 @@ expression.</p>
 
             </tbody>
         </table>
-        <table class="table table-sm table-bordered">
+</section>
+    <h3>lib/helpers/commons/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
@@ -4512,17 +4512,44 @@ expression.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(fieldName: string, searchedValue: any) &#x3D;&gt; {
-    const newObject: {[index: string]: any} &#x3D; {};
-    newObject[fieldName] &#x3D; searchedValue;
-    return newObject;
+                            <i>Default value : </i><code>(fieldName: string, fieldValue: any) &#x3D;&gt; {
+    return { [fieldName]: fieldValue };
 }</code>
                         </td>
                     </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Returns all documents whose specified field contains the searched value.</p>
+                        <div class="io-description"><p>Creates a javascript object with the name and the value passed in parameter</p>
+<p>With .Match(), returns all documents whose specified field contains the searched value.</p>
+<p>With .AddFields, adds a new property to returned documents</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="List"></a>
+                        <span class="name">
+                            <b>
+                            List</b>
+                            <a href="#List"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(...args: any[]) &#x3D;&gt; args</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Create a list with the elements passed in parameter</p>
 </div>
                     </td>
                 </tr>
@@ -4795,63 +4822,6 @@ example, use a $literal expression to a string that starts with a $ to avoid par
                     <td class="col-md-4">
                         <div class="io-description"><p>Randomly select documents at a given rate. Although the exact number of documents selected varies on each run, the
 quantity chosen approximates the sample rate expressed as a percentage of the total number of documents.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>lib/helpers/commons/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="List"></a>
-                        <span class="name">
-                            <b>
-                            List</b>
-                            <a href="#List"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(...args: any[]) &#x3D;&gt; args</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Create a list with the elements passed in parameter</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Property"></a>
-                        <span class="name">
-                            <b>
-                            Property</b>
-                            <a href="#Property"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(name: string, value: any) &#x3D;&gt; ({ [name]: value })</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Creates a javascript object with the name and the value passed in parameter</p>
 </div>
                     </td>
                 </tr>
