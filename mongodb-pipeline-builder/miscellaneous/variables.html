@@ -118,6 +118,9 @@
                             <a href="#Ceil" title="lib/operators/arithmetic/index.ts"><b>Ceil</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#CollectionPayload" title="lib/helpers/union-with/index.ts"><b>CollectionPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#Compare" title="lib/operators/comparison/index.ts"><b>Compare</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
@@ -206,6 +209,9 @@
                         </li>
                         <li>
                             <a href="#GreaterThanEqual" title="lib/operators/comparison/index.ts"><b>GreaterThanEqual</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#GroupByAutoPayload" title="lib/helpers/bucket-auto/index.ts"><b>GroupByAutoPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#GroupByPayload" title="lib/helpers/bucket/index.ts"><b>GroupByPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -404,6 +410,9 @@
                         </li>
                         <li>
                             <a href="#Size" title="lib/operators/array/index.ts"><b>Size</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SizePayload" title="lib/helpers/sample/index.ts"><b>SizePayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Slice" title="lib/operators/array/index.ts"><b>Slice</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -2548,6 +2557,36 @@ an alternative to the Object.bsonSize() method.</p>
 BSON.
 If the argument is null, the expression returns null.
 If the argument resolves to a data type other than an object or null, $bsonSize errors.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/union-with/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CollectionPayload"></a>
+                        <span class="name">
+                            <b>
+                            CollectionPayload</b>
+                            <a href="#CollectionPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(name: string, pipeline: StageInterface[] &#x3D; []) &#x3D;&gt; ({ coll: name, pipeline }) as UnionWithStageInterface</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Collection Payload</p>
 </div>
                     </td>
                 </tr>
@@ -4763,6 +4802,59 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             </tbody>
         </table>
 </section>
+    <h3>lib/helpers/bucket-auto/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GroupByAutoPayload"></a>
+                        <span class="name">
+                            <b>
+                            GroupByAutoPayload</b>
+                            <a href="#GroupByAutoPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+    groupBy: any,
+    buckets: number,
+    output: any | null &#x3D; { &quot;count&quot;: { $sum: 1 }},
+    granularity: GranularityValues &#x3D; null
+) &#x3D;&gt; {
+
+    const payload &#x3D; {
+        groupBy: groupBy,
+        buckets: buckets,
+        output: output,
+        granularity: granularity
+    } as BucketAutoStageInterface;
+
+    if (!granularity) {
+        delete payload.granularity;
+    }
+
+    if (!output) {
+        delete payload.output;
+    }
+
+    return payload;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>GroupByAuto Payload</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
     <h3>lib/helpers/bucket/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -4985,6 +5077,36 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>The moment.js library for formatting dates</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/sample/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SizePayload"></a>
+                        <span class="name">
+                            <b>
+                            SizePayload</b>
+                            <a href="#SizePayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(size &#x3D; 1) &#x3D;&gt; ({ size })</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Size Payload</p>
 </div>
                     </td>
                 </tr>
