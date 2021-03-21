@@ -84,7 +84,6 @@
 <h1 id="mongodb-pipeline-builder"><code>mongodb-pipeline-builder</code></h1>
 </div>
 
-<h2 id="span-styledisplay-block-font-weight-bold-whitespace-nowrap-pre-release-span"><span style="display: block; font-weight: bold; whitespace: nowrap;">[ pre-release ]</span></h2>
 <p><a id="doc-link" style="display: block; cursor: pointer;" href="https://mikedev75015.github.io/mongodb-pipeline-builder" target="_blank">Technical documentation</a></p>
 <p style="text-align: justify; width: 100%;font-size: 15px;">
 is a pipeline builder for the db.collection.aggregate method and db.aggregate method. It will simplify pipelines by making them more
@@ -108,7 +107,7 @@ const myNewPipeline = new PipelineBuilder('name-of-my-new-pipeline')<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.Project( OnlyPayload( 'firstname', 'lastname', 'email' ) )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.AddFields(<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Field( 'skills', ArrayElemAt( '$profile.skills', 0 ) ),<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Field( 'availability', ArrayElemAt( '$profile.availability', 0 ) ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Field( 'availability', ArrayElemAt( '$profile.availability', 0 ) )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.Unset(&nbsp;'profile'&nbsp;)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.getPipeline();
