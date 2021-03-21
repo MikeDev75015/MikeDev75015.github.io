@@ -250,7 +250,10 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$addFields</p>
+                                    <div class="io-description"><p>Adds new fields to documents. Similar to $project, $addFields reshapes each document in the stream; specifically,
+by adding new fields to output documents that contain both the existing fields from the input documents and the
+newly added fields.
+$set is an alias for $addFields.</p>
 </div>
                                 </td>
                             </tr>
@@ -290,7 +293,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$bucket</p>
+                                    <div class="io-description"><p>Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket boundaries.</p>
 </div>
                                 </td>
                             </tr>
@@ -330,7 +333,9 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$bucketAuto</p>
+                                    <div class="io-description"><p>Categorizes incoming documents into a specific number of groups, called buckets, based on a specified expression.
+Bucket boundaries are automatically determined in an attempt to evenly distribute the documents into the specified
+number of buckets.</p>
 </div>
                                 </td>
                             </tr>
@@ -370,7 +375,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$collStats</p>
+                                    <div class="io-description"><p>Returns a count of the number of documents at this stage of the aggregation pipeline.</p>
 </div>
                                 </td>
                             </tr>
@@ -451,7 +456,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$facet</p>
+                                    <div class="io-description"><p>Processes multiple aggregation pipelines within a single stage on the same set of input documents. Enables the
+creation of multi-faceted aggregations capable of characterizing data across multiple dimensions, or facets, in a
+single stage.</p>
 </div>
                                 </td>
                             </tr>
@@ -491,7 +498,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$geoNear</p>
+                                    <div class="io-description"><p>Returns an ordered stream of documents based on the proximity to a geospatial point. Incorporates the functionality
+of $match, $sort, and $limit for geospatial data. The output documents include an additional distance field and can
+include a location identifier field.</p>
 </div>
                                 </td>
                             </tr>
@@ -531,7 +540,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$graphLookup</p>
+                                    <div class="io-description"><p>Performs a recursive search on a collection. To each output document, adds a new array field that contains the
+traversal results of the recursive search for that document.</p>
 </div>
                                 </td>
                             </tr>
@@ -571,7 +581,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$group</p>
+                                    <div class="io-description"><p>Groups input documents by a specified identifier expression and applies the accumulator expression(s), if specified,
+to each group. Consumes all input documents and outputs one document per each distinct group. The output documents
+only contain the identifier field and, if specified, accumulated fields.</p>
 </div>
                                 </td>
                             </tr>
@@ -611,7 +623,7 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$indexStats</p>
+                                    <div class="io-description"><p>Returns statistics regarding the use of each index for the collection.</p>
 </div>
                                 </td>
                             </tr>
@@ -651,7 +663,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$limit</p>
+                                    <div class="io-description"><p>Passes the first n documents unmodified to the pipeline where n is the specified limit. For each input document,
+outputs either one document (for the first n documents) or zero documents (after the first n documents).</p>
 </div>
                                 </td>
                             </tr>
@@ -691,7 +704,7 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$listSessions</p>
+                                    <div class="io-description"><p>Lists all sessions that have been active long enough to propagate to the system.sessions collection.</p>
 </div>
                                 </td>
                             </tr>
@@ -731,7 +744,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$lookup</p>
+                                    <div class="io-description"><p>Performs a left outer join to another collection in the same database to filter in documents from the “joined”
+collection for processing.</p>
 </div>
                                 </td>
                             </tr>
@@ -771,7 +785,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$match</p>
+                                    <div class="io-description"><p>Filters the document stream to allow only matching documents to pass unmodified into the next pipeline stage.
+$match uses standard MongoDB queries. For each input document, outputs either one document (a match) or zero
+documents (no match).</p>
 </div>
                                 </td>
                             </tr>
@@ -811,7 +827,10 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$merge</p>
+                                    <div class="io-description"><p>Writes the resulting documents of the aggregation pipeline to a collection. The stage can incorporate (insert new
+documents, merge documents, replace documents, keep existing documents, fail the operation, process documents with
+a custom update pipeline) the results into an output collection. To use the $merge stage, it must be the last stage
+in the pipeline.</p>
 </div>
                                 </td>
                             </tr>
@@ -851,7 +870,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$out</p>
+                                    <div class="io-description"><p>Writes the resulting documents of the aggregation pipeline to a collection. To use the $out stage, it must be the
+last stage in the pipeline.</p>
 </div>
                                 </td>
                             </tr>
@@ -891,7 +911,7 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$planCacheStats</p>
+                                    <div class="io-description"><p>Returns plan cache information for a collection.</p>
 </div>
                                 </td>
                             </tr>
@@ -931,7 +951,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$project</p>
+                                    <div class="io-description"><p>Reshapes each document in the stream, such as by adding new fields or removing existing fields. For each input
+document, outputs one document.
+See also $unset for removing existing fields.</p>
 </div>
                                 </td>
                             </tr>
@@ -971,7 +993,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$redact</p>
+                                    <div class="io-description"><p>Reshapes each document in the stream by restricting the content for each document based on information stored in
+the documents themselves. Incorporates the functionality of $project and $match. Can be used to implement field
+level redaction. For each input document, outputs either one or zero documents.</p>
 </div>
                                 </td>
                             </tr>
@@ -1011,7 +1035,10 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$replaceRoot</p>
+                                    <div class="io-description"><p>Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+document, including the _id field. Specify a document embedded in the input document to promote the embedded
+document to the top level.
+$replaceWith is an alias for $replaceRoot stage.</p>
 </div>
                                 </td>
                             </tr>
@@ -1051,7 +1078,10 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$replaceWith</p>
+                                    <div class="io-description"><p>Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+document, including the _id field. Specify a document embedded in the input document to promote the embedded
+document to the top level.
+$replaceWith is an alias for $replaceRoot stage.</p>
 </div>
                                 </td>
                             </tr>
@@ -1091,7 +1121,7 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$sample</p>
+                                    <div class="io-description"><p>Randomly selects the specified number of documents from its input.</p>
 </div>
                                 </td>
                             </tr>
@@ -1131,7 +1161,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$search</p>
+                                    <div class="io-description"><p>Performs a full-text search of the field or fields in an Atlas collection.
+$search is only available for MongoDB Atlas clusters, and is not available for self-managed deployments.</p>
 </div>
                                 </td>
                             </tr>
@@ -1171,7 +1202,10 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$set</p>
+                                    <div class="io-description"><p>Adds new fields to documents. Similar to $project, $set reshapes each document in the stream; specifically, by
+adding new fields to output documents that contain both the existing fields from the input documents and the
+newly added fields.
+$set is an alias for $addFields stage.</p>
 </div>
                                 </td>
                             </tr>
@@ -1211,7 +1245,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$skip</p>
+                                    <div class="io-description"><p>Skips the first n documents where n is the specified skip number and passes the remaining documents unmodified to
+the pipeline. For each input document, outputs either zero documents (for the first n documents) or one document
+(if after the first n documents).</p>
 </div>
                                 </td>
                             </tr>
@@ -1251,7 +1287,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$sort</p>
+                                    <div class="io-description"><p>Reorders the document stream by a specified sort key. Only the order changes; the documents remain unmodified.
+For each input document, outputs one document.</p>
 </div>
                                 </td>
                             </tr>
@@ -1291,7 +1328,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$sortByCount</p>
+                                    <div class="io-description"><p>Groups incoming documents based on the value of a specified expression, then computes the count of documents in
+each distinct group.</p>
 </div>
                                 </td>
                             </tr>
@@ -1331,7 +1369,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$unionWith</p>
+                                    <div class="io-description"><p>Performs a union of two collections; i.e. combines pipeline results from two collections into a single result
+set.</p>
 </div>
                                 </td>
                             </tr>
@@ -1371,7 +1410,8 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$unset</p>
+                                    <div class="io-description"><p>Removes/excludes fields from documents.
+$unset is an alias for $project stage that removes fields.</p>
 </div>
                                 </td>
                             </tr>
@@ -1411,7 +1451,9 @@ Passes a document to the next stage that contains a count of the number of docum
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>$unwind</p>
+                                    <div class="io-description"><p>Deconstructs an array field from the input documents to output a document for each element. Each output document
+replaces the array with an element value. For each input document, outputs n documents where n is the number of
+array elements and can be zero for an empty array.</p>
 </div>
                                 </td>
                             </tr>
@@ -1440,19 +1482,24 @@ Passes a document to the next stage that contains a count of the number of docum
  */
 export interface StageInterface {
     /**
-     * $addFields
+     * Adds new fields to documents. Similar to $project, $addFields reshapes each document in the stream; specifically,
+     * by adding new fields to output documents that contain both the existing fields from the input documents and the
+     * newly added fields.
+     * $set is an alias for $addFields.
      */
     $addFields?: { [key: string]: any; } | { [key: string]: any; }[];
     /**
-     * $bucket
+     * Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket boundaries.
      */
     $bucket?: BucketStageInterface;
     /**
-     * $bucketAuto
+     * Categorizes incoming documents into a specific number of groups, called buckets, based on a specified expression.
+     * Bucket boundaries are automatically determined in an attempt to evenly distribute the documents into the specified
+     * number of buckets.
      */
     $bucketAuto?: BucketAutoStageInterface;
     /**
-     * $collStats
+     * Returns a count of the number of documents at this stage of the aggregation pipeline.
      */
     $collStats?: CollStatsStageInterface;
     /**
@@ -1461,103 +1508,140 @@ export interface StageInterface {
      */
     $count?: string;
     /**
-     * $facet
+     * Processes multiple aggregation pipelines within a single stage on the same set of input documents. Enables the
+     * creation of multi-faceted aggregations capable of characterizing data across multiple dimensions, or facets, in a
+     * single stage.
      */
     $facet?: FacetStageInterface;
     /**
-     * $geoNear
+     * Returns an ordered stream of documents based on the proximity to a geospatial point. Incorporates the functionality
+     * of $match, $sort, and $limit for geospatial data. The output documents include an additional distance field and can
+     * include a location identifier field.
      */
     $geoNear?: GeoNearStageInterface;
     /**
-     * $graphLookup
+     * Performs a recursive search on a collection. To each output document, adds a new array field that contains the
+     * traversal results of the recursive search for that document.
      */
     $graphLookup?: GraphLookupStageInterface;
     /**
-     * $group
+     * Groups input documents by a specified identifier expression and applies the accumulator expression(s), if specified,
+     * to each group. Consumes all input documents and outputs one document per each distinct group. The output documents
+     * only contain the identifier field and, if specified, accumulated fields.
      */
     $group?: GroupStageInterface;
     /**
-     * $indexStats
+     * Returns statistics regarding the use of each index for the collection.
      */
     $indexStats?: any;
     /**
-     * $limit
+     * Passes the first n documents unmodified to the pipeline where n is the specified limit. For each input document,
+     * outputs either one document (for the first n documents) or zero documents (after the first n documents).
      */
     $limit?: number;
     /**
-     * $listSessions
+     * Lists all sessions that have been active long enough to propagate to the system.sessions collection.
      */
     $listSessions?: any;
     /**
-     * $lookup
+     * Performs a left outer join to another collection in the same database to filter in documents from the “joined”
+     * collection for processing.
      */
     $lookup?: LookupStageInterface;
     /**
-     * $match
+     * Filters the document stream to allow only matching documents to pass unmodified into the next pipeline stage.
+     * $match uses standard MongoDB queries. For each input document, outputs either one document (a match) or zero
+     * documents (no match).
      */
     $match?: any;
     /**
-     * $merge
+     * Writes the resulting documents of the aggregation pipeline to a collection. The stage can incorporate (insert new
+     * documents, merge documents, replace documents, keep existing documents, fail the operation, process documents with
+     * a custom update pipeline) the results into an output collection. To use the $merge stage, it must be the last stage
+     * in the pipeline.
      */
     $merge?: MergeStageInterface;
     /**
-     * $out
+     * Writes the resulting documents of the aggregation pipeline to a collection. To use the $out stage, it must be the
+     * last stage in the pipeline.
      */
     $out?: OutStageInterface;
     /**
-     * $planCacheStats
+     * Returns plan cache information for a collection.
      */
     $planCacheStats?: any;
     /**
-     * $project
+     * Reshapes each document in the stream, such as by adding new fields or removing existing fields. For each input
+     * document, outputs one document.
+     * See also $unset for removing existing fields.
      */
     $project?: { [key: string]: any };
     /**
-     * $redact
+     * Reshapes each document in the stream by restricting the content for each document based on information stored in
+     * the documents themselves. Incorporates the functionality of $project and $match. Can be used to implement field
+     * level redaction. For each input document, outputs either one or zero documents.
      */
     $redact?: any;
     /**
-     * $replaceRoot
+     * Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+     * document, including the _id field. Specify a document embedded in the input document to promote the embedded
+     * document to the top level.
+     * $replaceWith is an alias for $replaceRoot stage.
      */
     $replaceRoot?: ReplaceRootStageInterface;
     /**
-     * $replaceWith
+     * Replaces a document with the specified embedded document. The operation replaces all existing fields in the input
+     * document, including the _id field. Specify a document embedded in the input document to promote the embedded
+     * document to the top level.
+     * $replaceWith is an alias for $replaceRoot stage.
      */
     $replaceWith?: any;
     /**
-     * $sample
+     * Randomly selects the specified number of documents from its input.
      */
     $sample?: SampleStageInterface;
     /**
-     * $search
+     * Performs a full-text search of the field or fields in an Atlas collection.
+     * $search is only available for MongoDB Atlas clusters, and is not available for self-managed deployments.
      */
     $search?: any;
     /**
-     * $set
+     * Adds new fields to documents. Similar to $project, $set reshapes each document in the stream; specifically, by
+     * adding new fields to output documents that contain both the existing fields from the input documents and the
+     * newly added fields.
+     * $set is an alias for $addFields stage.
      */
     $set?: { [key: string]: any };
     /**
-     * $skip
+     * Skips the first n documents where n is the specified skip number and passes the remaining documents unmodified to
+     * the pipeline. For each input document, outputs either zero documents (for the first n documents) or one document
+     * (if after the first n documents).
      */
     $skip?: number;
     /**
-     * $sort
+     * Reorders the document stream by a specified sort key. Only the order changes; the documents remain unmodified.
+     * For each input document, outputs one document.
      */
     $sort?: { [key: string]: any };
     /**
-     * $sortByCount
+     * Groups incoming documents based on the value of a specified expression, then computes the count of documents in
+     * each distinct group.
      */
     $sortByCount?: any;
     /**
-     * $unionWith
+     * Performs a union of two collections; i.e. combines pipeline results from two collections into a single result
+     * set.
      */
     $unionWith?: UnionWithStageInterface;
     /**
-     * $unset
+     * Removes/excludes fields from documents.
+     * $unset is an alias for $project stage that removes fields.
      */
     $unset?: string | string[];
     /**
-     * $unwind
+     * Deconstructs an array field from the input documents to output a document for each element. Each output document
+     * replaces the array with an element value. For each input document, outputs n documents where n is the number of
+     * array elements and can be zero for an empty array.
      */
     $unwind?: string | UnwindStageInterface;
 }
