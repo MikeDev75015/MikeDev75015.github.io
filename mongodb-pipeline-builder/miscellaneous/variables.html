@@ -238,6 +238,9 @@
                             <a href="#IndexOfCP" title="lib/operators/string/index.ts"><b>IndexOfCP</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#IntoPayload" title="lib/helpers/merge/index.ts"><b>IntoPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#IsArray" title="lib/operators/array/index.ts"><b>IsArray</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
@@ -4970,6 +4973,51 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Returns expected project stage Only Object</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/merge/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="IntoPayload"></a>
+                        <span class="name">
+                            <b>
+                            IntoPayload</b>
+                            <a href="#IntoPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+    into: string | { [key: string]: string },
+    optional?: {
+        on?: string | string[],
+        whenMatched?: WhenMatchedType | StageInterface[],
+        letWhenMatched?: { [key: string]: any },
+        whenNotMatched?: WhenNotMatchedType }
+) &#x3D;&gt; {
+    return {
+        into,
+        on: optional &amp;&amp; optional.on? optional.on : &#x27;_id&#x27;,
+        whenMatched: optional &amp;&amp; optional.whenMatched? optional.whenMatched : &#x27;merge&#x27;,
+        whenNotMatched: optional &amp;&amp; optional.whenNotMatched? optional.whenNotMatched : &#x27;insert&#x27;,
+        let: optional &amp;&amp; optional.letWhenMatched? optional.letWhenMatched : { new: &quot;$$ROOT&quot; }
+    } as MergeStageInterface;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Into Payload</p>
 </div>
                     </td>
                 </tr>
