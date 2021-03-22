@@ -3529,18 +3529,30 @@ specified expression and breaks out of the control flow.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(from: string, as: string, project: {[index: string]: any} &#x3D; {}, pipeline: {[index: string]: any}[] &#x3D; [], sourceList?: string[]) &#x3D;&gt; {
-
+                            <i>Default value : </i><code>(
+    from: string, as: string,
+    optional?: {
+        project?: {[index: string]: any},
+        pipeline?: StageInterface[],
+        sourceList?: string[]
+    }
+) &#x3D;&gt; {
     const letObject: {[index: string]: any} &#x3D; {};
-    if (sourceList &amp;&amp; sourceList[0]) {
-        sourceList.forEach(s &#x3D;&gt; letObject[s] &#x3D; &#x27;$&#x27; + s);
+    let pipeline: StageInterface[] &#x3D; [];
+
+    if (optional &amp;&amp; optional.pipeline) {
+        pipeline &#x3D; optional.pipeline;
     }
 
-    if (project &amp;&amp; Object.keys(project).length) {
-        pipeline &#x3D; pipeline.concat([{ $project: project }]);
+    if (optional &amp;&amp; optional.sourceList &amp;&amp; optional.sourceList[0]) {
+        optional.sourceList.forEach(s &#x3D;&gt; letObject[s] &#x3D; &#x27;$&#x27; + s);
     }
 
-    const payload: LookupConditionPayloadInterface &#x3D; {
+    if (optional &amp;&amp; optional.project &amp;&amp; Object.keys(optional.project).length) {
+        pipeline &#x3D; pipeline.concat([{ $project: optional.project }]);
+    }
+
+    const payload: LookupConditionInterface &#x3D; {
         from: from,
         as: as,
     };
@@ -3593,7 +3605,7 @@ equality match</p>
         localField: localField,
         foreignField: foreignField,
         as: as
-    } as LookupEqualityPayloadInterface;
+    } as LookupEqualityInterface;
 }</code>
                         </td>
                     </tr>
@@ -4824,23 +4836,23 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                             <i>Default value : </i><code>(
     groupBy: any,
     buckets: number,
-    output: any | null &#x3D; { &quot;count&quot;: { $sum: 1 }},
-    granularity: GranularityValues &#x3D; null
+    optional?: {
+        output?: any,
+        granularity?: GranularityValues
+    }
 ) &#x3D;&gt; {
-
-    const payload &#x3D; {
+    const payload: BucketAutoStageInterface &#x3D; {
         groupBy: groupBy,
         buckets: buckets,
-        output: output,
-        granularity: granularity
-    } as BucketAutoStageInterface;
+        output: { &quot;count&quot;: { $sum: 1 } }
+    };
 
-    if (!granularity) {
-        delete payload.granularity;
+    if (optional &amp;&amp; optional.output) {
+        payload.output &#x3D; optional.output;
     }
 
-    if (!output) {
-        delete payload.output;
+    if (optional &amp;&amp; optional.granularity) {
+        payload.granularity &#x3D; optional.granularity;
     }
 
     return payload;
@@ -4877,23 +4889,24 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                             <i>Default value : </i><code>(
     groupBy: any,
     boundaries: any[],
-    defaultId: string | number | null &#x3D; &quot;Other&quot;,
-    output: any | null &#x3D; { &quot;count&quot;: { $sum: 1 }}
+    optional?: {
+        default?: string | number,
+        output?: any
+    }
 ) &#x3D;&gt; {
 
     const payload &#x3D; {
         groupBy: groupBy,
         boundaries: boundaries,
-        default: defaultId,
-        output: output
+        output: { &quot;count&quot;: { $sum: 1 } }
     } as BucketStageInterface;
 
-    if (!defaultId) {
-        delete payload.default;
+    if (optional &amp;&amp; optional.default) {
+        payload.default &#x3D; optional.default;
     }
 
-    if (!output) {
-        delete payload.output;
+    if (optional &amp;&amp; optional.output) {
+        payload.output &#x3D; optional.output;
     }
 
     return payload;

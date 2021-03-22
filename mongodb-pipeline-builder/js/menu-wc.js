@@ -109,10 +109,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/InitOptionsInterface.html" data-type="entity-link">InitOptionsInterface</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/LookupConditionPayloadInterface.html" data-type="entity-link">LookupConditionPayloadInterface</a>
+                                <a href="interfaces/LookupConditionInterface.html" data-type="entity-link">LookupConditionInterface</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/LookupEqualityPayloadInterface.html" data-type="entity-link">LookupEqualityPayloadInterface</a>
+                                <a href="interfaces/LookupEqualityInterface.html" data-type="entity-link">LookupEqualityInterface</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/LookupStageInterface.html" data-type="entity-link">LookupStageInterface</a>
