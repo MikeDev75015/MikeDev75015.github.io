@@ -145,9 +145,6 @@
                             <a href="#Cosh" title="lib/operators/trigonometry/index.ts"><b>Cosh</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#DATE_FORMAT" title="lib/constants/index.ts"><b>DATE_FORMAT</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
-                        </li>
-                        <li>
                             <a href="#DateFromParts" title="lib/operators/date/index.ts"><b>DateFromParts</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
@@ -167,6 +164,9 @@
                         </li>
                         <li>
                             <a href="#DayOfYear" title="lib/operators/date/index.ts"><b>DayOfYear</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DbCollPayload" title="lib/helpers/out/index.ts"><b>DbCollPayload</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#DegreesToRadians" title="lib/operators/trigonometry/index.ts"><b>DegreesToRadians</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -311,9 +311,6 @@
                         </li>
                         <li>
                             <a href="#Mod" title="lib/operators/arithmetic/index.ts"><b>Mod</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#moment" title="lib/main.ts"><b>moment</b>&nbsp;&nbsp;&nbsp;(lib/.../main.ts)</a>
                         </li>
                         <li>
                             <a href="#Month" title="lib/operators/date/index.ts"><b>Month</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -503,12 +500,6 @@
                         </li>
                         <li>
                             <a href="#Type" title="lib/operators/type/index.ts"><b>Type</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#VALID_STAGE_LIST" title="lib/constants/index.ts"><b>VALID_STAGE_LIST</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#" title="lib/environments/index.ts"><b></b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Week" title="lib/operators/date/index.ts"><b>Week</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -3877,114 +3868,6 @@ collection</p>
             </tbody>
         </table>
 </section>
-    <h3>lib/constants/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="DATE_FORMAT"></a>
-                        <span class="name">
-                            <b>
-                            DATE_FORMAT</b>
-                            <a href="#DATE_FORMAT"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>literal type</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>constant containing all date formats used in the application. If empty, the ISO format will be used by default.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="PAYLOAD_VALIDATION_ENABLED"></a>
-                        <span class="name">
-                            <b>
-                            PAYLOAD_VALIDATION_ENABLED</b>
-                            <a href="#PAYLOAD_VALIDATION_ENABLED"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[
-    &#x27;lookup&#x27;
-]</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>list of all stage validators implemented</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="VALID_STAGE_LIST"></a>
-                        <span class="name">
-                            <b>
-                            VALID_STAGE_LIST</b>
-                            <a href="#VALID_STAGE_LIST"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[
-    &#x27;addFields&#x27;, &#x27;bucket&#x27;, &#x27;bucketAuto&#x27;, &#x27;collStats&#x27;, &#x27;count&#x27;, &#x27;facet&#x27;, &#x27;geoNear&#x27;, &#x27;graphLookup&#x27;, &#x27;group&#x27;, &#x27;indexStats&#x27;,
-    &#x27;limit&#x27;, &#x27;listSessions&#x27;, &#x27;lookup&#x27;, &#x27;match&#x27;, &#x27;merge&#x27;, &#x27;out&#x27;, &#x27;planCacheStats&#x27;, &#x27;project&#x27;, &#x27;redact&#x27;, &#x27;replaceRoot&#x27;,
-    &#x27;replaceWith&#x27;, &#x27;sample&#x27;, &#x27;search&#x27;, &#x27;set&#x27;, &#x27;skip&#x27;, &#x27;sort&#x27;, &#x27;sortByCount&#x27;, &#x27;unionWith&#x27;, &#x27;unset&#x27;, &#x27;unwind&#x27;
-]</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>list of all valid stages in a pipeline</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
     <h3>lib/operators/date/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -4518,6 +4401,45 @@ year) and 53 (leap year).</p>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Returns the year for a date as a number (e.g. 2014).</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/helpers/out/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DbCollPayload"></a>
+                        <span class="name">
+                            <b>
+                            DbCollPayload</b>
+                            <a href="#DbCollPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(coll: string, db?: string) &#x3D;&gt; {
+    if (db) {
+        return {
+            db,
+            coll
+        } as OutStageInterface;
+    }
+
+    return coll;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Database Payload</p>
 </div>
                     </td>
                 </tr>
@@ -5115,29 +5037,37 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             </tbody>
         </table>
 </section>
-    <h3>lib/main.ts</h3>
+    <h3>lib/constants/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="moment"></a>
+                        <a name="PAYLOAD_VALIDATION_ENABLED"></a>
                         <span class="name">
                             <b>
-                            moment</b>
-                            <a href="#moment"><span class="icon ion-ios-link"></span></a>
+                            PAYLOAD_VALIDATION_ENABLED</b>
+                            <a href="#PAYLOAD_VALIDATION_ENABLED"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>require(&#x27;moment-timezone&#x27;)</code>
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;lookup&#x27;
+]</code>
                         </td>
                     </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>The moment.js library for formatting dates</p>
+                        <div class="io-description"><p>list of all stage validators implemented</p>
 </div>
                     </td>
                 </tr>
@@ -5168,36 +5098,6 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Size Payload</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>lib/environments/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name=""></a>
-                        <span class="name">
-                            <b>
-                            </b>
-                            <a href="#"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>process.env</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Export environment variables</p>
 </div>
                     </td>
                 </tr>

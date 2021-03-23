@@ -93,16 +93,25 @@ through the stages in sequence.
 
 <h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
 <h3 id="npm-i-mongodb-pipeline-builderlatest---save">npm i mongodb-pipeline-builder@latest --save</h3>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Usage:</h2>
+<h3 id="--with-require">- with require</h3>
+<p style="font-size: 15px;">
+const PipelineBuilder = require("mongodb-pipeline-builder").PipelineBuilder;<br>
+const { EqualityPayload, List, OnlyPayload, Field } = require('mongodb-pipeline-builder/helpers');<br>
+const { ArrayElemAt, Equal, Expression } = require('mongodb-pipeline-builder/operators');
+</p>
+
+<h3 id="--with-import">- with import</h3>
 <p style="font-size: 15px;">
 import { PipelineBuilder } from 'mongodb-pipeline-builder';<br>
 import { EqualityPayload, List, OnlyPayload, Field } from 'mongodb-pipeline-builder/helpers';<br>
 import { ArrayElemAt, Equal, Expression } from 'mongodb-pipeline-builder/operators';
 </p>
 
+<h3 id="code">Code:</h3>
 <p style="font-size: 15px;">
 const myNewPipeline = new PipelineBuilder('name-of-my-new-pipeline')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;.Match( Expression( Equal( '$id' , userId ) ) )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Match( Expression( Equal( '$id' , 123456 ) ) )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.Lookup( EqualityPayload( 'profiles', 'profile', 'profileId', 'id' ) )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.Project( OnlyPayload( 'firstname', 'lastname', 'email' ) )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.AddFields(<br>
@@ -123,7 +132,10 @@ const myNewPipeline = [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$match:&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$expr:&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$eq:&nbsp;[ '$id', userId ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$eq:&nbsp;[<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'$id',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123456<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;},<br>
@@ -159,6 +171,7 @@ const myNewPipeline = [<br>
 ];<br>
 </p>
 
+<h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-on-npm-runkit-with-require-methoda-">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try on NPM RunKit with Require method</a> ]</h3>
 <h3 id="soon-more-complex-examples-will-be-available">Soon more complex examples will be available!</h3>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
 
@@ -174,10 +187,11 @@ STAGE HELPERS:<br>
 &nbsp;- BucketAuto ( GroupByAutoPayload )<br>
 &nbsp;- Lookup ( ConditionPayload | EqualityPayload )<br>
 &nbsp;- Merge ( IntoPayload )<br>
+&nbsp;- Out ( DbCollPayload )<br>
 &nbsp;- Project ( IgnorePayload | OnlyPayload )<br>
 &nbsp;- Sample ( SizePayload )<br>
 &nbsp;- UnionWith ( CollectionPayload )<br><br>
-COMMONS HELPERS:<br>
+COMMON HELPERS:<br>
 &nbsp;- Field >> AddFields( Field ** ) | Set( Field ** ) | Sort( Field ** )<br>
 &nbsp;- List<br><br>
 ** One or more separated by a comma.
