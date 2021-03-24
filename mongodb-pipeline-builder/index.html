@@ -91,24 +91,24 @@ readable and much easier to edit. It also allows you to test your pipelines on a
 through the stages in sequence.
 </p>
 
-<h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
+<h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-"><code>npm package</code> <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
 <h3 id="npm-i-mongodb-pipeline-builderlatest---save">npm i mongodb-pipeline-builder@latest --save</h3>
-<h2 id="usage">Usage:</h2>
-<h3 id="--with-require">- with require</h3>
+<h2 id="usage"><code>Usage:</code></h2>
+<h3 id="--with-require"><code>- with require</code></h3>
 <p style="font-size: 15px;">
 const PipelineBuilder = require("mongodb-pipeline-builder").PipelineBuilder;<br>
 const { EqualityPayload, OnlyPayload, Field } = require('mongodb-pipeline-builder/helpers');<br>
 const { ArrayElemAt, Equal, Expression } = require('mongodb-pipeline-builder/operators');
 </p>
 
-<h3 id="--with-import">- with import</h3>
+<h3 id="--with-import"><code>- with import</code></h3>
 <p style="font-size: 15px;">
 import { PipelineBuilder } from 'mongodb-pipeline-builder';<br>
 import { EqualityPayload, OnlyPayload, Field } from 'mongodb-pipeline-builder/helpers';<br>
 import { ArrayElemAt, Equal, Expression } from 'mongodb-pipeline-builder/operators';
 </p>
 
-<h3 id="code">Code:</h3>
+<h2 id="code"><code>Code:</code></h2>
 <p style="font-size: 15px;">
 const myNewPipeline = new PipelineBuilder('name-of-my-new-pipeline')<br>
 &nbsp;&nbsp;&nbsp;&nbsp;.Match( Expression( Equal( '$id' , 123456 ) ) )<br>
@@ -126,7 +126,7 @@ const myNewPipeline = new PipelineBuilder('name-of-my-new-pipeline')<br>
 *** If no helper is available for a stage, use its method and pass it a valid value as a parameter.
 </p>
 
-<h3 id="is-equivalent-to">is equivalent to:</h3>
+<h3 id="is-equivalent-to"><code>is equivalent to:</code></h3>
 <p style="font-size: 15px;">
 const myNewPipeline = [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -171,21 +171,21 @@ const myNewPipeline = [<br>
 ];<br>
 </p>
 
+<h2 id="getresult"><code>GetResult()</code></h2>
 <p style="font-size: 15px;">
-SUPER METHOD:<br>
-GetResult( collection or mongoose model, myNewPipeline )<br><br>
-GetResult is an asynchronous method that gives a very easy way to use your aggregation pipelines on a target (collection, or a mongoose model that have the aggregate method). It gives access to 2 methods:<br>
-GetDocs(): returns the documents found;<br>
-GetCount(): returns the total number of documents found;<br><br>
-Example (in an asynchronous parent method):<br>
+is an asynchronous method that provides a very easy way to use your aggregation pipelines on a target (collection, or a mongoose model having the aggregate method).</p>
+
+<h3 id="example-in-an-asynchronous-parent-method"><code>Example (in an asynchronous parent method):</code></h3>
+<p style="font-size: 15px;">
 const result = await GetResult( target, pipeline );<br>
 Then you will have access to:<br>
 &nbsp;- result.GetDocs() to get the documents found.<br>
 &nbsp;- result.GetCount() to get the total number of documents found. Often useful when paging with partial results.
 </p>
 
-<h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-on-npm-runkit-with-require-methoda-">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try on NPM RunKit with require method</a> ]</h3>
-<h3 id="soon-more-complex-examples-will-be-available">Soon more complex examples will be available!</h3>
+<h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-on-npm-runkit-with-require-methoda-br">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try on NPM RunKit with require method</a> ]<br></h3>
+<h3 id="soon-more-complex-examples-will-be-available"><code>Soon more complex examples will be available!</code></h3>
+<br>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
 
 <p style="font-size: 15px;">
