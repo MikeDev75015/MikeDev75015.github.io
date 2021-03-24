@@ -64,6 +64,13 @@
             <code>lib/interfaces/core/get-result-response.interface.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The interface that represent the contract for a Getresult response</p>
+
+            </p>
 
 
         <section>
@@ -118,14 +125,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="3"
-                            class="link-to-prism">lib/interfaces/core/get-result-response.interface.ts:3</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">lib/interfaces/core/get-result-response.interface.ts:15</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The method used to obtain the total number of documents found</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
@@ -157,14 +166,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="2"
-                            class="link-to-prism">lib/interfaces/core/get-result-response.interface.ts:2</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="9"
+                            class="link-to-prism">lib/interfaces/core/get-result-response.interface.ts:9</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The method used to obtain the documents found</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>    <code>any[]</code>
@@ -181,7 +192,16 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface GetResultResponseInterface {
+    /**
+     * The method used to obtain the documents found
+     * @constructor
+     */
     GetDocs(): any[];
+
+    /**
+     * The method used to obtain the total number of documents found
+     * @constructor
+     */
     GetCount(): number;
 }
 </code></pre>
