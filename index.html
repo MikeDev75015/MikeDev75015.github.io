@@ -2,28 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mikeonline75 - Documentations</title>
+    <title>Mikeonline75 - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 40px;
+        }
+
+        .header-part {
+            text-align: center;
+            white-space: nowrap;
+            color: #af7900;
+            padding: 12px 0px;
+        }
+
+        .header-part:nth-of-type(2) {
+            font-size: 50px;
+            background: #af7900;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            height: 170px;
+            min-width: 200px;
+        }
+
+        .item:first-of-type > p:first-of-type {
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                flex-direction: column;
+                line-height: 20px;
+                margin-bottom: 0;
+            }
+            .item {
+                height: 130px;
+            }
+        }
+    </style>
 </head>
 <body style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center">
-<h1 style="color: #555555;">mongodb-pipeline-builder</h1>
-<p>
-    <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" />
-</p>
-<p>
-    <a style="color: #555555; font-size: 20px;" href="https://www.npmjs.com/package/mongodb-pipeline-builder" target="_blank">npm package</a>
-</p>
-<p>
-    <img src="https://sonarcloud.io/images/sonarcloud-logo-black.svg" width="203" height="58" />
-</p>
-<p>
-    <a style="color: #555555; font-size: 20px;" href="https://sonarcloud.io/dashboard?branch=main&id=MikeDev75015_mongodb-pipeline-builder" target="_blank">code analysis report</a>
-</p>
-<p>
-    <img src="https://mikedev75015.github.io/mongodb-pipeline-builder/images/compodoc-vectorise.png" width="70" height="70" />
-</p>
-<p>
-    <a style="color: #555555; font-size: 20px;" href="https://mikedev75015.github.io/mongodb-pipeline-builder" target="_blank">documentation</a>
-</p>
+<h1 style="color: #555555;">
+    <span class="header-part">mongodb</span>
+    <span class="header-part">-pipeline-</span>
+    <span class="header-part">builder</span>
+</h1>
+
+<div class="container">
+
+    <div class="item">
+        <p>
+            <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" />
+        </p>
+        <p>
+            <a style="color: #555555; font-size: 20px;" href="https://www.npmjs.com/package/mongodb-pipeline-builder" target="_blank">npm package</a>
+        </p>
+    </div>
+
+    <div class="item">
+        <p>
+            <img src="https://sonarcloud.io/images/sonarcloud-logo-black.svg" width="203" height="58" />
+        </p>
+        <p>
+            <a style="color: #555555; font-size: 20px;" href="https://sonarcloud.io/dashboard?branch=main&id=MikeDev75015_mongodb-pipeline-builder" target="_blank">code analysis report</a>
+        </p>
+    </div>
+
+    <div class="item">
+        <p>
+            <img src="https://mikedev75015.github.io/mongodb-pipeline-builder/images/compodoc-vectorise.png" width="70" height="70" />
+        </p>
+        <p>
+            <a style="color: #555555; font-size: 20px;" href="https://mikedev75015.github.io/mongodb-pipeline-builder" target="_blank">documentation</a>
+        </p>
+    </div>
+</div>
+
 
 <!--<script lang="js">
     if (window.location.host === 'mikedev75015.github.io') {
