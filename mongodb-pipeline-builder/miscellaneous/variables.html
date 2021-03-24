@@ -73,6 +73,9 @@
                             <a href="#Add" title="lib/operators/arithmetic/index.ts"><b>Add</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#addFieldsPayloadValidator" title="lib/validators/stages/addFields-payload.validator.ts"><b>addFieldsPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../addFields-payload.validator.ts)</a>
+                        </li>
+                        <li>
                             <a href="#AddToSet" title="lib/operators/accumulator/index.ts"><b>AddToSet</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
@@ -113,6 +116,9 @@
                         </li>
                         <li>
                             <a href="#BsonSize" title="lib/operators/data-size/index.ts"><b>BsonSize</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#bucketPayloadValidator" title="lib/validators/stages/bucket-payload.validator.ts"><b>bucketPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../bucket-payload.validator.ts)</a>
                         </li>
                         <li>
                             <a href="#Ceil" title="lib/operators/arithmetic/index.ts"><b>Ceil</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -289,10 +295,10 @@
                             <a href="#Log10" title="lib/operators/arithmetic/index.ts"><b>Log10</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#lookupEqualityValidator" title="lib/validators/index.ts"><b>lookupEqualityValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#lookupEqualityValidator" title="lib/validators/stages/lookup-payload.validator.ts"><b>lookupEqualityValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../lookup-payload.validator.ts)</a>
                         </li>
                         <li>
-                            <a href="#lookupPayloadValidator" title="lib/validators/index.ts"><b>lookupPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#lookupPayloadValidator" title="lib/validators/stages/lookup-payload.validator.ts"><b>lookupPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../lookup-payload.validator.ts)</a>
                         </li>
                         <li>
                             <a href="#Ltrim" title="lib/operators/string/index.ts"><b>Ltrim</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -349,7 +355,7 @@
                             <a href="#Or" title="lib/operators/boolean/index.ts"><b>Or</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#PAYLOAD_VALIDATION_ENABLED" title="lib/constants/index.ts"><b>PAYLOAD_VALIDATION_ENABLED</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#PAYLOAD_VALIDATION_ENABLED" title="lib/validators/index.ts"><b>PAYLOAD_VALIDATION_ENABLED</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#Pow" title="lib/operators/arithmetic/index.ts"><b>Pow</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
@@ -1481,6 +1487,48 @@ to the expression respectively.</p>
             </tbody>
         </table>
 </section>
+    <h3>lib/validators/stages/addFields-payload.validator.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addFieldsPayloadValidator"></a>
+                        <span class="name">
+                            <b>
+                            addFieldsPayloadValidator</b>
+                            <a href="#addFieldsPayloadValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    const keyList &#x3D; Object.keys(payload);
+    if (!keyList.length) {
+        return &#x27;No fields have been added.&#x27;;
+    }
+
+    const valueErrorList &#x3D; Object.keys(payload).filter(v &#x3D;&gt; payload[v] &#x3D;&#x3D;&#x3D; undefined);
+    if (valueErrorList.length) {
+        return &#x27;One or more fields are undefined.&#x27;
+    }
+
+    return &#x27;&#x27;;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Checks that the payload contains fields and that the value of each field is valid</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
     <h3>lib/operators/accumulator/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -2563,6 +2611,48 @@ an alternative to the Object.bsonSize() method.</p>
 BSON.
 If the argument is null, the expression returns null.
 If the argument resolves to a data type other than an object or null, $bsonSize errors.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/validators/stages/bucket-payload.validator.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bucketPayloadValidator"></a>
+                        <span class="name">
+                            <b>
+                            bucketPayloadValidator</b>
+                            <a href="#bucketPayloadValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(payload: BucketStageInterface) &#x3D;&gt; {
+    if (!payload.groupBy &amp;&amp; !payload.boundaries) {
+        return &#x27;The groupBy and boundaries properties are required.&#x27;;
+    } else if (!payload.groupBy) {
+        return &#x27;The groupBy property is required.&#x27;;
+    } else if (!payload.boundaries) {
+        return &#x27;The boundaries property is required.&#x27;;
+    } else if (payload.boundaries.length &lt; 2) {
+        return &#x27;The boundaries value is not valid. You must specify at least two boundaries.&#x27;;
+    }
+
+    return &#x27;&#x27;;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Checks the presence of mandatory fields</p>
 </div>
                     </td>
                 </tr>
@@ -5133,7 +5223,7 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             </tbody>
         </table>
 </section>
-    <h3>lib/validators/index.ts</h3>
+    <h3>lib/validators/stages/lookup-payload.validator.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -5210,7 +5300,7 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             </tbody>
         </table>
 </section>
-    <h3>lib/constants/index.ts</h3>
+    <h3>lib/validators/index.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -5226,21 +5316,50 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
+                            <i>Type : </i>    <code>literal type</code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[
-    &#x27;lookup&#x27;
-]</code>
+                            <i>Default value : </i><code>{
+    addFields: addFieldsPayloadValidator,
+    bucket: bucketPayloadValidator,
+    bucketAuto: undefined,
+    collStats: undefined,
+    count: undefined,
+    facet: undefined,
+    geoNear: undefined,
+    graphLookup: undefined,
+    group: undefined,
+    indexStats: undefined,
+    limit: undefined,
+    listSessions: undefined,
+    lookup: lookupPayloadValidator,
+    match: undefined,
+    merge: undefined,
+    out: undefined,
+    planCacheStats: undefined,
+    project: undefined,
+    redact: undefined,
+    replaceRoot: undefined,
+    replaceWith: undefined,
+    sample: undefined,
+    search: undefined,
+    set: undefined,
+    skip: undefined,
+    sort: undefined,
+    sortByCount: undefined,
+    unionWith: undefined,
+    unset: undefined,
+    unwind: undefined
+}</code>
                         </td>
                     </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>list of all stage validators implemented</p>
+                        <div class="io-description"><p>list of all stage validators</p>
 </div>
                     </td>
                 </tr>
