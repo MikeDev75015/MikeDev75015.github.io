@@ -205,6 +205,9 @@
                             <a href="#FunctionOperator" title="lib/operators/custom-aggregation/index.ts"><b>FunctionOperator</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#GetResult" title="lib/methods/index.ts"><b>GetResult</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#getStageTypeValue" title="lib/interfaces/core/stage-type.interface.ts"><b>getStageTypeValue</b>&nbsp;&nbsp;&nbsp;(lib/.../stage-type.interface.ts)</a>
                         </li>
                         <li>
@@ -4741,6 +4744,63 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Create a list with the elements passed in parameter</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/methods/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GetResult"></a>
+                        <span class="name">
+                            <b>
+                            GetResult</b>
+                            <a href="#GetResult"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>async (target: any, pipeline: StageInterface[]) &#x3D;&gt; {
+    if (!target) {
+        throw new PipelineError(&#x27;Application not possible, the target is not valid.&#x27;);
+    }
+    if (!target.aggregate) {
+        throw new PipelineError(&#x27;Application not possible, the aggregate method does not exist on the chosen target.&#x27;);
+    }
+    if (!pipeline.length) {
+        throw new PipelineError(&#x27;Application not possible, the pipeline is empty.&#x27;);
+    }
+
+    const result &#x3D; await target.aggregate(pipeline);
+
+    // Paging result
+    if (result.length &#x3D;&#x3D;&#x3D; 1 &amp;&amp; result[0].docs &amp;&amp; result[0].count &amp;&amp; result[0].count[0]) {
+
+        return {
+            GetDocs: () &#x3D;&gt; result[0].docs,
+            GetCount: () &#x3D;&gt; result[0].count[0].totalElements
+        } as GetResultResponseInterface;
+    }
+
+    // Default result
+    return {
+        GetDocs: () &#x3D;&gt; result,
+        GetCount: () &#x3D;&gt; result.length
+    } as GetResultResponseInterface;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Apply the aggregate method on the chosen target</p>
 </div>
                     </td>
                 </tr>

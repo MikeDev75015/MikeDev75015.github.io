@@ -95,6 +95,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/GeoNearStageInterface.html" data-type="entity-link">GeoNearStageInterface</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/GetResultResponseInterface.html" data-type="entity-link">GetResultResponseInterface</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/GraphLookupStageInterface.html" data-type="entity-link">GraphLookupStageInterface</a>
                             </li>
                             <li class="link">
