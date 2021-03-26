@@ -658,7 +658,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="720" class="link-to-prism">lib/main.ts:720</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="716" class="link-to-prism">lib/main.ts:716</a></div>
                             </td>
                         </tr>
 
@@ -852,7 +852,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="730" class="link-to-prism">lib/main.ts:730</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="726" class="link-to-prism">lib/main.ts:726</a></div>
                             </td>
                         </tr>
 
@@ -952,7 +952,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="639" class="link-to-prism">lib/main.ts:639</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="635" class="link-to-prism">lib/main.ts:635</a></div>
                             </td>
                         </tr>
 
@@ -1113,7 +1113,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="667" class="link-to-prism">lib/main.ts:667</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="663" class="link-to-prism">lib/main.ts:663</a></div>
                             </td>
                         </tr>
 
@@ -1282,7 +1282,7 @@ builder</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="654" class="link-to-prism">lib/main.ts:654</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="650" class="link-to-prism">lib/main.ts:650</a></div>
                             </td>
                         </tr>
 
@@ -1335,7 +1335,7 @@ builder</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="694" class="link-to-prism">lib/main.ts:694</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="690" class="link-to-prism">lib/main.ts:690</a></div>
                             </td>
                         </tr>
 
@@ -4295,10 +4295,6 @@ export class PipelineBuilder {
      * @param payload
      */
     private readonly validatePayload &#x3D; (stageType: string, payload: any) &#x3D;&gt; {
-        if (!PAYLOAD_VALIDATION_ENABLED[stageType]) {
-            return &#x27;&#x27;;
-        }
-
         return this.stageValidatorsBundle[stageType](payload);
     }
 
