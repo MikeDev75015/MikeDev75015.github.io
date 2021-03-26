@@ -1588,6 +1588,10 @@ to the expression respectively.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    if (Array.isArray(payload)) {
+        return &#x27;The payload is not valid.&#x27;;
+    }
+
     const keyList &#x3D; Object.keys(payload);
     if (!keyList.length) {
         return &#x27;No fields have been added.&#x27;;
@@ -1595,7 +1599,7 @@ to the expression respectively.</p>
 
     const valueErrorList &#x3D; Object.keys(payload).filter(v &#x3D;&gt; payload[v] &#x3D;&#x3D;&#x3D; undefined);
     if (valueErrorList.length) {
-        return &#x27;One or more fields are undefined.&#x27;
+        return &#x27;One or more field values are not defined.&#x27;
     }
 
     return &#x27;&#x27;;
@@ -5061,6 +5065,12 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                         </td>
                     </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Checks the presence of mandatory fields and the validity of each field present in the payload</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -6046,6 +6056,16 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    const keyList &#x3D; Object.keys(payload);
+    if (!keyList.length) {
+        return &#x27;No fields have been added.&#x27;;
+    }
+
+    const valueErrorList &#x3D; Object.keys(payload).filter(v &#x3D;&gt; payload[v] &#x3D;&#x3D;&#x3D; undefined);
+    if (valueErrorList.length) {
+        return &#x27;One or more field values are not defined.&#x27;
+    }
+
     return &#x27;&#x27;;
 }</code>
                         </td>
@@ -6238,6 +6258,16 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    const keyList &#x3D; Object.keys(payload);
+    if (!keyList.length) {
+        return &#x27;No fields have been added.&#x27;;
+    }
+
+    const valueErrorList &#x3D; Object.keys(payload).filter(v &#x3D;&gt; payload[v] &#x3D;&#x3D;&#x3D; undefined);
+    if (valueErrorList.length) {
+        return &#x27;One or more field values are not defined.&#x27;
+    }
+
     return &#x27;&#x27;;
 }</code>
                         </td>
@@ -6364,6 +6394,16 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    const keyList &#x3D; Object.keys(payload);
+    if (!keyList.length) {
+        return &#x27;No fields have been added.&#x27;;
+    }
+
+    const valueErrorList &#x3D; Object.keys(payload).filter(v &#x3D;&gt; payload[v] &#x3D;&#x3D;&#x3D; undefined);
+    if (valueErrorList.length) {
+        return &#x27;One or more field values are not defined.&#x27;
+    }
+
     return &#x27;&#x27;;
 }</code>
                         </td>
