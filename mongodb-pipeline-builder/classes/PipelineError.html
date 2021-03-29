@@ -226,6 +226,7 @@
      */
     constructor(message?: string) {
         super(message ? message : &#x27;An error occurred while building the pipeline.&#x27;);
+        this.name &#x3D; PipelineError.name;
     }
 }
 </code></pre>

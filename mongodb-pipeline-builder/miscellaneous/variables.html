@@ -5202,22 +5202,27 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
         throw new PipelineError(&#x27;Application not possible, the pipeline is empty.&#x27;);
     }
 
-    const result &#x3D; await target.aggregate(pipeline);
+    try {
+        const result &#x3D; await target.aggregate(pipeline);
 
-    // Paging result
-    if (result.length &#x3D;&#x3D;&#x3D; 1 &amp;&amp; result[0].docs &amp;&amp; result[0].count &amp;&amp; result[0].count[0]) {
+        // Paging result
+        if (result.length &#x3D;&#x3D;&#x3D; 1 &amp;&amp; result[0].docs &amp;&amp; result[0].count &amp;&amp; result[0].count[0]) {
 
+            return {
+                GetDocs: () &#x3D;&gt; result[0].docs,
+                GetCount: () &#x3D;&gt; result[0].count[0].totalElements
+            } as GetResultResponseInterface;
+        }
+
+        // Default result
         return {
-            GetDocs: () &#x3D;&gt; result[0].docs,
-            GetCount: () &#x3D;&gt; result[0].count[0].totalElements
+            GetDocs: () &#x3D;&gt; result,
+            GetCount: () &#x3D;&gt; result.length
         } as GetResultResponseInterface;
-    }
 
-    // Default result
-    return {
-        GetDocs: () &#x3D;&gt; result,
-        GetCount: () &#x3D;&gt; result.length
-    } as GetResultResponseInterface;
+    } catch (e) {
+        throw new PipelineError(&#x60;An error was encountered while executing the GetResult method:\n - ${e.message}&#x60;)
+    }
 }</code>
                         </td>
                     </tr>
@@ -6124,6 +6129,10 @@ pipeline.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    if (Array.isArray(payload)) {
+        return &#x27;The payload is not valid.&#x27;;
+    }
+
     const keyList &#x3D; Object.keys(payload);
     if (!keyList.length) {
         return &#x27;No fields have been added.&#x27;;
@@ -6326,6 +6335,10 @@ pipeline.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    if (Array.isArray(payload)) {
+        return &#x27;The payload is not valid.&#x27;;
+    }
+
     const keyList &#x3D; Object.keys(payload);
     if (!keyList.length) {
         return &#x27;No fields have been added.&#x27;;
@@ -6462,6 +6475,10 @@ pipeline.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(payload: { [key: string]: any }) &#x3D;&gt; {
+    if (Array.isArray(payload)) {
+        return &#x27;The payload is not valid.&#x27;;
+    }
+
     const keyList &#x3D; Object.keys(payload);
     if (!keyList.length) {
         return &#x27;No fields have been added.&#x27;;
