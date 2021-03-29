@@ -83,6 +83,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/CollStatsStageInterface.html" data-type="entity-link">CollStatsStageInterface</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/CurrentOpInterface.html" data-type="entity-link">CurrentOpInterface</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/DebugBuildInterface.html" data-type="entity-link">DebugBuildInterface</a>
                             </li>
                             <li class="link">
