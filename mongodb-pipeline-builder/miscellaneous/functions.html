@@ -58,19 +58,19 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#first" title="lib/utils/decorators/index.ts"><b>first</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#IsValidName" title="lib/decorators/index.ts"><b>IsValidName</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#isArray" title="lib/utils/decorators/index.ts"><b>isArray</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#testMaxLength" title="lib/decorators/index.ts"><b>testMaxLength</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#isNumber" title="lib/utils/decorators/index.ts"><b>isNumber</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#testMinLength" title="lib/decorators/index.ts"><b>testMinLength</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#isString" title="lib/utils/decorators/index.ts"><b>isString</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#testNoSpace" title="lib/decorators/index.ts"><b>testNoSpace</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                         <li>
-                            <a href="#second" title="lib/utils/decorators/index.ts"><b>second</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
+                            <a href="#testNoSpecialChar" title="lib/decorators/index.ts"><b>testNoSpecialChar</b>&nbsp;&nbsp;&nbsp;(lib/.../index.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -79,48 +79,24 @@
     </table>
 </section>
 
-    <h3>lib/utils/decorators/index.ts</h3>
+    <h3>lib/decorators/index.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="first"></a>
+                    <a name="IsValidName"></a>
                     <span class="name">
                         <b>
-                            first
+                            IsValidName
                         </b>
-                        <a href="#first"><span class="icon ion-ios-link"></span></a>
+                        <a href="#IsValidName"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>first()</code>
-                </td>
-            </tr>
-
-
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="isArray"></a>
-                    <span class="name">
-                        <b>
-                            isArray
-                        </b>
-                        <a href="#isArray"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>isArray(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>IsValidName(options?)</code>
                 </td>
             </tr>
 
@@ -129,6 +105,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>IsValidName property decorator</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -136,16 +114,85 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>value</td>
+                                    <td>options</td>
+
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        Yes
                                     </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testMaxLength"></a>
+                    <span class="name">
+                        <b>
+                            testMaxLength
+                        </b>
+                        <a href="#testMaxLength"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>testMaxLength(newVal, maxLength, errorList)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>test Max Length</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>newVal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>maxLength</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>errorList</td>
 
                                     <td>
                                         No
@@ -166,18 +213,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="isNumber"></a>
+                    <a name="testMinLength"></a>
                     <span class="name">
                         <b>
-                            isNumber
+                            testMinLength
                         </b>
-                        <a href="#isNumber"><span class="icon ion-ios-link"></span></a>
+                        <a href="#testMinLength"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>isNumber(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>testMinLength(newVal, minLength, errorList)</code>
                 </td>
             </tr>
 
@@ -186,6 +233,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>test Min Length</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -193,16 +242,30 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>value</td>
+                                    <td>newVal</td>
+
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        No
                                     </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>minLength</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>errorList</td>
 
                                     <td>
                                         No
@@ -223,18 +286,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="isString"></a>
+                    <a name="testNoSpace"></a>
                     <span class="name">
                         <b>
-                            isString
+                            testNoSpace
                         </b>
-                        <a href="#isString"><span class="icon ion-ios-link"></span></a>
+                        <a href="#testNoSpace"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>isString(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>testNoSpace(newVal, errorList)</code>
                 </td>
             </tr>
 
@@ -243,6 +306,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>test No Space</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -250,16 +315,21 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>value</td>
+                                    <td>newVal</td>
+
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        No
                                     </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>errorList</td>
 
                                     <td>
                                         No
@@ -280,24 +350,64 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="second"></a>
+                    <a name="testNoSpecialChar"></a>
                     <span class="name">
                         <b>
-                            second
+                            testNoSpecialChar
                         </b>
-                        <a href="#second"><span class="icon ion-ios-link"></span></a>
+                        <a href="#testNoSpecialChar"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>second()</code>
+<code>testNoSpecialChar(newVal, errorList)</code>
                 </td>
             </tr>
 
 
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>test No Special Char</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>newVal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>errorList</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
 </section>
