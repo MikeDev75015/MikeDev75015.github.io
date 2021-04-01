@@ -191,8 +191,8 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
   },
   {
     $addFields: {
-      skills: { $arrayElemAt[&quot;$profile.skills&quot;, 0] },
-      availability: { $arrayElemAt[&quot;$profile.availability&quot;, 0] }
+      skills: { $arrayElemAt: [&quot;$profile.skills&quot;, 0] },
+      availability: { $arrayElemAt: [&quot;$profile.availability&quot;, 0] }
     }
   },
   {
@@ -201,14 +201,15 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
 ];
 </code></pre></div><h2 id="getresult">GetResult()</h2>
 <p style="font-size: 15px;">
-is an asynchronous method that provides a very easy way to use your aggregation pipelines on a target (collection or mongoose model having the aggregation method) with or without paging.</p>
+is an asynchronous method that provides a very easy way to use your aggregation pipelines on a target (collection or mongoose model having the aggregation method) with or without paging.
+</p>
 
 <h3 id="example-">Example :</h3>
-<p><code>const result = await GetResult( target, pipeline );</code></p>
-<p style="font-size: 15px;">
-Then you will have access to:<br>
-&nbsp;- result.GetDocs(); to get the documents found.<br>
-&nbsp;- result.GetCount(); to get the total number of documents found. Often useful when paging with partial results.
+<div><pre class="line-numbers"><code class="language-typescript">const result = await GetResult( target, pipeline );</code></pre></div><p style="font-size: 15px;">
+Then you will have access to:
+
+<p>&nbsp;- <code>result.GetDocs();</code> to get the documents found.<br>
+&nbsp;- <code>result.GetCount();</code> to get the total number of documents found. Often useful when paging with partial results.</p>
 </p>
 
 <h3 id="or-">Or :</h3>
