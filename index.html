@@ -16,6 +16,17 @@
             font-weight: bold;
         }
 
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20vh;
+            min-height: 100px;
+            max-height: 150px;
+            background: #272822;
+        }
+
         h1 {
             display: flex;
             justify-content: center;
@@ -27,14 +38,14 @@
         .header-part {
             text-align: center;
             white-space: nowrap;
-            color: #af7900;
+            color: #FFDE00;
             padding: 12px 0px;
         }
 
         .header-part:nth-of-type(2) {
             font-size: 50px;
-            background: #af7900;
-            color: white;
+            background: #FFDE00;
+            color: #272822;
         }
 
         a {
@@ -45,12 +56,21 @@
             text-decoration: underline;
         }
 
+        a > p:nth-of-type(2) {
+            color: #333333;
+        }
+
+        a > p:nth-of-type(2):hover {
+            color: #272822;
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             width: 100%;
+            background: white;
         }
 
         .item {
@@ -91,13 +111,16 @@
     </style>
 </head>
 <body style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center">
-<h1 style="color: #555555;">
-    <span class="header-part">mongodb</span>
-    <span class="header-part">-pipeline-</span>
-    <span class="header-part">builder</span>
-</h1>
 
-<div class="container">
+<section class="header">
+    <h1 style="color: #555555;">
+        <span class="header-part">mongodb</span>
+        <span class="header-part">-pipeline-</span>
+        <span class="header-part">builder</span>
+    </h1>
+</section>
+
+<section class="container">
 
     <a class="item" style="color: #555555; font-size: 20px;" href="https://www.npmjs.com/package/mongodb-pipeline-builder" target="_blank">
         <p>
@@ -125,7 +148,7 @@
             technical documentation
         </p>
     </a>
-</div>
+</section>
 
 
 <!--<script lang="js">
