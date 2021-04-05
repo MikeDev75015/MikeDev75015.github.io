@@ -92,8 +92,10 @@ readable and much easier to edit. It also allows you to test your pipelines on a
 through the stages in sequence.
 </p>
 
-<h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-"><code>npm package</code> <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
-<h3 id="npm-i-mongodb-pipeline-builderlatest---save"><code>npm i mongodb-pipeline-builder@latest --save</code></h3>
+<h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
+<blockquote>
+<p>npm i mongodb-pipeline-builder --save</p>
+</blockquote>
 <h2 id="usage">Usage:</h2>
 <h3 id="--with-require">- with require</h3>
 <div><pre class="line-numbers"><code class="language-typescript">const PipelineBuilder = require(&quot;mongodb-pipeline-builder&quot;).PipelineBuilder;
@@ -101,12 +103,12 @@ const { EqualityPayload, OnlyPayload, Field } = require(&#39;mongodb-pipeline-bu
 const { LessThanEqual, ArrayElemAt, Equal, Expression } = require(&#39;mongodb-pipeline-builder/operators&#39;);</code></pre></div><h3 id="--with-import">- with import</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { PipelineBuilder } from &#39;mongodb-pipeline-builder&#39;;
 import { EqualityPayload, OnlyPayload, Field } from &#39;mongodb-pipeline-builder/helpers&#39;;
-import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipeline-builder/operators&#39;;</code></pre></div><h2 id="example-with-paging"><code>Example with paging:</code></h2>
+import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipeline-builder/operators&#39;;</code></pre></div><h2 id="example-with-paging">Example with paging:</h2>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder( &#39;myPagination&#39;, { debug: true } )
-                        .Match( Expression( LessThanEqual( &#39;$id&#39;, 20 ) ) )
-                        .Project( OnlyPayload( &#39;name&#39;, &#39;weight&#39; ) )
-                        .Paging( 5, 3 ) // 5 per page, page 3
-                        .getPipeline();</code></pre></div><h3 id="is-equivalent-to">is equivalent to:</h3>
+    .Match( Expression( LessThanEqual( &#39;$id&#39;, 20 ) ) )
+    .Project( OnlyPayload( &#39;name&#39;, &#39;weight&#39; ) )
+    .Paging( 5, 3 ) // 5 per page, page 3
+    .getPipeline();</code></pre></div><h3 id="is-equivalent-to">is equivalent to:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [
   {
     $facet: {
@@ -153,8 +155,7 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
       ]
     }
   }
-];
-</code></pre></div><h2 id="example-without-paging">Example without paging:</h2>
+];</code></pre></div><h2 id="example-without-paging">Example without paging:</h2>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder(&#39;user-skills&#39;)
     .Match(Expression(Equal(&#39;$id&#39;, 123456)))
     .Lookup(EqualityPayload(&#39;profiles&#39;, &#39;profile&#39;, &#39;profileId&#39;, &#39;id&#39;))
@@ -191,47 +192,52 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
   },
   {
     $addFields: {
-      skills: { $arrayElemAt: [&quot;$profile.skills&quot;, 0] },
-      availability: { $arrayElemAt: [&quot;$profile.availability&quot;, 0] }
+      skills: {
+          $arrayElemAt: [&quot;$profile.skills&quot;, 0]
+      },
+      availability: {
+          $arrayElemAt: [&quot;$profile.availability&quot;, 0]
+      }
     }
   },
   {
     $unset: &quot;profile&quot;
   }
-];
-</code></pre></div><h2 id="getresult">GetResult()</h2>
+];</code></pre></div><hr>
+<h2 id="getresult">GetResult()</h2>
 <p style="font-size: 15px;">
-is an asynchronous method that provides a very easy way to use your aggregation pipelines on a target (collection or mongoose model having the aggregation method) with or without paging.
+is an asynchronous method that provides a very easy way to use your aggregation pipelines on a target (collection or mongoose model having the aggregation method) with or without paging.<br><br>
+Then you will have access to:<br>
+&nbsp;&nbsp;- GetDocs() to get the documents found.<br>
+&nbsp;&nbsp;- GetCount() to get the total number of documents found. Often useful when paging with partial results.
 </p>
 
 <h3 id="example-">Example :</h3>
-<div><pre class="line-numbers"><code class="language-typescript">const result = await GetResult( target, pipeline );</code></pre></div><p style="font-size: 15px;">
-Then you will have access to:
-
-<p>&nbsp;- <code>result.GetDocs();</code> to get the documents found.<br>
-&nbsp;- <code>result.GetCount();</code> to get the total number of documents found. Often useful when paging with partial results.</p>
-</p>
-
-<h3 id="or-">Or :</h3>
-<div><pre class="line-numbers"><code class="language-typescript">GetResult(target, pipeline)
-    .then(result =&gt; {
-        result.GetDocs();
-        result.GetCount();
-    });</code></pre></div><h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-on-npm-runkit-with-require-methoda-br">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try on NPM RunKit with require method</a> ]<br></h3>
-<br>
+<div><pre class="line-numbers"><code class="language-typescript">const result = await GetResult( target, pipeline );
+result.GetDocs();
+result.GetCount();</code></pre></div><h3 id="or-">Or :</h3>
+<div><pre class="line-numbers"><code class="language-typescript">GetResult(target, pipeline).then(result =&gt; {
+    result.GetDocs();
+    result.GetCount();
+});</code></pre></div><hr>
+<h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-the-lib-on-npm-runkit-with-the-require-methoda-br">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try the lib on NPM RunKit with the require method</a> ]<br></h3>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
 
+<p><code>MONGODB STAGES:</code></p>
 <p style="font-size: 15px;">
-MONGODB STAGES:<br>
-AddFields | Bucket | BucketAuto | CollStats | Count | Facet | GeoNear | GraphLookup | Group | IndexStats | Limit | ListSessions | Lookup | Match | Merge | Out | PlanCacheStats | Project | Redact | ReplaceRoot | ReplaceWith | Sample | Search | Set | Skip | Sort | SortByCount | UnionWith | Unset | Unwind<br><br>
-CUSTOM STAGE:<br>
+AddFields | Bucket | BucketAuto | CollStats | Count | Facet | GeoNear | GraphLookup | Group | IndexStats | Limit | ListSessions | Lookup | Match | Merge | Out | PlanCacheStats | Project | Redact | ReplaceRoot | ReplaceWith | Sample | Search | Set | Skip | Sort | SortByCount | UnionWith | Unset | Unwind
+</p>
+
+<p><code>CUSTOM STAGE:</code></p>
+<p style="font-size: 15px;">
 Paging
 </p>
 
+<hr>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Helpers</a> ]</p>
 
+<p><code>STAGE HELPERS * :</code></p>
 <p style="font-size: 15px;">
-STAGE HELPERS * :<br>
 &nbsp;- Bucket ( GroupByPayload )<br>
 &nbsp;- BucketAuto ( GroupByAutoPayload )<br>
 &nbsp;- CurrentOp ( OpPayload )<br>
@@ -241,14 +247,17 @@ STAGE HELPERS * :<br>
 &nbsp;- Out ( DbCollPayload )<br>
 &nbsp;- Project ( IgnorePayload | OnlyPayload )<br>
 &nbsp;- Sample ( SizePayload )<br>
-&nbsp;- UnionWith ( CollectionPayload )<br><br>
-COMMON HELPERS:<br>
-&nbsp;- Field >> AddFields( Field ** ) | Set( Field ** ) | Sort( Field ** )<br>
-&nbsp;- List<br><br>
-* If no helper is available for a stage, use its method and pass it a valid value as a parameter.<br>
-** One or more separated by a comma.
-</p>
+&nbsp;- UnionWith ( CollectionPayload )
 
+<p><code>COMMON HELPERS:</code></p>
+<p style="font-size: 15px;">
+&nbsp;- Field >> AddFields( Field ** ) | Set( Field ** ) | Sort( Field ** )<br>
+&nbsp;- List
+<p>
+* If no helper is available for a stage, use stage method and pass it a valid value as a parameter.<br>
+** One or more separated by a comma.
+
+<hr>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/" target="_blank">Aggregation Pipeline Operators</a> ]</p>
 
 <p style="font-size: 15px;">
