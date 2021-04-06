@@ -109,53 +109,21 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
     .Project( OnlyPayload( &#39;name&#39;, &#39;weight&#39; ) )
     .Paging( 5, 3 ) // 5 per page, page 3
     .getPipeline();</code></pre></div><h3 id="is-equivalent-to">is equivalent to:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [
-  {
+<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [ {
     $facet: {
-      docs: [
-        {
-          $match: {
-            $expr: {
-              $lte: [&quot;$id&quot;, 20]
-            }
-          }
-        },
-        {
-          $project: {
-            _id: 0,
-            name: 1,
-            weight: 1
-          }
-        },
-        {
-          $skip: 10
-        },
-        {
-          $limit: 5
-        }
-      ],
-      count: [
-        {
-          $match: {
-            $expr: {
-              $lte: [&quot;$id&quot;, 20]
-            }
-          }
-        },
-        {
-          $project: {
-            _id: 0,
-            name: 1,
-            weight: 1
-          }
-        },
-        {
-          $count: &quot;totalElements&quot;
-        }
-      ]
+        docs: [
+            { $match: { $expr: { $lte: [&quot;$id&quot;, 20] } } },
+            { $project: { _id: 0, name: 1, weight: 1 } },
+            { $skip: 10 },
+            { $limit: 5 }
+        ],
+        count: [
+            { $match: { $expr: { $lte: [&quot;$id&quot;, 20] } } },
+            { $project: { _id: 0, name: 1, weight: 1 } },
+            { $count: &quot;totalElements&quot; }
+        ]
     }
-  }
-];</code></pre></div><h2 id="example-without-paging">Example without paging:</h2>
+} ];</code></pre></div><h2 id="example-without-paging">Example without paging:</h2>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder(&#39;user-skills&#39;)
     .Match(Expression(Equal(&#39;$id&#39;, 123456)))
     .Lookup(EqualityPayload(&#39;profiles&#39;, &#39;profile&#39;, &#39;profileId&#39;, &#39;id&#39;))
@@ -167,42 +135,14 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
     .Unset(&#39;profile&#39;)
     .getPipeline();</code></pre></div><h3 id="is-equivalent-to-1">is equivalent to:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [
-  {
-    $match: {
-      $expr: {
-        $eq: [&quot;$id&quot;, 123456]
-      }
-    }
-  },
-  {
-    $lookup: {
-      from: &quot;profiles&quot;,
-      as: &quot;profile&quot;,
-      localField: &quot;profileId&quot;,
-      foreignField: &quot;id&quot;
-    }
-  },
-  {
-    $project: {
-      _id: 0,
-      firstname: 1,
-      lastname: 1,
-      email: 1
-    }
-  },
-  {
-    $addFields: {
-      skills: {
-          $arrayElemAt: [&quot;$profile.skills&quot;, 0]
-      },
-      availability: {
-          $arrayElemAt: [&quot;$profile.availability&quot;, 0]
-      }
-    }
-  },
-  {
-    $unset: &quot;profile&quot;
-  }
+    { $match: { $expr: { $eq: [&quot;$id&quot;, 123456] } } },
+    { $lookup: { from: &quot;profiles&quot;, as: &quot;profile&quot;, localField: &quot;profileId&quot;, foreignField: &quot;id&quot; } },
+    { $project: { _id: 0, firstname: 1, lastname: 1, email: 1 } },
+    { $addFields: {
+        skills: { $arrayElemAt: [&quot;$profile.skills&quot;, 0] },
+        availability: { $arrayElemAt: [&quot;$profile.availability&quot;, 0] }
+    } },
+    { $unset: &quot;profile&quot; }
 ];</code></pre></div><hr>
 <h2 id="getresult">GetResult()</h2>
 <p style="font-size: 15px;">
@@ -216,10 +156,10 @@ Then you will have access to:<br>
 <div><pre class="line-numbers"><code class="language-typescript">const result = await GetResult( target, pipeline );
 result.GetDocs();
 result.GetCount();</code></pre></div><h3 id="or-">Or :</h3>
-<div><pre class="line-numbers"><code class="language-typescript">GetResult(target, pipeline).then(result =&gt; {
+<div><pre class="line-numbers"><code class="language-typescript">GetResult( target, pipeline ).then( result =&gt; {
     result.GetDocs();
     result.GetCount();
-});</code></pre></div><hr>
+} );</code></pre></div><hr>
 <h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-the-lib-on-npm-runkit-with-the-require-methoda-br">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try the lib on NPM RunKit with the require method</a> ]<br></h3>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
 
