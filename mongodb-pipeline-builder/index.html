@@ -93,9 +93,7 @@ through the stages in sequence.
 </p>
 
 <h2 id="npm-package-img-srchttpspbstwimgcommediaedowjbuxyaarclgpng-width24-height24-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
-<blockquote>
-<p>npm i mongodb-pipeline-builder --save</p>
-</blockquote>
+<h3 id="npm-i--s-mongodb-pipeline-builder"><code>npm i -S mongodb-pipeline-builder</code></h3>
 <h2 id="usage">Usage:</h2>
 <h3 id="--with-require">- with require</h3>
 <div><pre class="line-numbers"><code class="language-typescript">const PipelineBuilder = require(&quot;mongodb-pipeline-builder&quot;).PipelineBuilder;
@@ -124,15 +122,15 @@ import { LessThanEqual, ArrayElemAt, Equal, Expression } from &#39;mongodb-pipel
         ]
     }
 } ];</code></pre></div><h2 id="example-without-paging">Example without paging:</h2>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder(&#39;user-skills&#39;)
-    .Match(Expression(Equal(&#39;$id&#39;, 123456)))
-    .Lookup(EqualityPayload(&#39;profiles&#39;, &#39;profile&#39;, &#39;profileId&#39;, &#39;id&#39;))
-    .Project(OnlyPayload(&#39;firstname&#39;, &#39;lastname&#39;, &#39;email&#39;))
+<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder( &#39;user-skills&#39; )
+    .Match( Expression( Equal( &#39;$id&#39;, 123456 ) ) )
+    .Lookup( EqualityPayload( &#39;profiles&#39;, &#39;profile&#39;, &#39;profileId&#39;, &#39;id&#39; ) )
+    .Project( OnlyPayload( &#39;firstname&#39;, &#39;lastname&#39;, &#39;email&#39; ) )
     .AddFields(
-        Field(&#39;skills&#39;, ArrayElemAt(&#39;$profile.skills&#39;, 0)),
-        Field(&#39;availability&#39;, ArrayElemAt(&#39;$profile.availability&#39;, 0))
+        Field( &#39;skills&#39;, ArrayElemAt( &#39;$profile.skills&#39;, 0 ) ),
+        Field( &#39;availability&#39;, ArrayElemAt( &#39;$profile.availability&#39;, 0 ) )
     )
-    .Unset(&#39;profile&#39;)
+    .Unset( &#39;profile&#39; )
     .getPipeline();</code></pre></div><h3 id="is-equivalent-to-1">is equivalent to:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [
     { $match: { $expr: { $eq: [&quot;$id&quot;, 123456] } } },
@@ -163,12 +161,12 @@ result.GetCount();</code></pre></div><h3 id="or-">Or :</h3>
 <h3 id="-a-hrefhttpsnpmrunkitcommongodb-pipeline-builder-target_blanktry-the-lib-on-npm-runkit-with-the-require-methoda-br">[ <a href="https://npm.runkit.com/mongodb-pipeline-builder" target="_blank">Try the lib on NPM RunKit with the require method</a> ]<br></h3>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Stages</a> ]</p>
 
-<p><code>MONGODB STAGES:</code></p>
+<h2 id="mongodb-stages"><code>MONGODB STAGES:</code></h2>
 <p style="font-size: 15px;">
 AddFields | Bucket | BucketAuto | CollStats | Count | Facet | GeoNear | GraphLookup | Group | IndexStats | Limit | ListSessions | Lookup | Match | Merge | Out | PlanCacheStats | Project | Redact | ReplaceRoot | ReplaceWith | Sample | Search | Set | Skip | Sort | SortByCount | UnionWith | Unset | Unwind
 </p>
 
-<p><code>CUSTOM STAGE:</code></p>
+<h2 id="custom-stage"><code>CUSTOM STAGE:</code></h2>
 <p style="font-size: 15px;">
 Paging
 </p>
@@ -176,7 +174,7 @@ Paging
 <hr>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/" target="_blank">Aggregation Pipeline Helpers</a> ]</p>
 
-<p><code>STAGE HELPERS * :</code></p>
+<h2 id="stage-helpers--"><code>STAGE HELPERS * :</code></h2>
 <p style="font-size: 15px;">
 &nbsp;- Bucket ( GroupByPayload )<br>
 &nbsp;- BucketAuto ( GroupByAutoPayload )<br>
@@ -189,13 +187,15 @@ Paging
 &nbsp;- Sample ( SizePayload )<br>
 &nbsp;- UnionWith ( CollectionPayload )
 
-<p><code>COMMON HELPERS:</code></p>
+<h2 id="common-helpers"><code>COMMON HELPERS:</code></h2>
 <p style="font-size: 15px;">
-&nbsp;- Field >> AddFields( Field ** ) | Set( Field ** ) | Sort( Field ** )<br>
+&nbsp;- Field: AddFields( Field ** ) | Facet( Field ** ) | Set( Field ** ) | Sort( Field ** )<br>
 &nbsp;- List
 <p>
+
+<p style="font-style: italic">
 * If no helper is available for a stage, use stage method and pass it a valid value as a parameter.<br>
-** One or more separated by a comma.
+** One or more Field helper(s) separated by a comma.
 
 <hr>
 <p style="font-size: 14px; white-space: nowrap;">[ <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/" target="_blank">Aggregation Pipeline Operators</a> ]</p>
