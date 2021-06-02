@@ -128,6 +128,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ReplaceRootStageInterface.html" data-type="entity-link">ReplaceRootStageInterface</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ResultProperty.html" data-type="entity-link">ResultProperty</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/SampleStageInterface.html" data-type="entity-link">SampleStageInterface</a>
                             </li>
                             <li class="link">
@@ -135,6 +138,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/StageInterface.html" data-type="entity-link">StageInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TestResultInterface.html" data-type="entity-link">TestResultInterface</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UnionWithStageInterface.html" data-type="entity-link">UnionWithStageInterface</a>
