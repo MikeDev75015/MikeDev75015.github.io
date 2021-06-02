@@ -1,3 +1,4 @@
 mongodb-pipeline-tester
 Dockerfile
+docker-compose.yml
 *.xml
