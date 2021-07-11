@@ -5168,38 +5168,67 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>async (target: any, pipeline: StageInterface[]) &#x3D;&gt; {
-    if (!target) {
-        throw new PipelineError(&#x27;Application not possible, the target is not valid.&#x27;);
-    }
-    if (!target.aggregate) {
-        throw new PipelineError(&#x27;Application not possible, the aggregate method does not exist on the chosen target.&#x27;);
-    }
-    if (!pipeline.length) {
-        throw new PipelineError(&#x27;Application not possible, the pipeline is empty.&#x27;);
+                            <i>Default value : </i><code>async (
+  target: any, pipeline: StageInterface[]
+): Promise&lt;GetResultResponse | GetPagingResultResponse&gt; &#x3D;&gt; {
+  if (!target) {
+    throw new PipelineError(&#x27;Application not possible, the target is not valid.&#x27;);
+  }
+  if (!target.aggregate) {
+    throw new PipelineError(&#x27;Application not possible, the aggregate method does not exist on the chosen target.&#x27;);
+  }
+  if (!pipeline.length) {
+    throw new PipelineError(&#x27;Application not possible, the pipeline is empty.&#x27;);
+  }
+  // @ts-ignore
+  const unknownStageList: any[] &#x3D; pipeline.filter((s) &#x3D;&gt; !StageTypeEnum[Object.keys(s)[0].substr(1)]);
+  if (unknownStageList &amp;&amp; unknownStageList.length) {
+    const unknownStageNameList &#x3D; unknownStageList.map((s) &#x3D;&gt; Object.keys(s)[0]);
+    throw new PipelineError(&#x60;Application not possible, ${unknownStageNameList.length &gt; 1
+      ? unknownStageNameList.join(&#x27; / &#x27;) + &#x27; pipeline stages are&#x27;
+      : unknownStageNameList[0] + &#x27; pipeline stage is&#x27;
+    } unknown or not valid.&#x60;);
+  }
+
+  try {
+    const result: any[] &#x3D; await target.aggregate(pipeline);
+
+    // Paging result
+    if (
+      result.length &#x3D;&#x3D;&#x3D; 1 &amp;&amp;
+      result[0].docs &amp;&amp;
+      result[0].count &amp;&amp;
+      result[0].count[0] &amp;&amp;
+      result[0].count[0].totalElements !&#x3D;&#x3D; undefined &amp;&amp;
+      result[0].count[0].totalElements &gt;&#x3D; 0
+    ) {
+      const pagingResult: { docs: any[]; count: { totalElements: number }[]; } &#x3D; result[0];
+      return {
+        GetDocs: () &#x3D;&gt; {
+          return pagingResult.docs;
+        },
+        GetCount: () &#x3D;&gt; pagingResult.count[0].totalElements
+      } as GetPagingResultResponse;
     }
 
-    try {
-        const result &#x3D; await target.aggregate(pipeline);
-
-        // Paging result
-        if (result.length &#x3D;&#x3D;&#x3D; 1 &amp;&amp; result[0].docs &amp;&amp; result[0].count &amp;&amp; result[0].count[0]) {
-
-            return {
-                GetDocs: () &#x3D;&gt; result[0].docs,
-                GetCount: () &#x3D;&gt; result[0].count[0].totalElements
-            } as GetResultResponseInterface;
+    // Default result
+    return {
+      GetDocs: (element?: number | &#x27;last&#x27;) &#x3D;&gt; {
+        if (!element) {
+          return result;
         }
+        const lastIndex &#x3D; result.length - 1;
+        if (element &gt; lastIndex || element &#x3D;&#x3D;&#x3D; &#x27;last&#x27;) {
+          return result[lastIndex];
+        }
+        return result[element];
+      },
+      GetCount: () &#x3D;&gt; result.length
+    } as GetResultResponse;
 
-        // Default result
-        return {
-            GetDocs: () &#x3D;&gt; result,
-            GetCount: () &#x3D;&gt; result.length
-        } as GetResultResponseInterface;
-
-    } catch (e) {
-        throw new PipelineError(&#x60;An error was encountered while executing the GetResult method:\n - ${e.message}&#x60;)
-    }
+  } catch (e) {
+    throw new PipelineError(&#x60;An error was encountered while executing the GetResult method:\n - ${e.message}&#x60;);
+  }
 }</code>
                         </td>
                     </tr>

@@ -98,7 +98,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/GeoNearStageInterface.html" data-type="entity-link">GeoNearStageInterface</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/GetResultResponseInterface.html" data-type="entity-link">GetResultResponseInterface</a>
+                                <a href="interfaces/GetPagingResultResponse.html" data-type="entity-link">GetPagingResultResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetResultResponse.html" data-type="entity-link">GetResultResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GraphLookupStageInterface.html" data-type="entity-link">GraphLookupStageInterface</a>
@@ -140,7 +143,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/StageInterface.html" data-type="entity-link">StageInterface</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/TestResultInterface.html" data-type="entity-link">TestResultInterface</a>
+                                <a href="interfaces/TestResultResponse.html" data-type="entity-link">TestResultResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UnionWithStageInterface.html" data-type="entity-link">UnionWithStageInterface</a>
