@@ -5214,7 +5214,7 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
     // Default result
     return {
       GetDocs: (element?: number | &#x27;last&#x27;) &#x3D;&gt; {
-        if (!element) {
+        if (element &#x3D;&#x3D;&#x3D; undefined) {
           return result;
         }
         const lastIndex &#x3D; result.length - 1;
