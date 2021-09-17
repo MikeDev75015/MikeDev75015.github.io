@@ -227,10 +227,16 @@
                             <a href="#geoNearPayloadValidator" title="lib/validators/stages/geoNear-payload.validator.ts"><b>geoNearPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../geoNear-payload.validator.ts)</a>
                         </li>
                         <li>
+                            <a href="#getDocsOfDefaultResult" title="lib/methods/get-result/get-result.ts"><b>getDocsOfDefaultResult</b>&nbsp;&nbsp;&nbsp;(lib/.../get-result.ts)</a>
+                        </li>
+                        <li>
                             <a href="#GetResult" title="lib/methods/get-result/get-result.ts"><b>GetResult</b>&nbsp;&nbsp;&nbsp;(lib/.../get-result.ts)</a>
                         </li>
                         <li>
                             <a href="#getStageTypeValue" title="lib/interfaces/core/stage-type.interface.ts"><b>getStageTypeValue</b>&nbsp;&nbsp;&nbsp;(lib/.../stage-type.interface.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getTotalPageNumber" title="lib/methods/get-result/get-result.ts"><b>getTotalPageNumber</b>&nbsp;&nbsp;&nbsp;(lib/.../get-result.ts)</a>
                         </li>
                         <li>
                             <a href="#graphLookupPayloadValidator" title="lib/validators/stages/graphLookup-payload.validator.ts"><b>graphLookupPayloadValidator</b>&nbsp;&nbsp;&nbsp;(lib/.../graphLookup-payload.validator.ts)</a>
@@ -2242,7 +2248,7 @@ If any argument resolves to a value of null or refers to a field that is missing
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(array: any, condition: boolean, as &#x3D; &#x27;this&#x27;) &#x3D;&gt; ({ $filter: { input: array, as: as, cond: condition } })</code>
+                            <i>Default value : </i><code>(array: any, condition: any, as &#x3D; &#x27;this&#x27;) &#x3D;&gt; ({ $filter: { input: array, as, cond: condition } })</code>
                         </td>
                     </tr>
 
@@ -2325,7 +2331,7 @@ that match the condition. The returned elements are in the original order.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(array: any, elementToFind: any, startIndex &#x3D; 0, endIndex?: number) &#x3D;&gt; ({
-    $indexOfArray: [ array, elementToFind, startIndex, (endIndex ? endIndex : { $size: array }) ]
+    $indexOfArray: [ array, elementToFind, startIndex, endIndex ]
 })</code>
                         </td>
                     </tr>
@@ -2411,7 +2417,7 @@ refers to a missing field, $indexOfArray returns an error.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(array: any, apply: any, as &#x3D; &#x27;this&#x27;) &#x3D;&gt; ({ $map: { input: array, as: as, in: apply } })</code>
+                            <i>Default value : </i><code>(array: any, apply: any, as &#x3D; &#x27;this&#x27;) &#x3D;&gt; ({ $map: { input: array, as, in: apply } })</code>
                         </td>
                     </tr>
 
@@ -2502,7 +2508,7 @@ the end point.</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(array: any, initialValue: any, apply: any) &#x3D;&gt; ({
-    $reduce: { input: array, initialValue: initialValue, in: apply }
+    $reduce: { input: array, initialValue, in: apply }
 })</code>
                         </td>
                     </tr>
@@ -5158,6 +5164,42 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="getDocsOfDefaultResult"></a>
+                        <span class="name">
+                            <b>
+                            getDocsOfDefaultResult</b>
+                            <a href="#getDocsOfDefaultResult"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(result: any[], element?: number | &#x27;last&#x27;) &#x3D;&gt; {
+  if (element &#x3D;&#x3D;&#x3D; undefined) {
+    return result;
+  }
+  const lastIndex &#x3D; result.length - 1;
+  if (element &gt; lastIndex || element &#x3D;&#x3D;&#x3D; &#x27;last&#x27;) {
+    return result[lastIndex];
+  }
+  return result[element];
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Apply the arguments of the GetDocs method of a default result</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="GetResult"></a>
                         <span class="name">
                             <b>
@@ -5176,6 +5218,9 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
   }
   if (!target.aggregate) {
     throw new PipelineError(&#x27;Application not possible, the aggregate method does not exist on the chosen target.&#x27;);
+  }
+  if (!pipeline) {
+    throw new PipelineError(&#x27;Application not possible, the pipeline is not valid.&#x27;);
   }
   if (!pipeline.length) {
     throw new PipelineError(&#x27;Application not possible, the pipeline is empty.&#x27;);
@@ -5202,27 +5247,19 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
       result[0].count[0].totalElements !&#x3D;&#x3D; undefined &amp;&amp;
       result[0].count[0].totalElements &gt;&#x3D; 0
     ) {
-      const pagingResult: { docs: any[]; count: { totalElements: number }[]; } &#x3D; result[0];
+      const { docs, count } &#x3D; result[0];
       return {
         GetDocs: () &#x3D;&gt; {
-          return pagingResult.docs;
+          return docs;
         },
-        GetCount: () &#x3D;&gt; pagingResult.count[0].totalElements
+        GetCount: () &#x3D;&gt; count[0].totalElements,
+        GetTotalPageNumber: (): number &#x3D;&gt; getTotalPageNumber(count, pipeline),
       } as GetPagingResultResponse;
     }
 
     // Default result
     return {
-      GetDocs: (element?: number | &#x27;last&#x27;) &#x3D;&gt; {
-        if (element &#x3D;&#x3D;&#x3D; undefined) {
-          return result;
-        }
-        const lastIndex &#x3D; result.length - 1;
-        if (element &gt; lastIndex || element &#x3D;&#x3D;&#x3D; &#x27;last&#x27;) {
-          return result[lastIndex];
-        }
-        return result[element];
-      },
+      GetDocs: (element?: number | &#x27;last&#x27;) &#x3D;&gt; getDocsOfDefaultResult(result, element),
       GetCount: () &#x3D;&gt; result.length
     } as GetResultResponse;
 
@@ -5236,6 +5273,52 @@ quantity chosen approximates the sample rate expressed as a percentage of the to
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Apply the aggregate method on the chosen target</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTotalPageNumber"></a>
+                        <span class="name">
+                            <b>
+                            getTotalPageNumber</b>
+                            <a href="#getTotalPageNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(count: any[], pipeline: StageInterface[]): number &#x3D;&gt; {
+  if (
+    !count || !count.length || count[0].totalElements &#x3D;&#x3D;&#x3D; undefined ||
+    !pipeline || !pipeline.length
+  ) {
+    return -1;
+  }
+
+  const totalElements &#x3D; count[0].totalElements as number;
+  const limitStage &#x3D; pipeline[0].$facet ? pipeline[0].$facet.docs.find((s) &#x3D;&gt; s.$limit) : undefined;
+  const elementsPerPage &#x3D; limitStage ? limitStage.$limit as number : undefined;
+
+  if (!elementsPerPage) {
+    return -1;
+  }
+
+  return totalElements % elementsPerPage
+    ? Math.floor(totalElements / elementsPerPage) + 1
+    : Math.floor(totalElements / elementsPerPage);
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Calculates the total number of pages for a pagination result</p>
 </div>
                     </td>
                 </tr>
