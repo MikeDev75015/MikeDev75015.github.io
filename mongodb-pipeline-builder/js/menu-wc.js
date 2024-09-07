@@ -1,6 +1,5 @@
 'use strict';
 
-
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -55,10 +54,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
-                                <a href="classes/PipelineBuilder.html" data-type="entity-link">PipelineBuilder</a>
+                                <a href="classes/PipelineBuilder.html" data-type="entity-link" >PipelineBuilder</a>
                             </li>
                             <li class="link">
-                                <a href="classes/PipelineError.html" data-type="entity-link">PipelineError</a>
+                                <a href="classes/PipelineError.html" data-type="entity-link" >PipelineError</a>
                             </li>
                         </ul>
                     </li>
@@ -71,85 +70,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/BucketAutoStageInterface.html" data-type="entity-link">BucketAutoStageInterface</a>
+                                <a href="interfaces/ResultProperty.html" data-type="entity-link" >ResultProperty</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/BucketStageInterface.html" data-type="entity-link">BucketStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/BuilderOptionsInterface.html" data-type="entity-link">BuilderOptionsInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/CollStatsStageInterface.html" data-type="entity-link">CollStatsStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/CurrentOpInterface.html" data-type="entity-link">CurrentOpInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/DebugBuildInterface.html" data-type="entity-link">DebugBuildInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/DebugHistoryInterface.html" data-type="entity-link">DebugHistoryInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/FacetStageInterface.html" data-type="entity-link">FacetStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/GeoNearStageInterface.html" data-type="entity-link">GeoNearStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/GetPagingResultResponse.html" data-type="entity-link">GetPagingResultResponse</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/GetResultResponse.html" data-type="entity-link">GetResultResponse</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/GraphLookupStageInterface.html" data-type="entity-link">GraphLookupStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/GroupStageInterface.html" data-type="entity-link">GroupStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/InitOptionsInterface.html" data-type="entity-link">InitOptionsInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/LookupConditionInterface.html" data-type="entity-link">LookupConditionInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/LookupEqualityInterface.html" data-type="entity-link">LookupEqualityInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/LookupStageInterface.html" data-type="entity-link">LookupStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/MergeStageInterface.html" data-type="entity-link">MergeStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/OutStageInterface.html" data-type="entity-link">OutStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/ReplaceRootStageInterface.html" data-type="entity-link">ReplaceRootStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/ResultProperty.html" data-type="entity-link">ResultProperty</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/SampleStageInterface.html" data-type="entity-link">SampleStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/StageErrorInterface.html" data-type="entity-link">StageErrorInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/StageInterface.html" data-type="entity-link">StageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/TestResultResponse.html" data-type="entity-link">TestResultResponse</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/UnionWithStageInterface.html" data-type="entity-link">UnionWithStageInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/UnwindStageInterface.html" data-type="entity-link">UnwindStageInterface</a>
+                                <a href="interfaces/TestResultResponse.html" data-type="entity-link" >TestResultResponse</a>
                             </li>
                         </ul>
                     </li>
@@ -161,9 +85,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
-                            <li class="link">
-                                <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
-                            </li>
                             <li class="link">
                                 <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>

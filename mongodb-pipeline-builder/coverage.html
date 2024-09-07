@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
         <link rel="stylesheet" href="./styles/postmark.css">
     </head>
     <body>
@@ -44,7 +45,8 @@
 
 
 
-                   
+
+
 
 
 <ol class="breadcrumb">
@@ -65,13 +67,25 @@
         </tr>
     </thead>
     <tbody>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#NON_DUPLICABLE_STAGE_LIST">lib/constants/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>NON_DUPLICABLE_STAGE_LIST</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#PAYLOAD_VALIDATION_ENABLED">lib/constants/index.ts</a>
+                <a href="./miscellaneous/variables.html#STAGE_PAYLOAD_VALIDATORS_AVAILABLE">lib/constants/index.ts</a>
             </td>
             <td>variable</td>
-            <td>PAYLOAD_VALIDATION_ENABLED</td>
+            <td>STAGE_PAYLOAD_VALIDATORS_AVAILABLE</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -80,7 +94,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#IsValidName">lib/decorators/is-valid-name/is-valid-name.ts</a>
+                <a href="./miscellaneous/functions.html#IsValidName">lib/decorators/is-valid-name/is-valid-name.decorator.ts</a>
             </td>
             <td>function</td>
             <td>IsValidName</td>
@@ -104,10 +118,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#GroupByAutoPayload">lib/helpers/bucket-auto/group-by-auto-payload.ts</a>
+                <a href="./miscellaneous/variables.html#BucketAutoHelper">lib/helpers/bucket-auto/bucket-auto.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>GroupByAutoPayload</td>
+            <td>BucketAutoHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -116,10 +130,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#GroupByPayload">lib/helpers/bucket/group-by-payload.ts</a>
+                <a href="./miscellaneous/variables.html#BucketHelper">lib/helpers/bucket/bucket.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>GroupByPayload</td>
+            <td>BucketHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -128,7 +142,43 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Field">lib/helpers/commons/field.ts</a>
+                <a href="./miscellaneous/variables.html#ChangeStreamHelper">lib/helpers/change-stream/change-stream.helper.ts</a>
+            </td>
+            <td>variable</td>
+            <td>ChangeStreamHelper</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#CollStatsHelper">lib/helpers/coll-stats/coll-stats.helper.ts</a>
+            </td>
+            <td>variable</td>
+            <td>CollStatsHelper</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#CurrentOpHelper">lib/helpers/current-op/current-op.helper.ts</a>
+            </td>
+            <td>variable</td>
+            <td>CurrentOpHelper</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#Field">lib/helpers/customs/field.helper.ts</a>
             </td>
             <td>variable</td>
             <td>Field</td>
@@ -140,7 +190,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#List">lib/helpers/commons/list.ts</a>
+                <a href="./miscellaneous/variables.html#List">lib/helpers/customs/list.helper.ts</a>
             </td>
             <td>variable</td>
             <td>List</td>
@@ -152,10 +202,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#OpPayload">lib/helpers/current-op/op-payload.ts</a>
+                <a href="./miscellaneous/variables.html#DensifyHelper">lib/helpers/densify/densify.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>OpPayload</td>
+            <td>DensifyHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -164,10 +214,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#NearPayload">lib/helpers/geo-near/near-payload.ts</a>
+                <a href="./miscellaneous/variables.html#FillHelper">lib/helpers/fill/fill.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>NearPayload</td>
+            <td>FillHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -176,10 +226,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ConditionPayload">lib/helpers/lookup/condition-payload.ts</a>
+                <a href="./miscellaneous/variables.html#GeoNearHelper">lib/helpers/geo-near/geo-near.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>ConditionPayload</td>
+            <td>GeoNearHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -188,10 +238,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#EqualityPayload">lib/helpers/lookup/equality-payload.ts</a>
+                <a href="./miscellaneous/variables.html#LookupConditionHelper">lib/helpers/lookup/lookup-condition.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>EqualityPayload</td>
+            <td>LookupConditionHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -200,10 +250,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IntoPayload">lib/helpers/merge/into-payload.ts</a>
+                <a href="./miscellaneous/variables.html#LookupEqualityHelper">lib/helpers/lookup/lookup-equality.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>IntoPayload</td>
+            <td>LookupEqualityHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -212,10 +262,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DbCollPayload">lib/helpers/out/db-coll-payload.ts</a>
+                <a href="./miscellaneous/variables.html#MergeHelper">lib/helpers/merge/merge.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>DbCollPayload</td>
+            <td>MergeHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -224,10 +274,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IgnorePayload">lib/helpers/project/ignore-payload.ts</a>
+                <a href="./miscellaneous/variables.html#OutHelper">lib/helpers/out/out.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>IgnorePayload</td>
+            <td>OutHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -236,10 +286,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Ignore">lib/helpers/project/ignore.ts</a>
+                <a href="./miscellaneous/variables.html#ProjectIgnoreHelper">lib/helpers/project/project-ignore.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>Ignore</td>
+            <td>ProjectIgnoreHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -248,10 +298,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#OnlyPayload">lib/helpers/project/only-payload.ts</a>
+                <a href="./miscellaneous/variables.html#ProjectOnlyHelper">lib/helpers/project/project-only.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>OnlyPayload</td>
+            <td>ProjectOnlyHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -260,10 +310,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Only">lib/helpers/project/only.ts</a>
+                <a href="./miscellaneous/variables.html#ProjectHelper">lib/helpers/project/project.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>Only</td>
+            <td>ProjectHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -272,118 +322,46 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SizePayload">lib/helpers/sample/size-payload.ts</a>
+                <a href="./miscellaneous/variables.html#SampleHelper">lib/helpers/sample/sample.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>SizePayload</td>
+            <td>SampleHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
             </td>
         </tr>
-        <tr class="very-good">
+        <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#CollectionPayload">lib/helpers/union-with/collection-payload.ts</a>
+                <a href="./miscellaneous/variables.html#SearchMetaHelper">lib/helpers/search-meta/search-meta.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>CollectionPayload</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
+            <td>SearchMetaHelper</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
             </td>
         </tr>
-        <tr class="very-good">
+        <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/BuilderOptionsInterface.html">lib/interfaces/core/builder-options.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>BuilderOptionsInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/DebugBuildInterface.html">lib/interfaces/core/debug-build.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>DebugBuildInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/DebugHistoryInterface.html">lib/interfaces/core/debug-history.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>DebugHistoryInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/GetPagingResultResponse.html">lib/interfaces/core/get-paging-result.response.ts</a>
-            </td>
-            <td>interface</td>
-            <td>GetPagingResultResponse</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(4/4)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/GetResultResponse.html">lib/interfaces/core/get-result.response.ts</a>
-            </td>
-            <td>interface</td>
-            <td>GetResultResponse</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/InitOptionsInterface.html">lib/interfaces/core/init-options.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>InitOptionsInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/StageErrorInterface.html">lib/interfaces/core/stage-error.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>StageErrorInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#getStageTypeValue">lib/interfaces/core/stage-type.interface.ts</a>
+                <a href="./miscellaneous/variables.html#SearchHelper">lib/helpers/search/search.helper.ts</a>
             </td>
             <td>variable</td>
-            <td>getStageTypeValue</td>
+            <td>SearchHelper</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#UnionWithHelper">lib/helpers/union-with/union-with.helper.ts</a>
+            </td>
+            <td>variable</td>
+            <td>UnionWithHelper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -392,70 +370,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/StageInterface.html">lib/interfaces/core/stage.interface.ts</a>
+                <a href="./miscellaneous/functions.html#isEmptyObject">lib/helpers/utils/utils.ts</a>
             </td>
-            <td>interface</td>
-            <td>StageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(31/31)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/BucketAutoStageInterface.html">lib/interfaces/stages/bucket-auto-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>BucketAutoStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/BucketStageInterface.html">lib/interfaces/stages/bucket-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>BucketStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/CollStatsStageInterface.html">lib/interfaces/stages/coll-stats-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>CollStatsStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/CurrentOpInterface.html">lib/interfaces/stages/current-op.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>CurrentOpInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(7/7)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/FacetStageInterface.html">lib/interfaces/stages/facet-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>FacetStageInterface</td>
+            <td>function</td>
+            <td>isEmptyObject</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -464,145 +382,25 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/GeoNearStageInterface.html">lib/interfaces/stages/geo-near-stage.interface.ts</a>
+                <a href="./miscellaneous/functions.html#isNotEmptyObject">lib/helpers/utils/utils.ts</a>
             </td>
-            <td>interface</td>
-            <td>GeoNearStageInterface</td>
+            <td>function</td>
+            <td>isNotEmptyObject</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(11/11)</span>
+                <span class="coverage-count">(1/1)</span>
             </td>
         </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/GraphLookupStageInterface.html">lib/interfaces/stages/graph-lookup-stage.interface.ts</a>
+                <a href="./miscellaneous/functions.html#setDefaultValueIfNotProvided">lib/helpers/utils/utils.ts</a>
             </td>
-            <td>interface</td>
-            <td>GraphLookupStageInterface</td>
+            <td>function</td>
+            <td>setDefaultValueIfNotProvided</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(9/9)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/GroupStageInterface.html">lib/interfaces/stages/group-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>GroupStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(2/2)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/LookupConditionInterface.html">lib/interfaces/stages/lookup-condition.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>LookupConditionInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(6/6)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/LookupEqualityInterface.html">lib/interfaces/stages/lookup-equality.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>LookupEqualityInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/LookupStageInterface.html">lib/interfaces/stages/lookup-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>LookupStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(7/7)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/MergeStageInterface.html">lib/interfaces/stages/merge-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>MergeStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(6/6)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/OutStageInterface.html">lib/interfaces/stages/out-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>OutStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/ReplaceRootStageInterface.html">lib/interfaces/stages/replace-root-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>ReplaceRootStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(2/2)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/SampleStageInterface.html">lib/interfaces/stages/sample-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>SampleStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(2/2)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/UnionWithStageInterface.html">lib/interfaces/stages/union-with-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>UnionWithStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/UnwindStageInterface.html">lib/interfaces/stages/unwind-stage.interface.ts</a>
-            </td>
-            <td>interface</td>
-            <td>UnwindStageInterface</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(4/4)</span>
+                <span class="coverage-count">(1/1)</span>
             </td>
         </tr>
         <tr class="very-good">
@@ -614,16 +412,40 @@
             <td>PipelineBuilder</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(58/58)</span>
+                <span class="coverage-count">(69/69)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#checkArgsValidity">lib/methods/get-result/get-result.ts</a>
+            </td>
+            <td>variable</td>
+            <td>checkArgsValidity</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
             </td>
         </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#getDocsOfDefaultResult">lib/methods/get-result/get-result.ts</a>
+                <a href="./miscellaneous/variables.html#getElementByIndex">lib/methods/get-result/get-result.ts</a>
             </td>
             <td>variable</td>
-            <td>getDocsOfDefaultResult</td>
+            <td>getElementByIndex</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#GetPagingResult">lib/methods/get-result/get-result.ts</a>
+            </td>
+            <td>variable</td>
+            <td>GetPagingResult</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -653,13 +475,205 @@
                 <span class="coverage-count">(1/1)</span>
             </td>
         </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#throwError">lib/methods/get-result/get-result.ts</a>
+            </td>
+            <td>variable</td>
+            <td>throwError</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#ValidPipelineStageNameList">lib/models/core/pipeline-stage.ts</a>
+            </td>
+            <td>variable</td>
+            <td>ValidPipelineStageNameList</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$AddToSet">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$AddToSet</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Average">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Average</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Bottom">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Bottom</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$BottomN">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$BottomN</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Count">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Count</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Max">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Max</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Min">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Min</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Push">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Push</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$StdDevPop">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$StdDevPop</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$StdDevSamp">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$StdDevSamp</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Sum">lib/operators/accumulator/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Sum</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Absolute">lib/operators/arithmetic/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Absolute</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Add">lib/operators/arithmetic/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Add</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#$Ceil">lib/operators/arithmetic/index.ts</a>
+            </td>
+            <td>variable</td>
+            <td>$Ceil</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#AddToSet">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Divide">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>AddToSet</td>
+            <td>$Divide</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -668,10 +682,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Avg">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Exponent">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Avg</td>
+            <td>$Exponent</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -680,10 +694,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Max">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Floor">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Max</td>
+            <td>$Floor</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -692,10 +706,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Min">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Log">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Min</td>
+            <td>$Log</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -704,10 +718,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Push">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Log10">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Push</td>
+            <td>$Log10</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -716,10 +730,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#StdDevPop">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Mod">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>StdDevPop</td>
+            <td>$Mod</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -728,10 +742,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#StdDevSamp">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Multiply">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>StdDevSamp</td>
+            <td>$Multiply</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -740,10 +754,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Sum">lib/operators/accumulator/index.ts</a>
+                <a href="./miscellaneous/variables.html#$NaturalLog">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Sum</td>
+            <td>$NaturalLog</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -752,10 +766,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Absolute">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Pow">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Absolute</td>
+            <td>$Pow</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -764,10 +778,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Add">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Round">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Add</td>
+            <td>$Round</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -776,10 +790,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Ceil">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Sqrt">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Ceil</td>
+            <td>$Sqrt</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -788,10 +802,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Divide">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Subtract">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Divide</td>
+            <td>$Subtract</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -800,10 +814,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Exponent">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Trunc">lib/operators/arithmetic/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Exponent</td>
+            <td>$Trunc</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -812,10 +826,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Floor">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArrayElementAt">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Floor</td>
+            <td>$ArrayElementAt</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -824,10 +838,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Log">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArrayToObject">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Log</td>
+            <td>$ArrayToObject</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -836,10 +850,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Log10">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ConcatArrays">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Log10</td>
+            <td>$ConcatArrays</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -848,10 +862,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Mod">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Filter">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Mod</td>
+            <td>$Filter</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -860,10 +874,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Multiply">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$First">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Multiply</td>
+            <td>$First</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -872,10 +886,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#NaturalLog">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$In">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>NaturalLog</td>
+            <td>$In</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -884,10 +898,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Pow">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IndexOfArray">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Pow</td>
+            <td>$IndexOfArray</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -896,10 +910,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Round">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IsArray">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Round</td>
+            <td>$IsArray</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -908,10 +922,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Sqrt">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Last">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Sqrt</td>
+            <td>$Last</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -920,10 +934,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Subtract">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Map">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Subtract</td>
+            <td>$Map</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -932,10 +946,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Trunc">lib/operators/arithmetic/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ObjectToArray">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Trunc</td>
+            <td>$ObjectToArray</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -944,10 +958,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ArrayElemAt">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Range">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ArrayElemAt</td>
+            <td>$Range</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -956,10 +970,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ArrayToObject">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Reduce">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ArrayToObject</td>
+            <td>$Reduce</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -968,10 +982,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ConcatArrays">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ReverseArray">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ConcatArrays</td>
+            <td>$ReverseArray</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -980,10 +994,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Filter">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Size">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Filter</td>
+            <td>$Size</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -992,10 +1006,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#First">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Slice">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>First</td>
+            <td>$Slice</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1004,10 +1018,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#In">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Zip">lib/operators/array/index.ts</a>
             </td>
             <td>variable</td>
-            <td>In</td>
+            <td>$Zip</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1016,10 +1030,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IndexOfArray">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BitwiseAnd">lib/operators/bitwise/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IndexOfArray</td>
+            <td>$BitwiseAnd</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1028,10 +1042,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IsArray">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BitwiseNot">lib/operators/bitwise/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IsArray</td>
+            <td>$BitwiseNot</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1040,10 +1054,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Last">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BitwiseOr">lib/operators/bitwise/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Last</td>
+            <td>$BitwiseOr</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1052,10 +1066,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#MapOperator">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BitwiseXor">lib/operators/bitwise/index.ts</a>
             </td>
             <td>variable</td>
-            <td>MapOperator</td>
+            <td>$BitwiseXor</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1064,10 +1078,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ObjectToArray">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$And">lib/operators/boolean/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ObjectToArray</td>
+            <td>$And</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1076,10 +1090,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Range">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Not">lib/operators/boolean/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Range</td>
+            <td>$Not</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1088,10 +1102,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Reduce">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Or">lib/operators/boolean/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Reduce</td>
+            <td>$Or</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1100,10 +1114,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ReverseArray">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Compare">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ReverseArray</td>
+            <td>$Compare</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1112,10 +1126,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Size">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Equal">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Size</td>
+            <td>$Equal</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1124,10 +1138,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Slice">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$GreaterThan">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Slice</td>
+            <td>$GreaterThan</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1136,10 +1150,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Zip">lib/operators/array/index.ts</a>
+                <a href="./miscellaneous/variables.html#$GreaterThanEqual">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Zip</td>
+            <td>$GreaterThanEqual</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1148,10 +1162,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#And">lib/operators/boolean/index.ts</a>
+                <a href="./miscellaneous/variables.html#$LessThan">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>And</td>
+            <td>$LessThan</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1160,10 +1174,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Not">lib/operators/boolean/index.ts</a>
+                <a href="./miscellaneous/variables.html#$LessThanEqual">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Not</td>
+            <td>$LessThanEqual</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1172,10 +1186,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Or">lib/operators/boolean/index.ts</a>
+                <a href="./miscellaneous/variables.html#$NotEqual">lib/operators/comparison/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Or</td>
+            <td>$NotEqual</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1184,10 +1198,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Compare">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Condition">lib/operators/conditional/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Compare</td>
+            <td>$Condition</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1196,10 +1210,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Equal">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IfNull">lib/operators/conditional/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Equal</td>
+            <td>$IfNull</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1208,10 +1222,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#GreaterThan">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Switch">lib/operators/conditional/index.ts</a>
             </td>
             <td>variable</td>
-            <td>GreaterThan</td>
+            <td>$Switch</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1220,10 +1234,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#GreaterThanEqual">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Accumulator">lib/operators/custom-aggregation/index.ts</a>
             </td>
             <td>variable</td>
-            <td>GreaterThanEqual</td>
+            <td>$Accumulator</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1232,10 +1246,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#LessThan">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$FunctionOperator">lib/operators/custom-aggregation/index.ts</a>
             </td>
             <td>variable</td>
-            <td>LessThan</td>
+            <td>$FunctionOperator</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1244,10 +1258,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#LessThanEqual">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BinarySize">lib/operators/data-size/index.ts</a>
             </td>
             <td>variable</td>
-            <td>LessThanEqual</td>
+            <td>$BinarySize</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1256,10 +1270,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#NotEqual">lib/operators/comparison/index.ts</a>
+                <a href="./miscellaneous/variables.html#$BsonSize">lib/operators/data-size/index.ts</a>
             </td>
             <td>variable</td>
-            <td>NotEqual</td>
+            <td>$BsonSize</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1268,10 +1282,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Cond">lib/operators/conditional/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateAdd">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Cond</td>
+            <td>$DateAdd</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1280,10 +1294,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IfNull">lib/operators/conditional/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateDifference">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IfNull</td>
+            <td>$DateDifference</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1292,10 +1306,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Switch">lib/operators/conditional/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateFromCalendarParts">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Switch</td>
+            <td>$DateFromCalendarParts</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1304,10 +1318,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Accumulator">lib/operators/custom-aggregation/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateFromIsoWeekParts">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Accumulator</td>
+            <td>$DateFromIsoWeekParts</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1316,10 +1330,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#FunctionOperator">lib/operators/custom-aggregation/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateFromString">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>FunctionOperator</td>
+            <td>$DateFromString</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1328,10 +1342,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#BinarySize">lib/operators/data-size/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateSubtract">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>BinarySize</td>
+            <td>$DateSubtract</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1340,10 +1354,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#BsonSize">lib/operators/data-size/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateToParts">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>BsonSize</td>
+            <td>$DateToParts</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1352,10 +1366,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DateFromParts">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateToString">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DateFromParts</td>
+            <td>$DateToString</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1364,10 +1378,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DateFromString">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DateTrunc">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DateFromString</td>
+            <td>$DateTrunc</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1376,10 +1390,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DateToParts">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DayOfMonth">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DateToParts</td>
+            <td>$DayOfMonth</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1388,10 +1402,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DateToString">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DayOfWeek">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DateToString</td>
+            <td>$DayOfWeek</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1400,10 +1414,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DayOfMonth">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DayOfYear">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DayOfMonth</td>
+            <td>$DayOfYear</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1412,10 +1426,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DayOfWeek">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Hour">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DayOfWeek</td>
+            <td>$Hour</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1424,10 +1438,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DayOfYear">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IsoDayOfWeek">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DayOfYear</td>
+            <td>$IsoDayOfWeek</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1436,10 +1450,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Hour">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IsoWeek">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Hour</td>
+            <td>$IsoWeek</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1448,10 +1462,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IsoDayOfWeek">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IsoWeekYear">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IsoDayOfWeek</td>
+            <td>$IsoWeekYear</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1460,10 +1474,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IsoWeek">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Millisecond">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IsoWeek</td>
+            <td>$Millisecond</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1472,10 +1486,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IsoWeekYear">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Minute">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IsoWeekYear</td>
+            <td>$Minute</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1484,10 +1498,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Millisecond">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Month">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Millisecond</td>
+            <td>$Month</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1496,10 +1510,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Minute">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Second">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Minute</td>
+            <td>$Second</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1508,10 +1522,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Month">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToDate">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Month</td>
+            <td>$ToDate</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1520,10 +1534,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Second">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Week">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Second</td>
+            <td>$Week</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1532,10 +1546,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToDate">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Year">lib/operators/date/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToDate</td>
+            <td>$Year</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1544,10 +1558,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Week">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$CovariancePop">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Week</td>
+            <td>$CovariancePop</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1556,10 +1570,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Year">lib/operators/date/index.ts</a>
+                <a href="./miscellaneous/variables.html#$CovarianceSamp">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Year</td>
+            <td>$CovarianceSamp</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1568,10 +1582,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Expression">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Expression">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Expression</td>
+            <td>$Expression</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1580,10 +1594,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Let">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Let">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Let</td>
+            <td>$Let</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1592,10 +1606,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Literal">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Literal">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Literal</td>
+            <td>$Literal</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1604,10 +1618,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#MergeObjects">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$MergeObjects">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>MergeObjects</td>
+            <td>$MergeObjects</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1616,10 +1630,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Meta">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Meta">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Meta</td>
+            <td>$Meta</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1628,10 +1642,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Rand">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Rand">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Rand</td>
+            <td>$Rand</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1640,10 +1654,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SampleRate">lib/operators/misc/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SampleRate">lib/operators/misc/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SampleRate</td>
+            <td>$SampleRate</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1652,10 +1666,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#AllElementsTrue">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$AllElementsTrue">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>AllElementsTrue</td>
+            <td>$AllElementsTrue</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1664,10 +1678,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#AnyElementTrue">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$AnyElementTrue">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>AnyElementTrue</td>
+            <td>$AnyElementTrue</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1676,10 +1690,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SetDifference">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SetDifference">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SetDifference</td>
+            <td>$SetDifference</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1688,10 +1702,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SetEquals">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SetEquals">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SetEquals</td>
+            <td>$SetEquals</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1700,10 +1714,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SetIntersection">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SetIntersection">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SetIntersection</td>
+            <td>$SetIntersection</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1712,10 +1726,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SetIsSubset">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SetIsSubset">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SetIsSubset</td>
+            <td>$SetIsSubset</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1724,10 +1738,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SetUnion">lib/operators/set/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SetUnion">lib/operators/set/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SetUnion</td>
+            <td>$SetUnion</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1736,10 +1750,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Concat">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Concat">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Concat</td>
+            <td>$Concat</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1748,10 +1762,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IndexOfBytes">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IndexOfBytes">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IndexOfBytes</td>
+            <td>$IndexOfBytes</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1760,10 +1774,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IndexOfCP">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IndexOfCP">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IndexOfCP</td>
+            <td>$IndexOfCP</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1772,10 +1786,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Ltrim">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Ltrim">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Ltrim</td>
+            <td>$Ltrim</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1784,10 +1798,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#RegexFind">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$RegexFind">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>RegexFind</td>
+            <td>$RegexFind</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1796,10 +1810,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#RegexFindAll">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$RegexFindAll">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>RegexFindAll</td>
+            <td>$RegexFindAll</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1808,10 +1822,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#RegexMatch">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$RegexMatch">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>RegexMatch</td>
+            <td>$RegexMatch</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1820,10 +1834,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ReplaceAll">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ReplaceAll">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ReplaceAll</td>
+            <td>$ReplaceAll</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1832,10 +1846,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ReplaceOne">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ReplaceOne">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ReplaceOne</td>
+            <td>$ReplaceOne</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1844,10 +1858,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Rtrim">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Rtrim">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Rtrim</td>
+            <td>$Rtrim</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1856,10 +1870,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Split">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Split">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Split</td>
+            <td>$Split</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1868,10 +1882,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#StrCaseCmp">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$StrCaseCmp">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>StrCaseCmp</td>
+            <td>$StrCaseCmp</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1880,10 +1894,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#StrLenBytes">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$StrLenBytes">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>StrLenBytes</td>
+            <td>$StrLenBytes</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1892,10 +1906,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#StrLenCP">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$StrLenCP">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>StrLenCP</td>
+            <td>$StrLenCP</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1904,10 +1918,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Substr">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Substr">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Substr</td>
+            <td>$Substr</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1916,10 +1930,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SubstrBytes">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SubstrBytes">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SubstrBytes</td>
+            <td>$SubstrBytes</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1928,10 +1942,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#SubstrCP">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$SubstrCP">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>SubstrCP</td>
+            <td>$SubstrCP</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1940,10 +1954,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToLower">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToLower">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToLower</td>
+            <td>$ToLower</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1952,10 +1966,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToString">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToString">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToString</td>
+            <td>$ToString</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1964,10 +1978,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToUpper">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToUpper">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToUpper</td>
+            <td>$ToUpper</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1976,10 +1990,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Trim">lib/operators/string/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Trim">lib/operators/string/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Trim</td>
+            <td>$Trim</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -1988,10 +2002,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Acos">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcCosine">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Acos</td>
+            <td>$ArcCosine</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2000,10 +2014,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Acosh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcCosineHyperbolic">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Acosh</td>
+            <td>$ArcCosineHyperbolic</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2012,10 +2026,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Asin">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcSine">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Asin</td>
+            <td>$ArcSine</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2024,10 +2038,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Asinh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcSineHyperbolic">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Asinh</td>
+            <td>$ArcSineHyperbolic</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2036,10 +2050,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Atan">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcTangent">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Atan</td>
+            <td>$ArcTangent</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2048,10 +2062,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Atan2">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcTangent2">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Atan2</td>
+            <td>$ArcTangent2</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2060,10 +2074,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Atanh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ArcTangentHyperbolic">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Atanh</td>
+            <td>$ArcTangentHyperbolic</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2072,10 +2086,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Cos">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Cosine">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Cos</td>
+            <td>$Cosine</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2084,10 +2098,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Cosh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$CosineHyperbolic">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Cosh</td>
+            <td>$CosineHyperbolic</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2096,10 +2110,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#DegreesToRadians">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$DegreesToRadians">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>DegreesToRadians</td>
+            <td>$DegreesToRadians</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2108,10 +2122,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#RadiansToDegrees">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$RadiansToDegrees">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>RadiansToDegrees</td>
+            <td>$RadiansToDegrees</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2120,10 +2134,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Sin">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Sin">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Sin</td>
+            <td>$Sin</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2132,10 +2146,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Sinh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Sinh">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Sinh</td>
+            <td>$Sinh</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2144,10 +2158,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Tan">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Tan">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Tan</td>
+            <td>$Tan</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2156,10 +2170,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Tanh">lib/operators/trigonometry/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Tanh">lib/operators/trigonometry/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Tanh</td>
+            <td>$Tanh</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2168,10 +2182,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Convert">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Convert">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Convert</td>
+            <td>$Convert</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2180,10 +2194,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#IsNumber">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$IsNumber">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>IsNumber</td>
+            <td>$IsNumber</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2192,10 +2206,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToBool">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToBool">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToBool</td>
+            <td>$ToBool</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2204,10 +2218,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToDecimal">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToDecimal">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToDecimal</td>
+            <td>$ToDecimal</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2216,10 +2230,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToDouble">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToDouble">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToDouble</td>
+            <td>$ToDouble</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2228,10 +2242,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToInt">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToInt">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToInt</td>
+            <td>$ToInt</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2240,10 +2254,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToLong">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToLong">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToLong</td>
+            <td>$ToLong</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2252,10 +2266,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#ToObjectId">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$ToObjectId">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>ToObjectId</td>
+            <td>$ToObjectId</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2264,10 +2278,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#Type">lib/operators/type/index.ts</a>
+                <a href="./miscellaneous/variables.html#$Type">lib/operators/type/index.ts</a>
             </td>
             <td>variable</td>
-            <td>Type</td>
+            <td>$Type</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2360,66 +2374,6 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#graphLookupPayloadValidator">lib/validators/stages/graphLookup-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>graphLookupPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#groupPayloadValidator">lib/validators/stages/group-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>groupPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#indexStatsPayloadValidator">lib/validators/stages/indexStats-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>indexStatsPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#limitPayloadValidator">lib/validators/stages/limit-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>limitPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#listSessionsPayloadValidator">lib/validators/stages/listSessions-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>listSessionsPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
                 <a href="./miscellaneous/variables.html#lookupEqualityValidator">lib/validators/stages/lookup-payload.validator.ts</a>
             </td>
             <td>variable</td>
@@ -2456,106 +2410,10 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#mergePayloadValidator">lib/validators/stages/merge-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>mergePayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#outPayloadValidator">lib/validators/stages/out-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>outPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#planCacheStatsPayloadValidator">lib/validators/stages/planCacheStats-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>planCacheStatsPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
                 <a href="./miscellaneous/variables.html#projectPayloadValidator">lib/validators/stages/project-payload.validator.ts</a>
             </td>
             <td>variable</td>
             <td>projectPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#redactPayloadValidator">lib/validators/stages/redact-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>redactPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#replaceRootPayloadValidator">lib/validators/stages/replaceRoot-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>replaceRootPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#replaceWithPayloadValidator">lib/validators/stages/replaceWith-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>replaceWithPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#samplePayloadValidator">lib/validators/stages/sample-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>samplePayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#searchPayloadValidator">lib/validators/stages/search-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>searchPayloadValidator</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
                 <span class="coverage-count">(1/1)</span>
@@ -2576,18 +2434,6 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#skipPayloadValidator">lib/validators/stages/skip-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>skipPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
                 <a href="./miscellaneous/variables.html#sortPayloadValidator">lib/validators/stages/sort-payload.validator.ts</a>
             </td>
             <td>variable</td>
@@ -2600,55 +2446,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#sortByCountPayloadValidator">lib/validators/stages/sortByCount-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>sortByCountPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#unionWithPayloadValidator">lib/validators/stages/unionWith-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>unionWithPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#unsetPayloadValidator">lib/validators/stages/unset-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>unsetPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#unwindPayloadValidator">lib/validators/stages/unwind-payload.validator.ts</a>
-            </td>
-            <td>variable</td>
-            <td>unwindPayloadValidator</td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(1/1)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href=".//functions.html#testMaxLength">lib/validators/utils/string.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testMaxLength">lib/validators/utils/string.validator.ts</a>
             </td>
             <td>function</td>
             <td>testMaxLength</td>
@@ -2660,7 +2458,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testMinLength">lib/validators/utils/string.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testMinLength">lib/validators/utils/string.validator.ts</a>
             </td>
             <td>function</td>
             <td>testMinLength</td>
@@ -2672,7 +2470,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testNoSpace">lib/validators/utils/string.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testNoSpace">lib/validators/utils/string.validator.ts</a>
             </td>
             <td>function</td>
             <td>testNoSpace</td>
@@ -2684,7 +2482,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testNoSpecialChar">lib/validators/utils/string.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testNoSpecialChar">lib/validators/utils/string.validator.ts</a>
             </td>
             <td>function</td>
             <td>testNoSpecialChar</td>
@@ -2720,7 +2518,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#getTypeOfV">lib/validators/utils/undefined.validator.ts</a>
+                <a href="./miscellaneous/functions.html#getTypeOfV">lib/validators/utils/undefined.validator.ts</a>
             </td>
             <td>function</td>
             <td>getTypeOfV</td>
@@ -2732,7 +2530,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#IsUndefined">lib/validators/utils/undefined.validator.ts</a>
+                <a href="./miscellaneous/functions.html#IsUndefined">lib/validators/utils/undefined.validator.ts</a>
             </td>
             <td>function</td>
             <td>IsUndefined</td>
@@ -2744,7 +2542,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testArrayValues">lib/validators/utils/undefined.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testArrayValues">lib/validators/utils/undefined.validator.ts</a>
             </td>
             <td>function</td>
             <td>testArrayValues</td>
@@ -2756,7 +2554,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testObjectProperties">lib/validators/utils/undefined.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testObjectProperties">lib/validators/utils/undefined.validator.ts</a>
             </td>
             <td>function</td>
             <td>testObjectProperties</td>
@@ -2768,7 +2566,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#testValueOfV">lib/validators/utils/undefined.validator.ts</a>
+                <a href="./miscellaneous/functions.html#testValueOfV">lib/validators/utils/undefined.validator.ts</a>
             </td>
             <td>function</td>
             <td>testValueOfV</td>
@@ -2800,7 +2598,7 @@
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -2812,6 +2610,15 @@
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'coverage';
@@ -2821,9 +2628,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
