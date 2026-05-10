@@ -32,1365 +32,472 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<p>++<div style="text-align: center; width: 100%;"></p>
-<div style="display: inline-block">
+<div align="center">
 
 <p><a href="https://www.npmjs.com/package/mongodb-pipeline-builder"><img src="https://img.shields.io/npm/v/mongodb-pipeline-builder.svg" alt="NPM version" class="img-responsive"></a>
 <img src="https://img.shields.io/npm/l/mongodb-pipeline-builder?registry_uri=https%3A%2F%2Fregistry.npmjs.com" alt="NPM" class="img-responsive">
 <img src="https://img.shields.io/npm/dw/mongodb-pipeline-builder" alt="npm" class="img-responsive"></p>
-</div>
-
-<div style="display: inline-block">
-
 <p><img src="https://img.shields.io/github/checks-status/MikeDev75015/mongodb-pipeline-builder/main" alt="GitHub branch checks state" class="img-responsive">
 <a href="https://app.circleci.com/pipelines/github/MikeDev75015/mongodb-pipeline-builder"><img src="https://circleci.com/gh/MikeDev75015/mongodb-pipeline-builder.svg?style=shield" alt="CircleCI" class="img-responsive"></a>
 <img src="https://img.shields.io/sonar/quality_gate/MikeDev75015_mongodb-pipeline-builder?server=https%3A%2F%2Fsonarcloud.io" alt="Sonar Quality Gate" class="img-responsive"></p>
-</div>
-</div>
-
-<div style="text-align: center; width: 100%;">
-<div style="display: inline-block">
-
 <p><img src="https://img.shields.io/sonar/tests/MikeDev75015_mongodb-pipeline-builder?server=https%3A%2F%2Fsonarcloud.io" alt="Sonar Tests" class="img-responsive">
 <img src="https://img.shields.io/sonar/coverage/MikeDev75015_mongodb-pipeline-builder?server=https%3A%2F%2Fsonarcloud.io" alt="Sonar Coverage" class="img-responsive">
 <img src="https://mikedev75015.github.io/mongodb-pipeline-builder/images/coverage-badge-documentation.svg" alt="documentation-badge"></p>
-</div>
-
-<div style="display: inline-block">
-
-<p><img src="https://img.shields.io/github/languages/top/MikeDev75015/mongodb-pipeline-builder" alt="GitHub top language" class="img-responsive">
-<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=ncloc" alt="Lines of Code" class="img-responsive"></a>
-<a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=duplicated_lines_density" alt="Duplicated Lines (%)" class="img-responsive"></a></p>
-</div>
-</div>
-
-<div style="text-align: center; width: 100%;">
-<div style="display: inline-block">
-
-<p><img src="https://img.shields.io/github/languages/code-size/MikeDev75015/mongodb-pipeline-builder" alt="GitHub code size in bytes" class="img-responsive">
-<img src="https://img.shields.io/github/commit-activity/w/MikeDev75015/mongodb-pipeline-builder" alt="GitHub commit activity" class="img-responsive">
-<img src="https://img.shields.io/github/last-commit/MikeDev75015/mongodb-pipeline-builder/main" alt="GitHub last commit (branch)" class="img-responsive"></p>
-</div>
-
-<div style="display: inline-block">
-
 <p><a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=sqale_rating" alt="Maintainability Rating" class="img-responsive"></a>
 <a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=reliability_rating" alt="Reliability Rating" class="img-responsive"></a>
 <a href="https://sonarcloud.io/dashboard?id=MikeDev75015_mongodb-pipeline-builder"><img src="https://sonarcloud.io/api/project_badges/measure?project=MikeDev75015_mongodb-pipeline-builder&metric=security_rating" alt="Security Rating" class="img-responsive"></a></p>
-</div>
-</div>
-
 <hr>
-<div style="text-align: center; width: 100%;">
-
-<p><a href="https://mikedev75015.github.io/mongodb-pipeline-builder">-&gt; Technical documentation &lt;-</a></p>
-<h1 id="mongodb-pipeline-builder">mongodb-pipeline-builder</h1>
+<h1 id="mongodb-pipeline-builder">MongoDB Pipeline Builder</h1>
+<p><strong>A type-safe, fluent API for building MongoDB aggregation pipelines</strong></p>
 </div>
 
-
-<p style="text-align: justify; width: 100%;font-size: 15px;">
-
-<p><strong>mongodb-pipeline-builder</strong> is a pipeline builder for the <a href="https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/">db.collection.aggregate</a>, the <a href="https://www.mongodb.com/docs/v7.0/reference/method/db.aggregate/">db.aggregate</a> and the mongoose <a href="https://mongoosejs.com/docs/api/aggregate.html#Aggregate()">Model.aggregate</a> methods.</p>
+<h2 id="🚀-overview">🚀 Overview</h2>
+<p><strong>mongodb-pipeline-builder</strong> is a powerful TypeScript library that simplifies the creation of MongoDB aggregation pipelines. It provides a fluent, type-safe API that makes your aggregation pipelines more readable, maintainable, and less error-prone.</p>
+<h3 id="key-features">Key Features</h3>
+<p>✨ <strong>Type-Safe</strong> - Full TypeScript support with generics for typed responses<br>📖 <strong>Readable</strong> - Fluent API that makes complex pipelines easy to understand<br>🔧 <strong>Maintainable</strong> - Modular design with reusable helpers<br>🎯 <strong>Complete</strong> - Supports all MongoDB aggregation stages and operators<br>⚡ <strong>Efficient</strong> - Built-in pagination support with optimized queries<br>🛡️ <strong>Validated</strong> - Automatic validation of pipeline stages  </p>
+<h3 id="supported-platforms">Supported Platforms</h3>
 <ul>
-<li>Simplify pipelines by making them more readable</li>
-<li>Pipelines are easier to edit. </li>
-<li>Pipeline stages appear in an array. </li>
-<li>Sequential stages for documents</li>
+<li>✅ <a href="https://www.mongodb.com/docs/drivers/node/current/">MongoDB Native Driver</a> - <code>db.collection.aggregate()</code></li>
+<li>✅ <a href="https://www.mongodb.com/docs/manual/reference/method/db.aggregate/">MongoDB Database Commands</a> - <code>db.aggregate()</code></li>
+<li>✅ <a href="https://mongoosejs.com/">Mongoose</a> - <code>Model.aggregate()</code></li>
 </ul>
-<p>All stages except the Out, Merge, GeoNear, ChangeStream, ChangeStreamSplitLargeEvent and Paging stages can appear multiple times in a pipeline.</p>
-</p>
-
 <hr>
-<h2 id="npm-package-">npm package <img src="https://pbs.twimg.com/media/EDoWJbUXYAArclg.png" width="24" height="24" /></h2>
-<p><code>npm i -S mongodb-pipeline-builder</code></p>
-<hr>
-<h3 id="news-and-breaking-changes-between-v3-and-v4"><strong>News and Breaking changes</strong> between <strong>v3</strong> and <strong>v4</strong></h3>
-<h4 id="pipelinebuilder"><strong>PipelineBuilder:</strong></h4>
-<ul>
-<li>Renaming <code>getPipeline()</code> with <code>build()</code></li>
-<li>Added new stages: ChangeStream, ChangeStreamSplitLargeEvent, Densify, Documents, Fill, ListLocalSessions, ListSampledQueries, ListSearchIndexes, SearchMeta, SetWindowFields and ShardedDataDistribution.</li>
-<li>Added the possibility to insert stages without validation.</li>
-<li>Checking for non-duplicable stages.</li>
-</ul>
-<h4 id="helpers"><strong>Helpers:</strong></h4>
-<ul>
-<li>Replacing the <code>Payload</code> suffix with <code>Helper</code> suffix</li>
-<li>Prefixed with the name of the pipeline stage where they should be used</li>
-</ul>
-<h4 id="operators"><strong>Operators:</strong></h4>
-<ul>
-<li>Prefixed with the <strong>$</strong> symbol</li>
-<li>Rename <code>MapOperator</code> to <code>$Map</code></li>
-</ul>
-<h4 id="getresult"><strong>GetResult:</strong></h4>
-<ul>
-<li>To be used if no Paging stage is set</li>
-<li>Removing GetDocs method arguments</li>
-<li>Added new GetElement method to the response object</li>
-</ul>
-<h4 id="getpagingresult"><strong>GetPagingResult:</strong></h4>
-<ul>
-<li>To be used exclusively with Paging stage.</li>
-</ul>
-<p><em>Welcome generics! <code>GetResult&lt;Type&gt;</code> and <code>GetPagingResult&lt;Type&gt;</code> now offer the ability to type responses.</em></p>
-<hr>
-<h2 id="usage">Usage:</h2>
-<h3 id="using-require">Using <code>require()</code></h3>
-<div><pre class="line-numbers"><code class="language-typescript">const PipelineBuilder = require(&quot;mongodb-pipeline-builder&quot;).PipelineBuilder;
-const { LookupEqualityHelper, ProjectOnlyHelper, Field } = require(&#39;mongodb-pipeline-builder/helpers&#39;);
-const { $LessThanEqual, $ArrayElementAt, $Equal, $Expression } = require(&#39;mongodb-pipeline-builder/operators&#39;);</code></pre></div><h3 id="using-import">Using <code>import</code></h3>
+<h2 id="📦-installation">📦 Installation</h2>
+<div><pre class="line-numbers"><code class="language-bash">npm install mongodb-pipeline-builder</code></pre></div><div><pre class="line-numbers"><code class="language-bash">yarn add mongodb-pipeline-builder</code></pre></div><div><pre class="line-numbers"><code class="language-bash">pnpm add mongodb-pipeline-builder</code></pre></div><hr>
+<h2 id="🎯-quick-start">🎯 Quick Start</h2>
+<h3 id="basic-example">Basic Example</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { PipelineBuilder } from &#39;mongodb-pipeline-builder&#39;;
-import { LookupEqualityHelper, ProjectOnlyHelper, Field } from &#39;mongodb-pipeline-builder/helpers&#39;;
-import { $LessThanEqual, $ArrayElementAt, $Equal, $Expression } from &#39;mongodb-pipeline-builder/operators&#39;;</code></pre></div><hr>
-<h2 id="pagination-example">Pagination example</h2>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder( &#39;myPagination&#39;, { debug: true } )
-    .Match( $Expression( $LessThanEqual( &#39;$id&#39;, 20 ) ) )
-    .Project( ProjectOnlyHelper( &#39;name&#39;, &#39;weight&#39; ) )
-    .Paging( 5, 3 ) // 5 per page, page 3
-    .build();</code></pre></div><p><em>is equivalent to</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [ {
-    $facet: {
-        docs: [
-            { $match: { $expr: { $lte: [&quot;$id&quot;, 20] } } },
-            { $project: { _id: 0, name: 1, weight: 1 } },
-            { $skip: 10 },
-            { $limit: 5 }
-        ],
-        count: [
-            { $match: { $expr: { $lte: [&quot;$id&quot;, 20] } } },
-            { $count: &quot;totalElements&quot; }
-        ]
-    }
-} ];</code></pre></div><hr>
-<h2 id="no-pagination-example">No pagination example</h2>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = new PipelineBuilder( &#39;user-skills&#39; )
-    .Match( $Expression( $Equal( &#39;$id&#39;, 123456 ) ) )
-    .Lookup( LookupEqualityHelper( &#39;profiles&#39;, &#39;profile&#39;, &#39;id&#39;, &#39;profileId&#39; ) )
-    .Project( ProjectOnlyHelper( &#39;firstname&#39;, &#39;lastname&#39;, &#39;email&#39; ) )
-    .AddFields(
-        Field( &#39;skills&#39;, $ArrayElementAt( &#39;$profile.skills&#39;, 0 ) ),
-        Field( &#39;availability&#39;, $ArrayElementAt( &#39;$profile.availability&#39;, 0 ) )
-    )
-    .Unset( &#39;profile&#39; )
-    .build();</code></pre></div><p><em>is equivalent to</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">const myNewPipeline = [
-    { $match: { $expr: { $eq: [&quot;$id&quot;, 123456] } } },
-    { $lookup: { from: &quot;profiles&quot;, as: &quot;profile&quot;, localField: &quot;id&quot;, foreignField: &quot;profileId&quot; } },
-    { $project: { _id: 0, firstname: 1, lastname: 1, email: 1 } },
-    { $addFields: {
-        skills: { $arrayElemAt: [&quot;$profile.skills&quot;, 0] },
-        availability: { $arrayElemAt: [&quot;$profile.availability&quot;, 0] }
-    } },
-    { $unset: &quot;profile&quot; }
-];</code></pre></div><hr>
-<h1 id="getresult-method-no-pagination">GetResult method (No pagination)</h1>
-<div><pre class="line-numbers"><code class="language-typescript">GetResult&lt;T&gt;(): Promise&lt;GetResultResponse&lt;T&gt;&gt;</code></pre></div><p style="font-size: 15px;">
+import { ProjectOnlyHelper } from &#39;mongodb-pipeline-builder/helpers&#39;;
+import { $Expression, $Equal } from &#39;mongodb-pipeline-builder/operators&#39;;
 
-<p><code>GetResult&lt;T&gt;()</code> is an <strong>asynchronous</strong> method that provides a very easy way to use aggregation responses.</p>
-<p>
+const pipeline = new PipelineBuilder(&#39;users-query&#39;)
+  .Match($Expression($Equal(&#39;$status&#39;, &#39;active&#39;)))
+  .Project(ProjectOnlyHelper(&#39;name&#39;, &#39;email&#39;, &#39;createdAt&#39;))
+  .Sort({ createdAt: -1 })
+  .Limit(10)
+  .build();
 
+// Use with MongoDB
+const results = await db.collection(&#39;users&#39;).aggregate(pipeline).toArray();
 
-<p style="font-size: 15px;">
+// Use with Mongoose
+const results = await User.aggregate(pipeline);</code></pre></div><h3 id="with-pagination">With Pagination</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PipelineBuilder, GetPagingResult } from &#39;mongodb-pipeline-builder&#39;;
+import { $Expression, $GreaterThan } from &#39;mongodb-pipeline-builder/operators&#39;;
 
-<p>This method returns a <code>GetResultResponse</code> object that contains 3 methods:<br></p>
+const pipeline = new PipelineBuilder(&#39;paginated-users&#39;)
+  .Match($Expression($GreaterThan(&#39;$age&#39;, 18)))
+  .Sort({ createdAt: -1 })
+  .Paging(20, 1) // 20 items per page, page 1
+  .build();
+
+const result = await GetPagingResult(User, pipeline);
+
+console.log(result.GetDocs());           // Document array
+console.log(result.GetCount());          // Total count
+console.log(result.GetTotalPageNumber()); // Total pages</code></pre></div><h3 id="with-lookups-joins">With Lookups (Joins)</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PipelineBuilder } from &#39;mongodb-pipeline-builder&#39;;
+import { LookupEqualityHelper, Field } from &#39;mongodb-pipeline-builder/helpers&#39;;
+import { $ArrayElementAt } from &#39;mongodb-pipeline-builder/operators&#39;;
+
+const pipeline = new PipelineBuilder(&#39;users-with-profiles&#39;)
+  .Lookup(LookupEqualityHelper(&#39;profiles&#39;, &#39;profile&#39;, &#39;profileId&#39;, &#39;_id&#39;))
+  .AddFields(
+    Field(&#39;profileData&#39;, $ArrayElementAt(&#39;$profile&#39;, 0))
+  )
+  .Unset(&#39;profile&#39;)
+  .build();</code></pre></div><hr>
+<h2 id="📚-documentation">📚 Documentation</h2>
+<h3 id="core-concepts">Core Concepts</h3>
 <ul>
-<li><code>GetDocs(): T[]</code> to get all the documents that match the request.</li>
-<li><code>GetElement(index: number | &#39;last&#39;): T</code> to get a particular document by its index.</li>
-<li><code>GetCount(): number</code> to get the total number of documents found.</li>
+<li><strong><a href="./docs/getting-started.md">Getting Started Guide</a></strong> - Detailed introduction and setup</li>
+<li><strong><a href="./docs/migration-guide.md">Migration Guide v3 → v4</a></strong> - Upgrade from version 3</li>
 </ul>
-</p>
-
-
-<div><pre class="line-numbers"><code class="language-typescript">const result = await GetResult&lt;DocType&gt;( target, pipeline ); 
-result.GetDocs(); // () =&gt; DocType[]
-result.GetElement(index | &#39;last&#39;); // () =&gt; DocType | undefined
-result.GetCount(); // () =&gt; number</code></pre></div><p><em>$Or</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">GetResult&lt;DocType&gt;( target, pipeline ).then( result =&gt; {
-    result.GetDocs(); // () =&gt; DocType[]
-    result.GetElement(index | &#39;last&#39;); // () =&gt; DocType | undefined
-    result.GetCount(); // () =&gt; number
-} );</code></pre></div><h3 id="getelementindex-number--last-method-possibilities"><code>GetElement(index: number | &#39;last&#39;)</code> method possibilities:</h3>
-<p style="font-size: 15px;">
-
+<h3 id="api-reference">API Reference</h3>
 <ul>
-<li>A particular document can be retrieved by specifying its index.</li>
-<li>To get the last document, simply provide the string <code>&#39;last&#39;</code>. </li>
-<li>If the specified index is greater than the index of the last document, <code>GetElement()</code> will return undefined.</p></li>
+<li><strong><a href="./docs/api/stages.md">Pipeline Stages</a></strong> - All MongoDB aggregation stages</li>
+<li><strong><a href="./docs/api/operators.md">Operators</a></strong> - Aggregation operators ($match, $group, etc.)</li>
+<li><strong><a href="./docs/api/helpers.md">Helpers</a></strong> - Utility functions and stage helpers (Field, ProjectHelper, LookupHelper, etc.)</li>
 </ul>
-<div><pre class="line-numbers"><code class="language-typescript">// GetDocs() -&gt; [document1, document2, document3, ..., document51]
-result.GetElement(2); // will return document to index 2, document3
-result.GetElement(&#39;last&#39;); // will return the last document, document51
-result.GetElement(99); // will return undefined</code></pre></div><hr>
-<h1 id="getpagingresult-method-pagination">GetPagingResult method (Pagination)</h1>
-<div><pre class="line-numbers"><code class="language-typescript">GetPagingResult&lt;T&gt;(): Promise&lt;GetPagingResultResponse&lt;T&gt;&gt;</code></pre></div><p style="font-size: 15px;">
-
-<p><code>GetPagingResult&lt;T&gt;()</code> is an <strong>asynchronous</strong> method that provides a very easy way to use aggregation responses when <strong>Paging</strong> stage is used.</p>
-<p>
-
-
-<p style="font-size: 15px;">
-
-<p>This method returns a <code>GetPagingResultResponse</code> object that contains three methods:</p>
+<h3 id="examples--tutorials">Examples &amp; Tutorials</h3>
 <ul>
-<li><code>GetDocs()</code> to get the documents found.</li>
-<li><code>GetCount()</code> to get the total number of documents found.</li>
-<li><code>GetTotalPageNumber()</code> to get the total number of pages.</li>
+<li><strong><a href="./docs/examples/pagination.md">Pagination Examples</a></strong> - Implementing pagination patterns</li>
+<li><strong><a href="./docs/examples/lookups.md">Lookup &amp; Join Examples</a></strong> - Working with multiple collections</li>
 </ul>
-</p>
-
-
-<div><pre class="line-numbers"><code class="language-typescript">const result = await GetPagingResult&lt;DocType&gt;(target, pipeline);
-result.GetDocs(); // () =&gt; DocType[]
-result.GetCount(); // () =&gt; number
-result.GetTotalPageNumber(); // () =&gt; number</code></pre></div><p><em>$Or</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">GetPagingResult&lt;DocType&gt;(target, pipeline).then( result =&gt; {
-    result.GetDocs(); // () =&gt; DocType[]
-    result.GetCount(); // () =&gt; number
-    result.GetTotalPageNumber(); // () =&gt; number
-} );</code></pre></div><hr>
-<p><a href="https://npm.runkit.com/mongodb-pipeline-builder">=&gt; Try the lib on NPM RunKit with the require method &lt;=</a></p>
 <hr>
-<p><code>// builder = new PipelineBuilder(&#39;example&#39;);</code></p>
-<h2 id="custom-stages">CUSTOM STAGES</h2>
-<h3 id="pagingelementsperpage-page">Paging(elementsPerPage, page)</h3>
-<p>  <em>The Paging stage automatically adds 3 native stages used to paginate documents ($skip, $limit and $count).
-  <br>Page is optional and defaults to 1.</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Paging(5, 2).build();
+<h2 id="🔥-whats-new-in-v4">🔥 What&#39;s New in v4</h2>
+<h3 id="breaking-changes">Breaking Changes</h3>
+<h4 id="pipelinebuilder">PipelineBuilder</h4>
+<ul>
+<li>✨ <code>build()</code> replaces <code>getPipeline()</code></li>
+<li>🆕 New stages: <code>ChangeStream</code>, <code>ChangeStreamSplitLargeEvent</code>, <code>Densify</code>, <code>Documents</code>, <code>Fill</code>, <code>ListLocalSessions</code>, <code>ListSampledQueries</code>, <code>ListSearchIndexes</code>, <code>SearchMeta</code>, <code>SetWindowFields</code>, <code>ShardedDataDistribution</code></li>
+<li>🆕 <code>Insert()</code> stage for adding custom stages without validation</li>
+<li>✅ Automatic detection of non-duplicable stages</li>
+</ul>
+<h4 id="helpers">Helpers</h4>
+<ul>
+<li>🔄 <code>Payload</code> suffix → <code>Helper</code> suffix</li>
+<li>🏷️ Prefixed with stage name (e.g., <code>LookupEqualityHelper</code>)</li>
+</ul>
+<h4 id="operators">Operators</h4>
+<ul>
+<li>🏷️ All operators prefixed with <code>$</code> (e.g., <code>$Add</code>, <code>$Match</code>)</li>
+<li>🔄 <code>MapOperator</code> → <code>$Map</code></li>
+<li>🆕 <strong>New Aggregation Operators (MongoDB 7.0+):</strong> <code>$Median</code>, <code>$Percentile</code>, <code>$Top</code>, <code>$TopN</code></li>
+<li>🆕 <strong>New Object Operators (MongoDB 5.0+):</strong> <code>$GetField</code>, <code>$SetField</code></li>
+</ul>
+<h4 id="result-methods">Result Methods</h4>
+<ul>
+<li>🎯 <code>GetResult&lt;T&gt;()</code> - For non-paginated queries<ul>
+<li>✨ <code>GetElement(index | &#39;last&#39;)</code> - New method to get specific document</li>
+<li>🚀 Generic type support for typed responses</li>
+</ul>
+</li>
+<li>🎯 <code>GetPagingResult&lt;T&gt;()</code> - Exclusively for paginated queries<ul>
+<li>🚀 Generic type support for typed responses</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="💡-real-world-example">💡 Real-World Example</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { PipelineBuilder, GetResult } from &#39;mongodb-pipeline-builder&#39;;
+import { 
+  LookupEqualityHelper, 
+  ProjectOnlyHelper, 
+  Field 
+} from &#39;mongodb-pipeline-builder/helpers&#39;;
+import { 
+  $Expression, 
+  $And,
+  $Equal, 
+  $GreaterThanEqual,
+  $ArrayElementAt 
+} from &#39;mongodb-pipeline-builder/operators&#39;;
 
-// pipeline
-[
-  {
-    $facet: {
-      docs: [ { &#39;$skip&#39;: 5 }, { &#39;$limit&#39;: 5 } ],
-      count: [ { &#39;$count&#39;: &#39;totalElements&#39; } ]
-    }
-  }
-]</code></pre></div><h3 id="insertstagestage">InsertStage(stage)</h3>
-<p>  <em>The InsertStage stage allows you to insert a stage without validation.
-  <br>Usefully when you need to insert a stage that is not yet implemented
-  or when the value fails validation but for some reason you want to keep it.</em></p>
-<div><pre class="line-numbers"><code class="language-typescript">builder.InsertStage({ &#39;$myCustomStage&#39;: { myField: &#39;myValue&#39; } }).build();
+// Complex query: Active users with their orders
+const pipeline = new PipelineBuilder(&#39;active-users-with-orders&#39;, { debug: true })
+  // Filter active users over 18
+  .Match($Expression(
+    $And(
+      $Equal(&#39;$status&#39;, &#39;active&#39;),
+      $GreaterThanEqual(&#39;$age&#39;, 18)
+    )
+  ))
+  
+  // Join with orders collection
+  .Lookup(LookupEqualityHelper(&#39;orders&#39;, &#39;orders&#39;, &#39;_id&#39;, &#39;userId&#39;))
+  
+  // Project specific fields
+  .Project(ProjectOnlyHelper(&#39;name&#39;, &#39;email&#39;, &#39;age&#39;))
+  
+  // Add computed fields
+  .AddFields(
+    Field(&#39;totalOrders&#39;, { $size: &#39;$orders&#39; }),
+    Field(&#39;lastOrder&#39;, $ArrayElementAt(&#39;$orders&#39;, -1))
+  )
+  
+  // Sort by total orders descending
+  .Sort(Field(&#39;totalOrders&#39;, -1))
+  
+  // Limit results
+  .Limit(50)
+  
+  .build();
 
-// pipeline
-[ { $myCustomStage: { myField: &#39;myValue&#39; } } ]</code></pre></div><h2 id="mongodb-stages"><a href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/">MONGODB STAGES</a></h2>
-<h3 id="addfieldsvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/addFields/">AddFields</a>(...values)</h3>
-<h4 id="helper-fieldname-value">Helper: <code>Field(name, value)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.AddFields(
-  Field(&#39;foo&#39;, &#39;value1&#39;),
-  Field(&#39;bar&#39;, &#39;value2&#39;),
-).build();
+// Execute query with typed response
+interface UserWithOrders {
+  name: string;
+  email: string;
+  age: number;
+  totalOrders: number;
+  lastOrder?: any;
+}
 
-// pipeline
-[ { $addFields: { foo: &#39;value1&#39;, bar: &#39;value2&#39; } } ]</code></pre></div><h3 id="bucketvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bucket/">Bucket</a>(value)</h3>
-<h4 id="helper-buckethelpergroupby-boundaries-optional">Helper: <code>BucketHelper(groupBy, boundaries, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Bucket(BucketHelper(&#39;$age&#39;, [6, 13, 18])).build();
+const result = await GetResult&lt;UserWithOrders&gt;(User, pipeline);
 
-// pipeline
-[ { $bucket: { groupBy: &#39;$age&#39;, boundaries: [ 6, 13, 18 ] } } ]</code></pre></div><h3 id="bucketautovalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bucketAuto/">BucketAuto</a>(value)</h3>
-<h4 id="helper-bucketautohelpergroupby-buckets-optional">Helper: <code>BucketAutoHelper(groupBy, buckets, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.BucketAuto(BucketAutoHelper(&#39;$age&#39;, 5)).build();
-
-// pipeline
-[ { $bucketAuto: { groupBy: &#39;$age&#39;, buckets: 5 } } ]</code></pre></div><h3 id="changestreamvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/changeStream/">ChangeStream</a>(value)</h3>
-<h4 id="helper-changestreamhelperoptional">Helper: <code>ChangeStreamHelper(optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ChangeStream(ChangeStreamHelper()).build();
-
-// pipeline
-[ { $changeStream: {} } ]</code></pre></div><h3 id="changestreamsplitlargeevent"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/changeStreamSplitLargeEvent/">ChangeStreamSplitLargeEvent</a>()</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ChangeStreamSplitLargeEvent().build();
-
-// pipeline
-[ { $changeStreamSplitLargeEvent: {} } ]</code></pre></div><h3 id="collstatsvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/collStats/">CollStats</a>(value)</h3>
-<h4 id="helper-collstatshelperoptional">Helper: <code>CollStatsHelper(optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.CollStats(CollStatsHelper()).build();
-
-// pipeline
-[ { $collStats: {} } ]</code></pre></div><h3 id="countvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/count/">Count</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Count(&#39;counter&#39;).build();
-
-// pipeline
-[ { $count: &#39;counter&#39; } ]</code></pre></div><h3 id="currentopvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/currentOp/">CurrentOp</a>(value)</h3>
-<h4 id="helper-currentophelperoptional">Helper: <code>CurrentOpHelper(optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.CurrentOp(CurrentOpHelper()).build();
-
-// pipeline
-[ { $currentOp: {} } ]</code></pre></div><h3 id="densifyvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/densify/">Densify</a>(value)</h3>
-<h4 id="helper-densifyhelperfield-range-optional">Helper: <code>DensifyHelper(field, range, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Densify(
-    DensifyHelper(
-      &#39;altitude&#39;,
-      { bounds: &#39;full&#39;, step: 200 },
-      { partitionByFields: [ &#39;variety&#39; ] }
-    ),
-).build();
-
-// pipeline
-[
-  {
-    $densify: {
-      field: &#39;altitude&#39;,
-      range: { bounds: &#39;full&#39;, step: 200 }
-      partitionByFields: [ &#39;variety&#39; ],
-    }
-  }
-]</code></pre></div><h3 id="documentsvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/documents/">Documents</a>(...values)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Documents({ doc1Id: 1 }, { doc2Id: 2 }, { doc3Id: 3 }).build();
-
-// pipeline
-[ { $documents: [ { doc1Id: 1 }, { doc2Id: 2 }, { doc3Id: 3 } ] } ]</code></pre></div><h3 id="facetvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/facet/">Facet</a>(...values)</h3>
-<h4 id="helper-fieldname-pipeline">Helper: <code>Field(name, pipeline)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Facet(
-  Field(&#39;pipeline1&#39;, [{ $match: { tag: &#39;first&#39; }}]),
-  Field(&#39;pipeline2&#39;, [{ $match: { tag: &#39;second&#39; }}]),
-  Field(&#39;pipeline3&#39;, [{ $match: { tag: &#39;third&#39; }}]),
-).build();
-
-// pipeline
-[
-  {
-    $facet: {
-      pipeline1: [ { &#39;$match&#39;: { tag: &#39;first&#39; } } ],
-      pipeline2: [ { &#39;$match&#39;: { tag: &#39;second&#39; } } ],
-      pipeline3: [ { &#39;$match&#39;: { tag: &#39;third&#39; } } ]
-    }
-  }
-]</code></pre></div><h3 id="fillvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/fill/">Fill</a>(value)</h3>
-<h4 id="helper-fillhelperoutput-optional">Helper: <code>FillHelper(output, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Fill(
-  FillHelper({
-    bootsSold: { value: 0 },
-    sandalsSold: { value: 0 },
-    sneakersSold: { value: 0 },
-  }),
-).build();
-
-// pipeline
-[
-  {
-    $fill: {
-      output: {
-        bootsSold: { value: 0 },
-        sandalsSold: { value: 0 },
-        sneakersSold: { value: 0 }
-      }
-    }
-  }
-]</code></pre></div><h3 id="geonearvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/geoNear/">GeoNear</a>(value)</h3>
-<h4 id="helper-geonearhelpernear-distancefield-optional">Helper: <code>GeoNearHelper(near, distanceField, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.GeoNear(
-  GeoNearHelper({ type: &quot;Point&quot;, coordinates: [ -73.99279 , 40.719296 ] }, &#39;calculated&#39;)
-).build();
-
-// pipeline
-[
-  {
-    $geoNear: {
-      near: { type: &#39;Point&#39;, coordinates: [ -73.99279, 40.719296 ] },
-      distanceField: &#39;calculated&#39;
-    }
-  }
-]</code></pre></div><h3 id="graphlookupvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/graphLookup/">GraphLookup</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.GraphLookup({
-  from: &#39;employees&#39;, startWith: &#39;$reportsTo&#39;, connectFromField: &#39;reportsTo&#39;, connectToField: &#39;name&#39;, as: &#39;reportingHierarchy&#39;,
-}).build();
-
-// pipeline
-[
-  {
-    $graphLookup: {
-      from: &#39;employees&#39;,
-      startWith: &#39;$reportsTo&#39;,
-      connectFromField: &#39;reportsTo&#39;,
-      connectToField: &#39;name&#39;,
-      as: &#39;reportingHierarchy&#39;
-    }
-  }
-]</code></pre></div><h3 id="groupvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/">Group</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Group({ _id: null, count: { $count: { } } }).build();
-
-// pipeline
-[
-  { $group: { _id: null, count: { &#39;$count&#39;: {} } } }
-]</code></pre></div><h3 id="indexstats"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/indexStats/">IndexStats</a>()</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.IndexStats().build();
-
-// pipeline
-[ { $indexStats: {} } ]</code></pre></div><h3 id="limitvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/limit/">Limit</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Limit(10).build();
-
-// pipeline
-[ { $limit: 10 } ]</code></pre></div><h3 id="listlocalsessionsvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/listLocalSessions/">ListLocalSessions</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ListLocalSessions({ allUsers: true }).build();
-
-// pipeline
-[ { $listLocalSessions: { allUsers: true } } ]</code></pre></div><h3 id="listsampledqueriesvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/listSampledQueries/">ListSampledQueries</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ListSampledQueries({ namespace: &quot;social.post&quot; }).build();
-
-// pipeline
-[ { $listSampledQueries: { namespace: &#39;social.post&#39; } } ]</code></pre></div><h3 id="listsearchindexesvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/listSearchIndexes/">ListSearchIndexes</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ListSearchIndexes({ name: &#39;searchIndex01&#39; }).build();
-
-// pipeline
-[ { $listSearchIndexes: { name: &#39;searchIndex01&#39; } } ]</code></pre></div><h3 id="listsessionsvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/listSessions/">ListSessions</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ListSessions({ allUsers: true }).build();
-
-// pipeline
-[ { $listSessions: { allUsers: true } } ]</code></pre></div><h3 id="lookupvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/">Lookup</a>(value)</h3>
-<h4 id="helper-lookupconditionhelperfrom-as-optional">Helper: <code>LookupConditionHelper(from, as, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Lookup(LookupConditionHelper(&#39;users&#39;, &#39;users&#39;)).build();
-
-// pipeline
-[ { $lookup: { from: &#39;users&#39;, as: &#39;users&#39; } } ]</code></pre></div><h4 id="helper-lookupequalityhelperfrom-as-localfield-foreignfield">Helper: <code>LookupEqualityHelper(from, as, localField, foreignField)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Lookup(
-  LookupEqualityHelper(&#39;users&#39;, &#39;users&#39;, &#39;userId&#39;, &#39;id&#39;)
-).build();
-
-// pipeline
-[
+// Access results
+const users = result.GetDocs();        // UserWithOrders[]
+const count = result.GetCount();       // number
+const firstUser = result.GetElement(0); // UserWithOrders | undefined
+const lastUser = result.GetElement(&#39;last&#39;); // UserWithOrders | undefined</code></pre></div><hr>
+<h2 id="🧪-try-it-online">🧪 Try It Online</h2>
+<p><a href="https://npm.runkit.com/mongodb-pipeline-builder">→ Try the library on NPM RunKit</a></p>
+<hr>
+<h2 id="📊-comparison-before--after">📊 Comparison: Before &amp; After</h2>
+<h3 id="before-raw-mongodb">Before (Raw MongoDB)</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = [
+  { 
+    $match: { 
+      $expr: { 
+        $and: [
+          { $eq: [&quot;$status&quot;, &quot;active&quot;] },
+          { $gte: [&quot;$age&quot;, 18] }
+        ]
+      } 
+    } 
+  },
   {
     $lookup: {
-      from: &#39;users&#39;,
-      localField: &#39;userId&#39;,
-      foreignField: &#39;id&#39;,
-      as: &#39;users&#39;
+      from: &quot;orders&quot;,
+      localField: &quot;_id&quot;,
+      foreignField: &quot;userId&quot;,
+      as: &quot;orders&quot;
     }
-  }
-]</code></pre></div><h3 id="matchvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/">Match</a>(value)</h3>
-<h4 id="helper-fieldname-value-1">Helper: <code>Field(name, value)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Match(Field(&#39;age&#39;, 18)).build();
-
-// pipeline
-[ { $match: { age: 18 } } ]</code></pre></div><h4 id="operator-expression">Operator: <code>$Expression</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Match($Expression($GreaterThanEqual(&#39;$age&#39;, 18))).build();
-
-// pipeline
-[ { $match: { &#39;$expr&#39;: { &#39;$gte&#39;: [ &#39;$age&#39;, 18 ] } } } ]</code></pre></div><h3 id="mergevalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/merge/">Merge</a>(value)</h3>
-<h4 id="helper-mergehelperinto-optional">Helper: <code>MergeHelper(into, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Merge(MergeHelper(&#39;newCollection&#39;)).build();
-
-// pipeline
-[ { $merge: { into: &#39;newCollection&#39; } } ]</code></pre></div><h3 id="outvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/out/">Out</a>(value)</h3>
-<h4 id="helper-outhelpercollection-optional">Helper: <code>OutHelper(collection, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Out(OutHelper(&#39;users&#39;)).build();
-
-// pipeline
-[ { $out: &#39;users&#39; } ]</code></pre></div><h3 id="plancachestats"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/planCacheStats/">PlanCacheStats</a>()</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.PlanCacheStats().build();
-
-// pipeline
-[ { $planCacheStats: {} } ]</code></pre></div><h3 id="projectvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/project/">Project</a>(...values)</h3>
-<h4 id="helper-projecthelperfield-value">Helper: <code>ProjectHelper(field, value)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Project(
-  ProjectHelper(&#39;age&#39;, &#39;$user.age&#39;),
-  ProjectHelper(
-    &#39;nickname&#39;,
-    {
-      $cond: {
-        if: { $eq: [ &#39;&#39;, &#39;$user.nickname&#39; ] },
-        then: &#39;$$REMOVE&#39;,
-        else: &#39;$user.nickname&#39;,
-      },
-    },
-  ),
-).build();
-
-// pipeline
-[
-  {
-    $project: {
-      age: &#39;$user.age&#39;,
-      nickname: {
-        $cond: {
-          if: { $eq: [ &#39;&#39;, &#39;$user.nickname&#39; ] },
-          then: &#39;$$REMOVE&#39;,
-          else: &#39;$user.nickname&#39;
-        }
-      }
-    }
-  }
-]</code></pre></div><h4 id="helper-projectignorehelperfields">Helper: <code>ProjectIgnoreHelper(...fields)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Project(ProjectIgnoreHelper(&#39;password&#39;, &#39;refreshToken&#39;)).build();
-
-// pipeline
-[ { $project: { password: 0, refreshToken: 0 } } ]</code></pre></div><h4 id="helper-projectonlyhelperfields">Helper: <code>ProjectOnlyHelper(...fields)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Project(ProjectOnlyHelper(&#39;password&#39;, &#39;refreshToken&#39;)).build();
-
-// pipeline
-[ { $project: { _id: 0, password: 1, refreshToken: 1 } } ]</code></pre></div><h3 id="redactvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/redact/">Redact</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Redact(
-  $Condition(
-    $GreaterThan($Size($SetIntersection(&#39;$tags&#39;, [&#39;STLW&#39;, &#39;G&#39;])), 0),
-    &#39;$$DESCEND&#39;,
-    &#39;$$PRUNE&#39;
+  },
+  { 
+    $project: { 
+      _id: 0, 
+      name: 1, 
+      email: 1, 
+      age: 1,
+      totalOrders: { $size: &quot;$orders&quot; },
+      lastOrder: { $arrayElemAt: [&quot;$orders&quot;, -1] }
+    } 
+  },
+  { $sort: { totalOrders: -1 } },
+  { $limit: 50 }
+];</code></pre></div><h3 id="after-with-pipeline-builder">After (With Pipeline Builder)</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = new PipelineBuilder(&#39;active-users&#39;)
+  .Match($Expression($And(
+    $Equal(&#39;$status&#39;, &#39;active&#39;),
+    $GreaterThanEqual(&#39;$age&#39;, 18)
+  )))
+  .Lookup(LookupEqualityHelper(&#39;orders&#39;, &#39;orders&#39;, &#39;_id&#39;, &#39;userId&#39;))
+  .Project(
+    ProjectOnlyHelper(&#39;name&#39;, &#39;email&#39;, &#39;age&#39;),
+    Field(&#39;totalOrders&#39;, { $size: &#39;$orders&#39; }),
+    Field(&#39;lastOrder&#39;, $ArrayElementAt(&#39;$orders&#39;, -1))
   )
-).build();
+  .Sort(Field(&#39;totalOrders&#39;, -1))
+  .Limit(50)
+  .build();</code></pre></div><hr>
+<h2 id="🔍-working-with-results">🔍 Working with Results</h2>
+<h3 id="getresult---for-non-paginated-queries">GetResult<T> - For Non-Paginated Queries</h3>
+<p>Use when your pipeline does <strong>not</strong> include the <code>Paging</code> stage:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { GetResult } from &#39;mongodb-pipeline-builder&#39;;
 
-// pipeline
-[
-  {
-    $redact: {
-      &#39;$cond&#39;: [
-        { &#39;$gt&#39;: [ { &#39;$size&#39;: { &#39;$setIntersection&#39;: [ &#39;$tags&#39;, [ &#39;STLW&#39;, &#39;G&#39; ] ] } }, 0 ] },
-        &#39;$$DESCEND&#39;,
-        &#39;$$PRUNE&#39;
-      ]
-    }
-  }
-]</code></pre></div><h3 id="replacerootvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/replaceRoot/">ReplaceRoot</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ReplaceRoot({
-  newRoot: { full_name: { $concat : [ &quot;$first_name&quot;, &quot; &quot;, &quot;$last_name&quot; ] } }
-}).build();
+interface User {
+  name: string;
+  email: string;
+  age: number;
+}
 
-// pipeline
-[
-  {
-    $replaceRoot: {
-      newRoot: {
-        full_name: { &#39;$concat&#39;: [ &#39;$first_name&#39;, &#39; &#39;, &#39;$last_name&#39; ] }
-      }
-    }
-  }
-]</code></pre></div><h3 id="replacewithvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/replaceWith/">ReplaceWith</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ReplaceWith(&#39;$name&#39;).build();
+const pipeline = new PipelineBuilder(&#39;users&#39;)
+  .Match($Expression($Equal(&#39;$status&#39;, &#39;active&#39;)))
+  .build();
 
-// pipeline
-[ { $replaceWith: &#39;$name&#39; } ]</code></pre></div><h3 id="samplevalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/sample/">Sample</a>(value)</h3>
-<h4 id="helper-samplehelpersize">Helper: <code>SampleHelper(size)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Sample(SampleHelper(6)).build();
+const result = await GetResult&lt;User&gt;(User, pipeline);
 
-// pipeline
-[ { $sample: { size: 6 } } ]</code></pre></div><h3 id="searchvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/search/">Search</a>(value)</h3>
-<h4 id="helper-searchhelperoperator--collector-optional">Helper: <code>SearchHelper(operator | collector, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Search(
-  SearchHelper({
-    near: { path: &#39;released&#39;, origin: date, pivot: 7776000000 },
-  }),
-).build();
+const users = result.GetDocs();           // User[] - all documents  
+const count = result.GetCount();          // number - total count
+const firstUser = result.GetElement(0);   // User | undefined
+const lastUser = result.GetElement(&#39;last&#39;); // User | undefined</code></pre></div><hr>
+<h3 id="getpagingresult---for-paginated-queries">GetPagingResult<T> - For Paginated Queries</h3>
+<p>Use <strong>exclusively</strong> when your pipeline includes the <code>Paging</code> stage:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { GetPagingResult } from &#39;mongodb-pipeline-builder&#39;;
 
-// pipeline
-[
-  {
-    $search: {
-      near: { path: &#39;released&#39;, origin: date, pivot: 7776000000 },
-    },
-  }
-]</code></pre></div><h3 id="searchmetavalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/searchMeta/">SearchMeta</a>(value)</h3>
-<h4 id="helper-searchmetahelpercollector-optional">Helper: <code>SearchMetaHelper(collector, optional)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.SearchMeta(
-  SearchMetaHelper({
-    facet: {
-      operator: {
-        near: { path: &#39;released&#39;, origin: date, pivot: 7776000000 },
-      },
-      facets: {
-        test: { type: &#39;number&#39;, path: &#39;released&#39;, boundaries: [0, 100] },
-      },
-    },
+const pipeline = new PipelineBuilder(&#39;users&#39;)
+  .Match($Expression($Equal(&#39;$status&#39;, &#39;active&#39;)))
+  .Paging(20, 1) // Required for GetPagingResult
+  .build();
+
+const result = await GetPagingResult&lt;User&gt;(User, pipeline);
+
+const users = result.GetDocs();           // User[] - current page
+const totalCount = result.GetCount();     // number - total documents
+const totalPages = result.GetTotalPageNumber(); // number - total pages</code></pre></div><blockquote>
+<p>📖 <strong>Learn More:</strong> See <a href="./docs/getting-started.md">Getting Started Guide</a> for detailed examples</p>
+</blockquote>
+<hr>
+<h2 id="📚-api-reference-quick-links">📚 API Reference Quick Links</h2>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<p>All MongoDB aggregation stages are supported. See <a href="./docs/api/stages.md">complete reference</a>.</p>
+<p><strong>Common Stages:</strong></p>
+<ul>
+<li><code>Match()</code> - Filter documents</li>
+<li><code>Project()</code> - Select/transform fields</li>
+<li><code>Group()</code> - Group and aggregate</li>
+<li><code>Sort()</code> - Sort documents</li>
+<li><code>Limit()</code> - Limit results</li>
+<li><code>Lookup()</code> - Join collections</li>
+<li><code>Unwind()</code> - Deconstruct arrays</li>
+<li><code>AddFields()</code> - Add computed fields</li>
+<li><code>Paging()</code> - Add pagination</li>
+</ul>
+<h3 id="operators-1">Operators</h3>
+<p>156+ MongoDB operators supported. See <a href="./docs/api/operators.md">complete reference</a>.</p>
+<p><strong>Common Operators:</strong></p>
+<ul>
+<li>Comparison: <code>$Equal</code>, <code>$GreaterThan</code>, <code>$LessThan</code></li>
+<li>Logical: <code>$And</code>, <code>$Or</code>, <code>$Not</code></li>
+<li>Arithmetic: <code>$Add</code>, <code>$Subtract</code>, <code>$Multiply</code>, <code>$Divide</code></li>
+<li>Array: <code>$Size</code>, <code>$Filter</code>, <code>$Map</code>, <code>$ArrayElementAt</code></li>
+<li>String: <code>$Concat</code>, <code>$ToLower</code>, <code>$ToUpper</code>, <code>$Split</code></li>
+<li>Date: <code>$DateAdd</code>, <code>$DateSubtract</code>, <code>$DateDifference</code></li>
+<li>Aggregation: <code>$Sum</code>, <code>$Average</code>, <code>$Min</code>, <code>$Max</code>, <code>$Median</code>, <code>$Percentile</code>, <code>$Top</code>, <code>$TopN</code></li>
+<li>Object: <code>$GetField</code>, <code>$SetField</code>, <code>$MergeObjects</code></li>
+</ul>
+<h3 id="helpers-1">Helpers</h3>
+<p>20+ helper functions for common patterns. See <a href="./docs/api/stages.md#complete-helpers-reference">complete list in stages.md</a>.</p>
+<p><strong>Common Helpers:</strong></p>
+<ul>
+<li><code>Field(name, value)</code> - Universal field helper</li>
+<li><code>ProjectOnlyHelper(...fields)</code> - Include specific fields</li>
+<li><code>LookupEqualityHelper(...)</code> - Simple joins</li>
+<li><code>BucketHelper(...)</code> - Categorize documents</li>
+<li><code>SearchHelper(...)</code> - Full-text search</li>
+</ul>
+<hr>
+<h2 id="🎓-quick-examples">🎓 Quick Examples</h2>
+<h3 id="example-1-simple-query">Example 1: Simple Query</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = new PipelineBuilder(&#39;active-users&#39;)
+  .Match($Expression($Equal(&#39;$status&#39;, &#39;active&#39;)))
+  .Project(ProjectOnlyHelper(&#39;name&#39;, &#39;email&#39;))
+  .Sort({ createdAt: -1 })
+  .Limit(10)
+  .build();
+
+const result = await GetResult&lt;User&gt;(User, pipeline);</code></pre></div><h3 id="example-2-with-pagination">Example 2: With Pagination</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = new PipelineBuilder(&#39;paginated&#39;)
+  .Match($Expression($GreaterThan(&#39;$price&#39;, 100)))
+  .Sort({ price: -1 })
+  .Paging(20, 1)
+  .build();
+
+const result = await GetPagingResult&lt;Product&gt;(Product, pipeline);
+console.log(`Page 1 of ${result.GetTotalPageNumber()}`);</code></pre></div><h3 id="example-3-with-joins">Example 3: With Joins</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = new PipelineBuilder(&#39;users-with-orders&#39;)
+  .Lookup(LookupEqualityHelper(&#39;orders&#39;, &#39;orders&#39;, &#39;_id&#39;, &#39;userId&#39;))
+  .AddFields(
+    Field(&#39;orderCount&#39;, $Size(&#39;$orders&#39;)),
+    Field(&#39;lastOrder&#39;, $ArrayElementAt(&#39;$orders&#39;, -1))
+  )
+  .Match($Expression($GreaterThan(&#39;$orderCount&#39;, 0)))
+  .build();</code></pre></div><h3 id="example-4-complex-aggregation">Example 4: Complex Aggregation</h3>
+<div><pre class="line-numbers"><code class="language-typescript">const pipeline = new PipelineBuilder(&#39;sales-by-category&#39;)
+  .Match($Expression($Equal(&#39;$year&#39;, 2024)))
+  .Group({
+    _id: &#39;$category&#39;,
+    totalSales: $Sum(&#39;$amount&#39;),
+    averagePrice: $Average(&#39;$price&#39;),
+    count: $Sum(1)
   })
-).build();
+  .Sort({ totalSales: -1 })
+  .Limit(10)
+  .build();</code></pre></div><h3 id="example-5-statistical-analysis-mongodb-70">Example 5: Statistical Analysis (MongoDB 7.0+)</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { $Median, $Percentile, $Top, $TopN } from &#39;mongodb-pipeline-builder/operators&#39;;
+
+const pipeline = new PipelineBuilder(&#39;price-stats&#39;)
+  .Match($Expression($Equal(&#39;$year&#39;, 2024)))
+  .Group({
+    _id: &#39;$category&#39;,
+    medianPrice: $Median(&#39;$price&#39;),
+    p95Price: $Percentile(&#39;$price&#39;, [0.95]),
+    topProduct: $Top({ sales: -1 }, &#39;$productName&#39;),
+    top3Products: $TopN(3, { sales: -1 }, &#39;$productName&#39;, &#39;$price&#39;)
+  })
+  .Sort({ _id: 1 })
+  .build();</code></pre></div><hr>
+<h2 id="❓-faq">❓ FAQ</h2>
+<details>
+<summary><strong>When should I use GetResult vs GetPagingResult?</strong></summary>
+
+<ul>
+<li>Use <code>GetResult</code> for queries <strong>without</strong> the <code>Paging</code> stage</li>
+<li>Use <code>GetPagingResult</code> <strong>exclusively</strong> when using the <code>Paging</code> stage</li>
+</ul>
+<p>The <code>Paging</code> stage wraps your pipeline in <code>$facet</code> for efficient pagination.</p>
+</details>
+
+<details>
+<summary><strong>Can I use raw MongoDB syntax?</strong></summary>
+
+<p>Yes! Use the <code>Insert</code> stage:</p>
+<div><pre class="line-numbers"><code class="language-typescript">builder.Insert({ $myCustomStage: { field: &#39;value&#39; } })</code></pre></div><p>Useful for new MongoDB stages or custom implementations.</p>
+</details>
+
+<details>
+<summary><strong>Does it work with Mongoose?</strong></summary>
+
+<p>Yes! Works with:</p>
+<ul>
+<li><strong>MongoDB Native Driver:</strong> <code>db.collection.aggregate()</code></li>
+<li><strong>Mongoose:</strong> <code>Model.aggregate()</code></li>
+<li><strong>MongoDB Database Commands:</strong> <code>db.aggregate()</code></details></li>
+</ul>
+<details>
+<summary><strong>Are all MongoDB stages supported?</strong></summary>
+
+<p>Yes! All stages through MongoDB 7.0+ including <code>$densify</code>, <code>$fill</code>, <code>$setWindowFields</code>, <code>$searchMeta</code>, and more.</p>
+</details>
+
+<details>
+<summary><strong>What new operators were added in recent versions?</strong></summary>
+
+<p>MongoDB 7.0+ introduced several statistical operators:</p>
+<ul>
+<li><strong><code>$Median</code></strong> - Calculates the median of values (MongoDB 7.2+)</li>
+<li><strong><code>$Percentile</code></strong> - Calculates percentiles (MongoDB 7.2+)</li>
+<li><strong><code>$Top</code></strong> - Returns the top element in a group (MongoDB 7.0+)</li>
+<li><strong><code>$TopN</code></strong> - Returns the top N elements in a group (MongoDB 7.0+)</li>
+<li><strong><code>$GetField</code></strong> - Retrieves a field value dynamically (MongoDB 5.0+)</li>
+<li><strong><code>$SetField</code></strong> - Sets a field value dynamically (MongoDB 5.0+)</li>
+</ul>
+<p>See <a href="#example-5-statistical-analysis-mongodb-70">Example 5</a> for usage.</p>
+</details>
+
+<details>
+<summary><strong>How do I handle TypeScript types?</strong></summary>
+
+<p>Use generics:</p>
+<div><pre class="line-numbers"><code class="language-typescript">interface User { name: string; email: string; }
+const result = await GetResult&lt;User&gt;(User, pipeline);
+const users: User[] = result.GetDocs(); // Fully typed!</code></pre></div></details>
+
+<details>
+<summary><strong>Can I chain multiple lookups?</strong></summary>
+
+<p>Yes! Chain as many as needed:</p>
+<div><pre class="line-numbers"><code class="language-typescript">builder
+  .Lookup(LookupEqualityHelper(&#39;profiles&#39;, &#39;profile&#39;, &#39;_id&#39;, &#39;userId&#39;))
+  .Lookup(LookupEqualityHelper(&#39;orders&#39;, &#39;orders&#39;, &#39;_id&#39;, &#39;userId&#39;))
+  .Lookup(LookupEqualityHelper(&#39;subscriptions&#39;, &#39;sub&#39;, &#39;_id&#39;, &#39;userId&#39;))</code></pre></div><p>See <a href="./docs/examples/lookups.md">Lookup Examples</a>.</p>
+</details>
+
+<hr>
+<h2 id="📈-performance-tips">📈 Performance Tips</h2>
+<ol>
+<li><strong>Index your fields</strong> - Create indexes on <code>$match</code> and <code>$sort</code> fields</li>
+<li><strong>Match early</strong> - Apply <code>$match</code> as early as possible</li>
+<li><strong>Project early</strong> - Remove unnecessary fields to reduce memory</li>
+<li><strong>Limit lookups</strong> - Use pipeline syntax to limit joined documents</li>
+<li><strong>Use covered queries</strong> - Query only indexed fields when possible</li>
+</ol>
+<blockquote>
+<p>📖 <strong>Learn More:</strong> <a href="./docs/examples/pagination.md#performance-tips">Pagination Examples</a></p>
+</blockquote>
+<hr>
+<h2 id="🆘-support">🆘 Support</h2>
+<h3 id="getting-help">Getting Help</h3>
+<ul>
+<li>📖 <a href="./docs/getting-started.md">Documentation</a></li>
+<li>🐛 <a href="https://github.com/MikeDev75015/mongodb-pipeline-builder/issues">Issue Tracker</a></li>
+<li>💬 <a href="https://docs.mongodb.com/manual/aggregation/">MongoDB Docs</a></li>
+</ul>
+<h3 id="reporting-issues">Reporting Issues</h3>
+<p>Include:</p>
+<ul>
+<li>Package version</li>
+<li>Node.js and MongoDB versions</li>
+<li>Code snippet</li>
+<li>Expected vs actual behavior</li>
+</ul>
+<hr>
+<h2 id="📜-changelog">📜 Changelog</h2>
+<p>See <a href="./CHANGELOG.md">CHANGELOG.md</a> for version history.</p>
+<hr>
+<p><strong>Made with ❤️ by <a href="https://cv-mikeonline.web.app">Mickaël NODANCHE</a></strong></p>
 
-// pipeline
-[
-  {
-    $searchMeta: {
-      facet: {
-        operator: {
-          near: { path: &#39;released&#39;, origin: date, pivot: 7776000000 },
-        },
-        facets: {
-          test: { type: &#39;number&#39;, path: &#39;released&#39;, boundaries: [0, 100] },
-        },
-      },
-    }
-  }
-]</code></pre></div><h3 id="setvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/set/">Set</a>(...values)</h3>
-<h4 id="helper-fieldname-value-2">Helper: <code>Field(name, value)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Set(Field(&#39;first&#39;, true), Field(&#39;second&#39;, 2)).build();
-
-// pipeline
-[ { $set: { first: true, second: 2 } } ]</code></pre></div><h3 id="setwindowfieldsvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/setWindowFields/">SetWindowFields</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.SetWindowFields({
-  partitionBy: &quot;$state&quot;,
-  sortBy: { orderDate: 1 },
-  output: {
-    cumulativeQuantityForState: {
-      $sum: &quot;$quantity&quot;,
-      window: { documents: [ &quot;unbounded&quot;, &quot;current&quot; ] }
-    }
-  }
-}).build();
-
-// pipeline
-[
-  {
-    $setWindowFields: {
-      partitionBy: &#39;$state&#39;,
-      sortBy: { orderDate: 1 },
-      output: {
-        cumulativeQuantityForState: {
-          &#39;$sum&#39;: &#39;$quantity&#39;,
-          window: { documents: [ &#39;unbounded&#39;, &#39;current&#39; ] }
-        }
-      }
-    }
-  }
-]</code></pre></div><h3 id="shardeddatadistributionvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/shardedDataDistribution/">ShardedDataDistribution</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.ShardedDataDistribution({}).build();
-
-// pipeline
-[ { $shardedDataDistribution: {} } ]</code></pre></div><h3 id="skipvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/">Skip</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Skip(100).build();
-
-// pipeline
-[ { $skip: 100 } ]</code></pre></div><h3 id="sortvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/">Sort</a>(...values)</h3>
-<h4 id="helper-fieldname-value-3">Helper: <code>Field(name, value)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Sort(
-  Field(&#39;first&#39;, -1),
-  Field(&#39;second&#39;, 1),
-  Field(&#39;third&#39;, { $meta: &quot;textScore&quot; }),
-).build();
-
-// pipeline
-[
-  {
-    $sort: { first: -1, second: 1, third: { &#39;$meta&#39;: &#39;textScore&#39; } }
-  }
-]</code></pre></div><h3 id="sortbycountvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/sortByCount/">SortByCount</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.SortByCount(&#39;$employee&#39;).build();
-// pipeline
-
-[ { $sortByCount: &#39;$employee&#39; } ]</code></pre></div><h3 id="unionwithvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/unionWith/">UnionWith</a>(value)</h3>
-<h4 id="helper-unionwithhelpercollection-pipeline">Helper: <code>UnionWithHelper(collection, pipeline)</code></h4>
-<div><pre class="line-numbers"><code class="language-typescript">builder.UnionWith(
-  UnionWithHelper(&#39;cars&#39;),
-).build();
-
-// pipeline
-[
-  {
-    $unionWith: { coll: &#39;cars&#39; }
-  }
-]</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">builder.UnionWith(
-  UnionWithHelper(
-    undefined,
-    [{ $document: [{ ref: 1 }, { ref: 2 }, { ref: 3 }],  }]),
-).build();
-
-// pipeline
-[
-  {
-    $unionWith: { pipeline: [ { &#39;$document&#39;: [ { ref: 1 }, { ref: 2 }, { ref: 3 } ] } ] }
-  }
-]</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">builder.UnionWith(
-  UnionWithHelper(&#39;cars&#39;, [{ $match: { color: &#39;red&#39; } }]),
-).build();
-
-// pipeline
-[
-  {
-    $unionWith: { coll: &#39;cars&#39;, pipeline: [ { &#39;$match&#39;: { color: &#39;red&#39; } } ] }
-  }
-]</code></pre></div><h3 id="unsetvalues"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/unset/">Unset</a>(...values)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Unset(&#39;users&#39;, &#39;roles&#39;).build();
-
-// pipeline
-[ { $unset: [ &#39;users&#39;, &#39;roles&#39; ] } ]</code></pre></div><h3 id="unwindvalue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/unwind/">Unwind</a>(value)</h3>
-<div><pre class="line-numbers"><code class="language-typescript">builder.Unwind({ path: &#39;$sizes&#39;, preserveNullAndEmptyArrays: true }).build();
-
-// pipeline
-[ { $unwind: { path: &#39;$sizes&#39;, preserveNullAndEmptyArrays: true } } ]</code></pre></div><hr>
-<h1 id="mongodb-operators"><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/">MONGODB OPERATORS</a></h1>
-<h4 id="absolute"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/abs/">$Absolute</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Absolute(-5)
-
-// operator
-{ $abs: -5 }</code></pre></div><h4 id="accumulator"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/accumulator/">$Accumulator</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Accumulator(
-  () =&gt; ({ count: 0, sum: 0 }),
-  (state: { count: number; sum: number; }, numCopies: number) =&gt; ({
-    count: state.count + 1,
-    sum: state.sum + numCopies,
-  }),
-  [&#39;$copies&#39;],
-  (state1: { count: number; sum: number; }, state2: { count: number; sum: number; }) =&gt; ({
-    count: state1.count + state2.count,
-    sum: state1.sum + state2.sum,
-  }),
-  { finalize: (state: { sum: number; count: number; }) =&gt; (state.sum / state.count) },
-)
-
-// operator
-{
-  &#39;$accumulator&#39;: {
-    init: [ () =&gt; ({ count: 0, sum: 0 }) ],
-    accumulate: [
-      (state: { count: number; sum: number; }, numCopies: number) =&gt; ({
-        count: state.count + 1,
-        sum: state.sum + numCopies,
-      })
-    ],
-    accumulateArgs: [ &#39;$copies&#39; ],
-    merge: [
-      (state1: { count: number; sum: number; }, state2: { count: number; sum: number; }) =&gt; ({
-        count: state1.count + state2.count,
-        sum: state1.sum + state2.sum,
-      })
-    ],
-    finalize: [ (state: { sum: number; count: number; }) =&gt; (state.sum / state.count) ],
-    lang: &#39;js&#39;
-  }
-}</code></pre></div><h4 id="arccosine"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/acos/">$ArcCosine</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcCosine({ $divide : [ &#39;$side_b&#39;, &#39;$hypotenuse&#39; ] })
-
-// operator
-{ &#39;$acos&#39;: { &#39;$divide&#39;: [ &#39;$side_b&#39;, &#39;$hypotenuse&#39; ] } }</code></pre></div><h4 id="arccosinehyperbolic"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/acosh/">$ArcCosineHyperbolic</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcCosineHyperbolic(3)
-
-// operator
-{ &#39;$acosh&#39;: 3 }</code></pre></div><h4 id="add"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/add/">$Add</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Add(&#39;$price&#39;, 10)
-
-// operator
-{ &#39;$add&#39;: [ &#39;$price&#39;, 10 ] }</code></pre></div><h4 id="addtoset"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/addToSet/">$AddToSet</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$AddToSet(&#39;$item&#39;)
-
-// operator
-{ &#39;$addToSet&#39;: &#39;$item&#39; }</code></pre></div><h4 id="allelementstrue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/allElementsTrue/">$AllElementsTrue</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$AllElementsTrue([ true, 1, &quot;someString&quot; ])
-
-// operator
-{ &#39;$allElementsTrue&#39;: [ [ true, 1, &#39;someString&#39; ] ] }</code></pre></div><h4 id="and"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/and/">$And</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$And(1, &#39;green&#39;)
-
-// operator
-{ &#39;$and&#39;: [ 1, &#39;green&#39; ] }</code></pre></div><h4 id="anyelementtrue"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/anyElementTrue/">$AnyElementTrue</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$AnyElementTrue([ true, false ])
-
-// operator
-{ &#39;$anyElementTrue&#39;: [ [ true, false ] ] }</code></pre></div><h4 id="arrayelementat"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayElemAt/">$ArrayElementAt</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArrayElementAt([ 1, 2, 3 ], 0)
-
-// operator
-{ &#39;$arrayElemAt&#39;: [ [ 1, 2, 3 ], 0 ] }</code></pre></div><h4 id="arraytoobject"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayToObject/">$ArrayToObject</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArrayToObject([ { &quot;k&quot;: &quot;item&quot;, &quot;v&quot;: &quot;abc123&quot; }, { &quot;k&quot;: &quot;qty&quot;, &quot;v&quot;: &quot;$qty&quot; } ])
-
-// operator
-{ &#39;$arrayToObject&#39;: [ { k: &#39;item&#39;, v: &#39;abc123&#39; }, { k: &#39;qty&#39;, v: &#39;$qty&#39; } ] }</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$ArrayToObject([ [ &quot;item&quot;, &quot;abc123&quot; ], [ &quot;qty&quot;, 25 ] ], true)              
-
-// operator
-{ &#39;$arrayToObject&#39;: { &#39;$literal&#39;: [ [ &#39;item&#39;, &#39;abc123&#39; ], [ &#39;qty&#39;, 25 ] ] } }</code></pre></div><h4 id="arcsine"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/asin/">$ArcSine</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcSine(&#39;$value&#39;)
-
-// operator
-{ &#39;$asin&#39;: &#39;$value&#39; }</code></pre></div><h4 id="arcsinehyperbolic"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/asinh/">$ArcSineHyperbolic</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcSineHyperbolic(&#39;$value&#39;)
-
-// operator
-{ &#39;$asinh&#39;: &#39;$value&#39; }</code></pre></div><h4 id="arctangent"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/atan/">$ArcTangent</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcTangent(&#39;$value&#39;)
-
-// operator
-{ &#39;$atan&#39;: &#39;$value&#39; }</code></pre></div><h4 id="arctangent2"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/atan2/">$ArcTangent2</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcTangent2(&#39;$side_b&#39;, &#39;$side_a&#39;)
-
-// operator
-{ &#39;$atan2&#39;: [ &#39;$side_b&#39;, &#39;$side_a&#39; ] }</code></pre></div><h4 id="arctangenthyperbolic"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/atanh/">$ArcTangentHyperbolic</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ArcTangentHyperbolic(&#39;$value&#39;)
-
-// operator
-{ &#39;$atanh&#39;: &#39;$value&#39; }</code></pre></div><h4 id="average"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/avg/">$Average</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Average(&#39;$value&#39;)
-
-// operator
-{ &#39;$avg&#39;: &#39;$value&#39; }</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$Average(&#39;$value1&#39;, &#39;$value2&#39;, &#39;$value3&#39;)
-
-// operator
-{ &#39;$avg&#39;: [ &#39;$value1&#39;, &#39;$value2&#39;, &#39;$value3&#39; ] }</code></pre></div><h4 id="binarysize"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/binarySize/">$BinarySize</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BinarySize(&#39;Hello World!&#39;)
-
-// operator
-{ &#39;$binarySize&#39;: &#39;Hello World!&#39; }</code></pre></div><h4 id="bitwiseand"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bitAnd/#mongodb-expression-exp.-bitAnd">$BitwiseAnd</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BitwiseAnd(&#39;$array&#39;)
-
-// operator
-{ &#39;$bitAnd&#39;: &#39;$array&#39; }</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$BitwiseAnd(0, 127, 5)
-
-// operator
-{ &#39;$bitAnd&#39;: [ 0, 127, 5 ] }</code></pre></div><h4 id="bitwisenot"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bitNot/#mongodb-expression-exp.-bitNot">$BitwiseNot</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BitwiseNot(&#39;$long&#39;)
-
-// operator
-{ &#39;$bitNot&#39;: &#39;$long&#39; }</code></pre></div><h4 id="bitwiseor"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bitOr/#mongodb-expression-exp.-bitOr">$BitwiseOr</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BitwiseOr(&#39;$array&#39;)
-
-// operator
-{ &#39;$bitOr&#39;: &#39;$array&#39; }</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$BitwiseOr(0, 127, 5)
-
-// operator
-{ &#39;$bitOr&#39;: [ 0, 127, 5 ] }</code></pre></div><h4 id="bitwisexor"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bitXor/#mongodb-expression-exp.-bitXor">$BitwiseXor</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BitwiseXor(&#39;$array&#39;)
-
-// operator
-{ &#39;$bitXor&#39;: &#39;$array&#39; }</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$BitwiseXor(0, 127, 5)
-
-// operator
-{ &#39;$bitXor&#39;: [ 0, 127, 5 ] }</code></pre></div><h4 id="bottom"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bottom/#mongodb-group-grp.-bottom">$Bottom</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Bottom([&#39;field1&#39;, &#39;field2&#39;], { field2: -1 })
-
-// operator
-{ &#39;$bottom&#39;: { output: [ &#39;field1&#39;, &#39;field2&#39; ], sortBy: { field2: -1 } } }</code></pre></div><h4 id="bottomn"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bottomN/#mongodb-group-grp.-bottomN">$BottomN</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BottomN(&#39;field&#39;, { field: 1 }, 3)
-
-// operator
-{ &#39;$bottomN&#39;: { output: &#39;field&#39;, sortBy: { field: 1 }, n: 3 } }</code></pre></div><h4 id="bsonsize"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/bsonSize/">$BsonSize</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$BsonSize(&#39;$$ROOT&#39;)
-
-// operator
-{ &#39;$bsonSize&#39;: &#39;$$ROOT&#39; }</code></pre></div><h4 id="ceil"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/ceil/">$Ceil</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Ceil(&#39;$value&#39;)
-
-// operator
-{ &#39;$ceil&#39;: &#39;$value&#39; }</code></pre></div><h4 id="compare"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/cmp/">$Compare</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Compare(&#39;$age&#39;, 25)
-
-// operator
-{ &#39;$cmp&#39;: [ &#39;$age&#39;, 25 ] }</code></pre></div><h4 id="concat"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/concat/">$Concat</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Concat(&#39;$first&#39;, &#39; - &#39;, &#39;$second&#39;)
-
-// operator
-{ &#39;$concat&#39;: [ &#39;$first&#39;, &#39; - &#39;, &#39;$second&#39; ] }</code></pre></div><h4 id="concatarrays"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/concatArrays/">$ConcatArrays</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$ConcatArrays(&#39;$array&#39;, [1, 2, 3])
-
-// operator
-{ &#39;$concatArrays&#39;: [ &#39;$array&#39;, [ 1, 2, 3 ] ] }</code></pre></div><h4 id="condition"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/cond/">$Condition</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Condition({ $gte: [ &#39;$quantity&#39;, 250 ] }, &#39;true&#39;, &#39;false&#39;)
-
-// operator
-{ &#39;$cond&#39;: [ { &#39;$gte&#39;: [ &#39;$quantity&#39;, 250 ] }, &#39;true&#39;, &#39;false&#39; ] }</code></pre></div><h4 id="convert"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/convert/">$Convert</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Convert(100, &#39;bool&#39;)
-
-// operator
-{ &#39;$convert&#39;: { input: 100, to: &#39;bool&#39; } }</code></pre></div><h4 id="cosine"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/cos/">$Cosine</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Cosine(&#39;$angle&#39;)
-
-// operator
-{ &#39;$cos&#39;: &#39;$angle&#39; }</code></pre></div><h4 id="cosinehyperbolic"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/cosh/">$CosineHyperbolic</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$CosineHyperbolic({ $degreesToRadians : &quot;$angle&quot; })
-
-// operator
-{ &#39;$cosh&#39;: { &#39;$degreesToRadians&#39;: &#39;$angle&#39; } }</code></pre></div><h4 id="count"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/">$Count</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$Count()
-
-// operator
-{ &#39;$count&#39;: {} }</code></pre></div><h4 id="covariancepopulation"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/covariancePop/">$CovariancePopulation</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$CovariancePopulation(&#39;$numeric1&#39;, &#39;$numeric2&#39;)
-
-// operator
-{ &#39;$covariancePopulation&#39;: [ &#39;$numeric1&#39;, &#39;$numeric2&#39; ] }</code></pre></div><h4 id="covariancesample"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/covarianceSamp/">$CovarianceSample</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$CovarianceSample(&#39;$numeric1&#39;, &#39;$numeric2&#39;)
-
-// operator
-{ &#39;$covarianceSample&#39;: [ &#39;$numeric1&#39;, &#39;$numeric2&#39; ] }</code></pre></div><h4 id="dateadd"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateAdd/">$DateAdd</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateAdd(&#39;$startDate&#39;, &#39;hour&#39;, 2)
-
-// operator
-{ &#39;$dateAdd&#39;: { startDate: &#39;$startDate&#39;, unit: &#39;hour&#39;, amount: 2 } }</code></pre></div><h4 id="datedifference"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateDiff/">$DateDifference</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateDifference(&#39;$startDate&#39;, &#39;$endDate&#39;, &#39;second&#39;)
-
-// operator
-{ &#39;$dateDiff&#39;: { startDate: &#39;$startDate&#39;, endDate: &#39;$endDate&#39;, unit: &#39;second&#39; } }</code></pre></div><h4 id="datefromparts"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateFromParts/">$DateFromParts</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateFromCalendarParts(2000, { month: 12, day: 31, hour: 12, minute: 25, second: 59, timezone: &#39;+01:00&#39; })
-
-// operator
-{
-  &#39;$dateFromParts&#39;: {
-    year: 2000,
-    month: 12,
-    day: 31,
-    hour: 12,
-    minute: 25,
-    second: 59,
-    timezone: &#39;+01:00&#39;
-  }
-}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">$DateFromIsoWeekParts(2000, { isoWeek: 53, isoDayOfWeek: 7, millisecond: 500 })
-
-// operator
-{ &#39;$dateFromParts&#39;: { isoWeekYear: 2000, isoWeek: 53, isoDayOfWeek: 7, millisecond: 500 } }</code></pre></div><h4 id="datefromstring"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateFromString/">$DateFromString</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateFromString(&#39;2017-02-08T12:10:40.787&#39;, { timezone: &#39;America/New_York&#39; })
-
-// operator
-{
-  &#39;$dateFromString&#39;: {
-    dateString: &#39;2017-02-08T12:10:40.787&#39;,
-    timezone: &#39;America/New_York&#39;
-  }
-}</code></pre></div><h4 id="datesubtract"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateSubtract/">$DateSubtract</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateSubtract(1697382106124, &#39;month&#39;, 1)
-
-// operator
-{ &#39;$dateSubtract&#39;: { startDate: 1697382106124, unit: &#39;month&#39;, amount: 1 } }</code></pre></div><h4 id="datetoparts"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateToParts/">$DateToParts</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateToParts(1697382106124)
-
-// operator
-{ &#39;$dateToParts&#39;: { date: 1697382106124 } }</code></pre></div><h4 id="datetostring"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateToString/">$DateToString</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateToString(1697382106124)
-
-// operator
-{ &#39;$dateToString&#39;: { date: 1697382106124 } }</code></pre></div><h4 id="datetrunc"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateTrunc/">$DateTrunc</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DateTrunc(1697382106124, &#39;month&#39;)
-
-// operator
-{ &#39;$dateTrunc&#39;: { date: 1697382106124, unit: &#39;month&#39; } }</code></pre></div><h4 id="dayofmonth"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dayOfMonth/">$DayOfMonth</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DayOfMonth(&#39;$date&#39;, &#39;Europe/Paris&#39;)
-
-// operator
-{ &#39;$dayOfMonth&#39;: { date: &#39;$date&#39;, timezone: &#39;Europe/Paris&#39; } }</code></pre></div><h4 id="dayofweek"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dayOfWeek/">$DayOfWeek</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DayOfWeek(&#39;$date&#39;, &#39;+03:30&#39;)
-
-// operator
-{ &#39;$dayOfWeek&#39;: { date: &#39;$date&#39;, timezone: &#39;+03:30&#39; } }</code></pre></div><h4 id="dayofyear"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/dayOfYear/">$DayOfYear</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DayOfYear(&#39;$date&#39;)
-
-// operator
-{ &#39;$dayOfYear&#39;: { date: &#39;$date&#39; } }</code></pre></div><h4 id="degreestoradians"><a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/degreesToRadians/">$DegreesToRadians</a></h4>
-<div><pre class="line-numbers"><code class="language-typescript">$DegreesToRadians(&#39;$angle_a&#39;)
-
-// operator
-{ &#39;$degreesToRadians&#39;: &#39;$angle_a&#39; }</code></pre></div><h4 id="denserank">$DenseRank</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="derivative">$Derivative</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="divide">$Divide</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="documentnumber">$DocumentNumber</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="equal">$Equal</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="exponent">$Exponent</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="exponentialmovingaverage">$ExponentialMovingAverage</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="filter">$Filter</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="first">$First</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="firstn">$FirstN</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="floor">$Floor</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="function">$Function</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="getfield">$GetField</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="greaterthan">$GreaterThan</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="greaterthanequal">$GreaterThanEqual</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="hour">$Hour</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="ifnull">$IfNull</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="in">$In</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="indexofarray">$IndexOfArray</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="indexofbytes">$IndexOfBytes</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="indexofcodepoint">$IndexOfCodePoint</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="integral">$Integral</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="isarray">$IsArray</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="isnumber">$IsNumber</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="isodayofweek">$IsoDayOfWeek</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="isoweek">$IsoWeek</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="isoweekyear">$IsoWeekYear</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="last">$Last</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="lastn">$LastN</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="lessthan">$LessThan</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="lessthanequal">$LessThanEqual</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="let">$Let</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="literal">$Literal</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="log">$Log</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="log10">$Log10</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="ltrim">$Ltrim</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="map">$Map</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="max">$Max</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="mergeobjects">$MergeObjects</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="meta">$Meta</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="millisecond">$Millisecond</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="min">$Min</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="minute">$Minute</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="mod">$Mod</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="month">$Month</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="multiply">$Multiply</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="naturallog">$NaturalLog</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="not">$Not</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="notequal">$NotEqual</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="objecttoarray">$ObjectToArray</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="or">$Or</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="pow">$Pow</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="push">$Push</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="radianstodegrees">$RadiansToDegrees</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="rand">$Rand</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="range">$Range</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="reduce">$Reduce</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="regexfind">$RegexFind</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="regexfindall">$RegexFindAll</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="regexmatch">$RegexMatch</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="replaceall">$ReplaceAll</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="replaceone">$ReplaceOne</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="reversearray">$ReverseArray</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="round">$Round</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="rtrim">$Rtrim</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="samplerate">$SampleRate</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="second">$Second</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="setdifference">$SetDifference</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="setequals">$SetEquals</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="setintersection">$SetIntersection</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="setissubset">$SetIsSubset</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="setunion">$SetUnion</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="sin">$Sin</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="sinh">$Sinh</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="size">$Size</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="slice">$Slice</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="split">$Split</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="sqrt">$Sqrt</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="stddevpop">$StdDevPop</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="stddevsamp">$StdDevSamp</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="strcasecmp">$StrCaseCmp</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="strlenbytes">$StrLenBytes</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="strlencp">$StrLenCP</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="substr">$Substr</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="substrbytes">$SubstrBytes</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="substrcp">$SubstrCP</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="subtract">$Subtract</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="sum">$Sum</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="switch">$Switch</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tan">$Tan</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tanh">$Tanh</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tobool">$ToBool</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="todate">$ToDate</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="todecimal">$ToDecimal</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="todouble">$ToDouble</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="toint">$ToInt</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tolong">$ToLong</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tolower">$ToLower</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="toobjectid">$ToObjectId</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="tostring">$ToString</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="toupper">$ToUpper</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="trim">$Trim</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="trunc">$Trunc</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="type">$Type</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="week">$Week</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="year">$Year</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div><h4 id="zip">$Zip</h4>
-<div><pre class="line-numbers"><code class="language-typescript">
-
-// operator
-</code></pre></div>
 
 
 
@@ -1466,11 +573,6 @@ result.GetTotalPageNumber(); // () =&gt; number</code></pre></div><p><em>$Or</em
           <script src="./js/search/search_index.js"></script>
        <script src="./js/lazy-load-graphs.js"></script>
 
-        <script lang="js">
-          if (window.location.host === 'mikedev75015.github.io') {
-            document.querySelector('#doc-link').style.display = 'none';
-          }
-        </script>
 
     </body>
 </html>
